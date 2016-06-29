@@ -140,6 +140,7 @@
     <Content Include="less\layout\header.less" />
     <Content Include="less\layout\layout.less" />
     <Content Include="less\mixins.less" />
+    <Content Include="less\social-icons.less" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
@@ -148,6 +149,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Partial\Layout\Header.cshtml" />
+    <Content Include="Views\Shared\Partial\Layout\Footer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
