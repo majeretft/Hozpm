@@ -1,1 +1,109 @@
-﻿
+﻿@import (once) '../variables.less';
+
+@text-color: #333;
+@text-color-hover: @text-color;
+@border-color: #ccc;
+@border-color-hover: #adadad;
+@bg-color: #f9f9f9;
+@bg-color-hover: #e6e6e6;
+
+header {
+	position: relative;
+}
+
+header > .content-wrap {
+	position: relative;
+
+	.contact {
+		display: none;
+		float: right;
+		font-size: 26px;
+		text-align: right;
+		line-height: 35px;
+		padding: 30px 15px;
+		color: #000;
+		text-shadow: 1px 1px 1px #888;
+	}
+
+	> .menu-wrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		text-transform: uppercase;
+
+		.navbar-header {
+			> button > .icon-bar {
+				background-color: @text-color;
+			}
+		}
+
+		.navbar-agile {
+			color: @text-color;
+			background-color: @bg-color;
+			border-bottom-color: @border-color;
+			margin-bottom: 0;
+			overflow: hidden;
+
+			.navbar-collapse {
+				border-color: #e7e7e7;
+			}
+
+			a,
+			a:hover,
+			a:visited {
+				color: @text-color;
+				text-decoration: none;
+			}
+
+			ul.nav > li > a:hover {
+				background-color: @bg-color-hover;
+			}
+		}
+	}
+
+	@media(min-width: @screen-md-min) {
+		@header-height: 130px;
+		@navbar-heigh: 44px;
+
+		height: @header-height;
+		background: url('../../img/avrgroup_logo.png') left center no-repeat, url('../../img/contact-bg.png') right center no-repeat, url('../../img/factory_1920x130.jpg') center center;
+		box-shadow: 0px 1px 8px #000;
+
+		.contact {
+			display: inline-block;
+		}
+
+		> .menu-wrap {
+			top: auto;
+			left: 0;
+			right: 0;
+			bottom: -(@navbar-height / 2);
+			text-align: center;
+			line-height: 0;
+
+			.navbar-agile {
+				display: inline-block;
+				border-color: @border-color;
+				border-radius: 6px;
+				min-height: @navbar-heigh;
+
+				.navbar-collapse {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+
+			ul.nav > li > a {
+				padding: 10px 16px;
+				font-size: 18px;
+				line-height: 1.3333333;
+				border-right: 1px solid @border-color;
+			}
+
+			ul.nav li > a.last {
+				border-right: none;
+			}
+		}
+	}
+}

@@ -10,13 +10,15 @@
 </head>
 <body>
 
-<header>
-	@Html.Partial("Partial/Layout/Header")
-</header>
+<div id="wrap">
+	<header>
+		@Html.Partial("Partial/Layout/Header")
+	</header>
 
-<main class="container">
-	@RenderBody()
-</main>
+	<main class="container">
+		@RenderBody()
+	</main>
+</div>
 
 <footer>
 	@Html.Partial("Partial/Layout/Footer")

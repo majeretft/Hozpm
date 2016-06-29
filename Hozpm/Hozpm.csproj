@@ -119,6 +119,10 @@
       <DependentUpon>site.css</DependentUpon>
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\avrgroup_logo.png" />
+    <Content Include="img\avrgroup_logo_icon.png" />
+    <Content Include="img\contact-bg.png" />
+    <Content Include="img\factory_1920x130.jpg" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

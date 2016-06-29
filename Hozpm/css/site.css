@@ -93,3 +93,88 @@
 .si-delicious-1:before {
   content: '\e813';
 }
+header {
+  position: relative;
+}
+header > .content-wrap {
+  position: relative;
+}
+header > .content-wrap .contact {
+  display: none;
+  float: right;
+  font-size: 26px;
+  text-align: right;
+  line-height: 35px;
+  padding: 30px 15px;
+  color: #000;
+  text-shadow: 1px 1px 1px #888;
+}
+header > .content-wrap > .menu-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+}
+header > .content-wrap > .menu-wrap .navbar-header > button > .icon-bar {
+  background-color: #333;
+}
+header > .content-wrap > .menu-wrap .navbar-agile {
+  color: #333;
+  background-color: #f9f9f9;
+  border-bottom-color: #ccc;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+header > .content-wrap > .menu-wrap .navbar-agile .navbar-collapse {
+  border-color: #e7e7e7;
+}
+header > .content-wrap > .menu-wrap .navbar-agile a,
+header > .content-wrap > .menu-wrap .navbar-agile a:hover,
+header > .content-wrap > .menu-wrap .navbar-agile a:visited {
+  color: #333;
+  text-decoration: none;
+}
+header > .content-wrap > .menu-wrap .navbar-agile ul.nav > li > a:hover {
+  background-color: #e6e6e6;
+}
+@media (min-width: 992px) {
+  header > .content-wrap {
+    height: 130px;
+    background: url('../img/avrgroup_logo.png') left center no-repeat, url('../img/contact-bg.png') right center no-repeat, url('../img/factory_1920x130.jpg') center center;
+    box-shadow: 0px 1px 8px #000;
+  }
+  header > .content-wrap .contact {
+    display: inline-block;
+  }
+  header > .content-wrap > .menu-wrap {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: -25px;
+    text-align: center;
+    line-height: 0;
+  }
+  header > .content-wrap > .menu-wrap .navbar-agile {
+    display: inline-block;
+    border-color: #ccc;
+    border-radius: 6px;
+    min-height: 44px;
+  }
+  header > .content-wrap > .menu-wrap .navbar-agile .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  header > .content-wrap > .menu-wrap ul.nav > li > a {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-right: 1px solid #ccc;
+  }
+  header > .content-wrap > .menu-wrap ul.nav li > a.last {
+    border-right: none;
+  }
+}
+main {
+  padding-top: 50px;
+}
