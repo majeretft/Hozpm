@@ -119,6 +119,7 @@
       <DependentUpon>site.css</DependentUpon>
     </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\social-icons.svg" />
     <Content Include="img\avrgroup_logo.png" />
     <Content Include="img\avrgroup_logo_icon.png" />
     <Content Include="img\contact-bg.png" />
@@ -145,6 +146,10 @@
     <Content Include="less\layout\layout.less" />
     <Content Include="less\mixins.less" />
     <Content Include="less\social-icons.less" />
+    <Content Include="fonts\social-icons.eot" />
+    <Content Include="fonts\social-icons.ttf" />
+    <Content Include="fonts\social-icons.woff" />
+    <Content Include="fonts\social-icons.woff2" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
