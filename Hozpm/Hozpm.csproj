@@ -135,6 +135,11 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="less\variables.less" />
+    <Content Include="less\layout\footer.less" />
+    <Content Include="less\layout\header.less" />
+    <Content Include="less\layout\layout.less" />
+    <Content Include="less\mixins.less" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
