@@ -1,8 +1,23 @@
 ﻿@import (once) '../variables.less';
 @import (once) '../mixins.less';
-@import (once) 'footer.less';
 @import (once) 'header.less';
+@import (once) 'footer.less';
+
+html,
+body {
+	height: 100%;
+}
+
+#wrap {
+	min-height: 100%;
+}
 
 main {
 	padding-top: @navbar-height;
+	padding-bottom: @footer-xs-height;
+}
+
+footer {
+	height: @footer-xs-height;
+	margin-top: -@footer-xs-height;
 }

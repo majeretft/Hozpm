@@ -1,28 +1,29 @@
 ﻿@import (once) '../variables.less';
 
-@text-color: #333;
-@text-color-hover: @text-color;
-@border-color: #ccc;
-@border-color-hover: #adadad;
-@bg-color: #f9f9f9;
-@bg-color-hover: #e6e6e6;
-
 header {
 	position: relative;
 }
 
 header > .content-wrap {
+	@text-color: #333;
+	@text-color-hover: @text-color;
+	@border-color: #ccc;
+	@border-color-hover: #adadad;
+	@bg-color: #f9f9f9;
+	@bg-color-hover: #e6e6e6;
+
 	position: relative;
 
 	.contact {
 		display: none;
 		float: right;
-		font-size: 26px;
+		font-size: 22px;
 		text-align: right;
 		line-height: 35px;
 		padding: 30px 15px;
 		color: #000;
 		text-shadow: 1px 1px 1px #888;
+		text-transform: uppercase;
 	}
 
 	> .menu-wrap {
@@ -44,6 +45,7 @@ header > .content-wrap {
 			border-bottom-color: @border-color;
 			margin-bottom: 0;
 			overflow: hidden;
+			z-index: 10000;
 
 			.navbar-collapse {
 				border-color: #e7e7e7;

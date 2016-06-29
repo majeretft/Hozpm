@@ -1,4 +1,7 @@
-﻿@font-face {
+﻿.indissoluble {
+  white-space: nowrap;
+}
+@font-face {
   font-family: 'social-icons';
   src: url('../fonts/social-icons.eot?59928839');
   src: url('../fonts/social-icons.eot?59928839#iefix') format('embedded-opentype'), url('../fonts/social-icons.woff2?59928839') format('woff2'), url('../fonts/social-icons.woff?59928839') format('woff'), url('../fonts/social-icons.ttf?59928839') format('truetype'), url('../fonts/social-icons.svg?59928839#social-icons') format('svg');
@@ -102,12 +105,13 @@ header > .content-wrap {
 header > .content-wrap .contact {
   display: none;
   float: right;
-  font-size: 26px;
+  font-size: 22px;
   text-align: right;
   line-height: 35px;
   padding: 30px 15px;
   color: #000;
   text-shadow: 1px 1px 1px #888;
+  text-transform: uppercase;
 }
 header > .content-wrap > .menu-wrap {
   position: absolute;
@@ -125,6 +129,7 @@ header > .content-wrap > .menu-wrap .navbar-agile {
   border-bottom-color: #ccc;
   margin-bottom: 0;
   overflow: hidden;
+  z-index: 10000;
 }
 header > .content-wrap > .menu-wrap .navbar-agile .navbar-collapse {
   border-color: #e7e7e7;
@@ -151,7 +156,7 @@ header > .content-wrap > .menu-wrap .navbar-agile ul.nav > li > a:hover {
     top: auto;
     left: 0;
     right: 0;
-    bottom: -25px;
+    bottom: -26px;
     text-align: center;
     line-height: 0;
   }
@@ -175,6 +180,118 @@ header > .content-wrap > .menu-wrap .navbar-agile ul.nav > li > a:hover {
     border-right: none;
   }
 }
+footer > .content-wrap {
+  color: #ccc;
+  background-color: #303030;
+}
+footer > .content-wrap .text {
+  padding: 10px 0;
+  display: none;
+  text-transform: uppercase;
+}
+footer > .content-wrap .contact {
+  padding: 10px 0;
+  text-align: center;
+  font-size: 22px;
+  line-height: 30px;
+  text-shadow: 1px 1px 1px #888;
+  text-transform: uppercase;
+}
+footer > .content-wrap .copywrite {
+  padding: 12px 0;
+  text-align: center;
+}
+footer > .content-wrap .manage {
+  display: none;
+  text-align: right;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+footer > .content-wrap .bg {
+  color: #8c8c8c;
+  background-color: #3d3d3d;
+}
+footer > .content-wrap .bg a,
+footer > .content-wrap .bg a:hover,
+footer > .content-wrap .bg a:visited {
+  text-decoration: none;
+  color: #8c8c8c;
+}
+@media (min-width: 768px) {
+  footer > .content-wrap .text {
+    display: block;
+  }
+  footer > .content-wrap .contact {
+    text-align: right;
+  }
+}
+@media (min-width: 992px) {
+  footer > .content-wrap .manage {
+    display: block;
+  }
+  footer > .content-wrap .copywrite {
+    text-align: left;
+  }
+}
+footer > .content-wrap .ya-share2 > div > ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+footer > .content-wrap .ya-share2 > div > ul li {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+footer > .content-wrap .ya-share2 > div > ul li .ya-share2__badge .ya-share2__icon {
+  font: normal normal normal 20px/1 'social-icons';
+  text-rendering: auto;
+}
+footer > .content-wrap .ya-share2 > div > ul li .ya-share2__counter,
+footer > .content-wrap .ya-share2 > div > ul li .ya-share2__title {
+  display: none;
+}
+footer > .content-wrap .ya-share2 > div > ul li a,
+footer > .content-wrap .ya-share2 > div > ul li a:visited {
+  text-decoration: none;
+  color: #30e5ff;
+  text-shadow: 1px 1px 20px #30e5ff;
+}
+footer > .content-wrap .ya-share2 > div > ul li a:hover {
+  color: #96f2ff;
+  text-shadow: 1px 1px 20px #96f2ff;
+}
+footer > .content-wrap .ya-share2 > div > ul li[class$="vkontakte"] .ya-share2__icon:before {
+  content: '\e801';
+}
+footer > .content-wrap .ya-share2 > div > ul li[class$="facebook"] .ya-share2__icon:before {
+  content: '\e802';
+}
+footer > .content-wrap .ya-share2 > div > ul li[class$="_odnoklassniki"] .ya-share2__icon:before {
+  content: '\e811';
+}
+footer > .content-wrap .ya-share2 > div > ul li[class$="gplus"] .ya-share2__icon:before {
+  content: '\e807';
+}
+footer > .content-wrap .ya-share2 > div > ul li[class$="linkedin"] .ya-share2__icon:before {
+  content: '\e805';
+}
+html,
+body {
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+}
 main {
-  padding-top: 50px;
+  padding-top: 52px;
+  padding-bottom: 186px;
+}
+footer {
+  height: 186px;
+  margin-top: -186px;
 }
