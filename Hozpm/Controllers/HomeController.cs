@@ -19,11 +19,6 @@ namespace Hozpm.Controllers
 			return View();
 		}
 
-		public ActionResult Catalog()
-		{
-			return View();
-		}
-
 		public ActionResult About()
 		{
 			return View();
