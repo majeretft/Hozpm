@@ -8,5 +8,30 @@ namespace Hozpm.Controllers
 		{
 			return View();
 		}
+
+		public ActionResult CustomerInfo()
+		{
+			return View();
+		}
+
+		public ActionResult PackingInfo()
+		{
+			return View();
+		}
+
+		public ActionResult Catalog()
+		{
+			return View();
+		}
+
+		public ActionResult About()
+		{
+			return View();
+		}
+
+		public ActionResult Contact()
+		{
+			return View();
+		}
 	}
 }

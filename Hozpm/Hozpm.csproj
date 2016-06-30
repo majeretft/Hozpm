@@ -150,6 +150,7 @@
     <Content Include="fonts\social-icons.ttf" />
     <Content Include="fonts\social-icons.woff" />
     <Content Include="fonts\social-icons.woff2" />
+    <Content Include="less\views\group-card.less" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
@@ -160,6 +161,12 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Partial\Layout\Header.cshtml" />
     <Content Include="Views\Shared\Partial\Layout\Footer.cshtml" />
+    <Content Include="Views\Shared\Site\GroupCard.cshtml" />
+    <Content Include="Views\Home\CustomerInfo.cshtml" />
+    <Content Include="Views\Home\PackingInfo.cshtml" />
+    <Content Include="Views\Home\Catalog.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -180,7 +187,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Partial\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

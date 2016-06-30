@@ -8,16 +8,16 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand visible-xs visible-sm" href="#"><img src="@Url.Content("~/img/avrgroup_logo_icon.png")" alt=""/></a>
+				<a class="navbar-brand visible-xs visible-sm" href="@Url.Action("Index", "Home")"><img src="@Url.Content("~/img/avrgroup_logo_icon.png")" alt=""/></a>
 			</div>
 			<div class="collapse navbar-collapse" id="top-menu">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">Заказчику</a></li>
-					<li><a href="#">Упаковка</a></li>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">О Компании</a></li>
-					<li><a href="#" class="last">Контакты</a></li>
+					<li><a href="@Url.Action("Index", "Home")">Главная</a></li>
+					<li><a href="@Url.Action("CustomerInfo", "Home")">Заказчику</a></li>
+					<li><a href="@Url.Action("PackingInfo", "Home")">Упаковка</a></li>
+					<li><a href="@Url.Action("Catalog", "Home")">Каталог</a></li>
+					<li><a href="@Url.Action("About", "Home")">О Компании</a></li>
+					<li><a href="@Url.Action("Contact", "Home")" class="last">Контакты</a></li>B
 				</ul>
 			</div>
 		</nav>
