@@ -1,0 +1,64 @@
+﻿@using (Html.BeginForm())
+{
+
+	<div class="form-inline sorting-form">
+		<div class="form-group">
+			<label>Сортировать по: </label>
+			<select class="form-control">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label>Отображать по: </label>
+			<select class="form-control">
+				<option>10</option>
+				<option>20</option>
+				<option>30</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="col-lg-4 aside-form">
+		<div class="form-group">
+			<label>Группа</label>
+			<select class="form-control">
+				<option>Группа 1</option>
+				<option>Группа 2</option>
+				<option>Группа 3</option>
+			</select>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Любая группа
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Назначение</label>
+			<div class="checkbox-list">
+				<div>
+					@for (var i = 1; i < 30; i++)
+					{
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> Назначение @i
+							</label>
+						</div>
+					}
+				</div>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Любое назначение
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+			<label>Артикул</label>
+			<input type="text" class="form-control" />
+		</div>
+		<button type="submit" class="btn btn-primary btn-block">Применить</button>
+	</div>
+
+}

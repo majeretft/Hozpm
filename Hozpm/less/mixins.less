@@ -1,3 +1,23 @@
-﻿.indissoluble {
-	white-space: nowrap;
+﻿.remove-link-decoration() {
+	text-decoration: none;
+
+	&:hover, &:visited, &:focus {
+		text-decoration: none;
+	}
+}
+
+.set-link-color(@common, @hover: @common, @visited: @common, @focus: @common) {
+	color: @common;
+
+	&:hover {
+		color: @hover;
+	}
+
+	&:visited {
+		color: @visited;
+	}
+
+	&:focus {
+		color: @focus;
+	}
 }

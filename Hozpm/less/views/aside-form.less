@@ -1,0 +1,49 @@
+﻿@import (once) '../variables.less';
+@import (once) '../mixins.less';
+
+@padding-top: 15px;
+@padding-bottom: @padding-top;
+
+@form-inline-height: 34px + @padding-top + @padding-bottom;
+@screen-lg-left: 780px;
+
+.sorting-form {
+	.form-spacing();
+}
+
+.aside-form {
+	position: absolute;
+	left: @screen-lg-left;
+	top: @form-inline-height;
+
+	.checkbox-list {
+		> div {
+			@checkbox-count: 8;
+			@checkbox-height: 20px;
+			@fist-margin: 10px + 10px;
+			@next-margin: -5px + 10px;
+
+			height: @checkbox-height * @checkbox-count + @fist-margin + (@checkbox-count - 1) * @next-margin;
+			overflow: hidden;
+			overflow-y: auto;
+			padding: 0 5px;
+		}
+
+		border: 1px solid #ccc;
+		border-radius: @element-dorder-radius;
+		padding: 5px;
+	}
+}
+
+.back-to-top {
+	position: fixed;
+	left: 82%;
+	top: 70%;
+	font-size: 36px;
+	.remove-link-decoration();
+}
+
+.form-spacing() {
+	padding-top: @padding-top;
+	padding-bottom: @padding-bottom;
+}
