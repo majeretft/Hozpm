@@ -1,19 +1,38 @@
-﻿<table class="table table-bordered">
-	<thead>
-		<tr>
-			<td>1</td>
-			<td>2</td>
-			<td>3</td>
-		</tr>
-	</thead>
-	<tbody>
-		@for (var i = 0; i < 10; i++)
-		{
+﻿<div class="table-responsive">
+	<table class="table table-bordered product-list">
+		<thead>
 			<tr>
-				<td>x</td>
-				<td>x</td>
-				<td>x</td>
+				<td>
+					<h4>Артикул</h4>
+				</td>
+				<td>
+					<h4>Наименование</h4>
+				</td>
+				<td>
+					<h4>Набор</h4>
+				</td>
+				<td></td>
+				<td></td>
 			</tr>
-		}
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+			@for (var i = 1; i < 11; i++)
+			{
+				<tr>
+					<td class="code">A000000</td>
+					<td class="caption">Продукция с описанием среднестатистической длины или даже очень длинным названием или даже невероятно длинным названием омг какой длины хД @i</td>
+					<td class="kit">
+						<span class="glyphicon glyphicon-ok"></span>
+					</td>
+					<td class="image">
+						<img src="http://placehold.it/128x128" alt="" class="img-responsive"/>
+					</td>
+					<td class="link">
+						<a href="#" class="btn btn-link">Подробнее</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+

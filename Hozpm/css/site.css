@@ -375,7 +375,7 @@ footer {
 }
 .aside-form {
   position: absolute;
-  left: 780px;
+  left: 877px;
   top: 64px;
 }
 .aside-form .checkbox-list {
@@ -400,4 +400,32 @@ footer {
 .back-to-top:visited,
 .back-to-top:focus {
   text-decoration: none;
+}
+.product-list {
+  text-align: center;
+}
+.product-list .code,
+.product-list .caption,
+.product-list .kit,
+.product-list .image,
+.product-list .link {
+  vertical-align: middle;
+}
+.product-list .code,
+.product-list .caption {
+  font-size: 15px;
+}
+.product-list .caption {
+  text-align: left;
+}
+.product-list .code {
+  font-weight: bold;
+}
+.product-list .kit {
+  color: #3c763d;
+}
+.product-list .image {
+  width: 128px;
+  height: 128px;
+  padding: 0px;
 }

@@ -1,0 +1,32 @@
+﻿@import (once) '../variables.less';
+@import (once) '../mixins.less';
+
+.product-list {
+	text-align: center;
+
+	.code, .caption, .kit, .image, .link {
+		vertical-align: middle;
+	}
+	
+	.code, .caption {
+		font-size: 15px;
+	}
+
+	.caption {
+		 text-align: left;
+	}
+
+	.code {
+		font-weight: bold;
+	}
+
+	.kit {
+		color: @bs-success-color;
+	}
+
+	.image {
+		width: 128px;
+		height: 128px;
+		padding: 0px;
+	}
+}
