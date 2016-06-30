@@ -294,3 +294,45 @@ footer {
   height: 186px;
   margin-top: -186px;
 }
+.group-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  width: 358px;
+  height: 619px;
+  background-color: #fcfcfc;
+}
+.group-card > .photo {
+  height: 203px;
+  border-bottom: 1px solid #ddd;
+}
+.group-card > .caption,
+.group-card > .description,
+.group-card > .links {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  margin: 0;
+}
+.group-card > .caption {
+  height: 82px;
+  text-align: center;
+  line-height: 26px;
+}
+.group-card > .description {
+  height: 200px;
+  overflow: hidden;
+}
+.group-card .links {
+  height: 134px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.group-card .links > .btn {
+  display: inline-block;
+  margin: 8px 10px 0 0;
+}

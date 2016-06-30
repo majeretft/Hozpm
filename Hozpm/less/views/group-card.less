@@ -1,0 +1,65 @@
+﻿@import (once) '../variables.less';
+@import (once) '../mixins.less';
+
+@border-radius: 4px;
+@border-color: #ddd;
+@bottom-spacing: 25px;
+@element-top-spacing: 15px;
+@element-bottom-spacing: @element-top-spacing;
+
+@photo-width: 358px;
+@photo-height: 203px;
+@caption-height: 52px + @element-bottom-spacing + @element-top-spacing;
+@description-height: 170px + @element-bottom-spacing + @element-top-spacing;
+@links-height: 119px + @element-bottom-spacing;
+
+@bg-color: #fcfcfc;
+@description-hover-bg: darken(@bg-color, 2%);
+
+.group-card {
+	border: 1px solid @border-color;
+	border-radius: @border-radius;
+	overflow: hidden;
+	margin-bottom: @bottom-spacing;
+	width: @photo-width;
+	height: @photo-height + @caption-height + @description-height + @links-height;
+	background-color: @bg-color;
+
+	> .photo {
+		height: @photo-height;
+		border-bottom: 1px solid @border-color;
+	}
+
+	> .caption, > .description, > .links {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: @element-top-spacing;
+		padding-bottom: @element-bottom-spacing;
+		border-bottom: 1px solid @border-color;
+		overflow: hidden;
+		margin: 0;
+	}
+
+
+	> .caption {
+		height: @caption-height;
+		text-align: center;
+		line-height: 26px;
+	}
+
+	> .description {
+		height: @description-height;
+		overflow: hidden;
+	}
+
+	.links {
+		height: @links-height;
+		padding-bottom: 0;
+		border-bottom: none;
+
+		> .btn {
+			display: inline-block;
+			margin: 8px 10px 0 0;
+		}
+	}
+}

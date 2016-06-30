@@ -1,7 +1,23 @@
 ﻿
 @{
-	ViewBag.Title = "Index";
+	ViewBag.Title = "Заголовок главной страницы";
 }
 
-<h2>Index</h2>
+<div class="page-header">
+	<h2>ViewBag.Title</h2>
+</div>
 
+<div class="row">
+	<div class="col-lg-4">
+		@Html.Partial("Site/GroupCard")
+	</div>
+	<div class="col-lg-4">
+		@Html.Partial("Site/GroupCard")
+	</div>
+	<div class="col-lg-4">
+		@Html.Partial("Site/GroupCard")
+	</div>
+	<div class="col-lg-4">
+		@Html.Partial("Site/GroupCard")
+	</div>
+</div>
