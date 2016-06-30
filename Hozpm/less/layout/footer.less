@@ -41,11 +41,9 @@ footer > .content-wrap {
 		color: darken(@text-color, 25%);
 		background-color: lighten(@bg-color, 5%);
 
-		a,
-		a:hover,
-		a:visited {
-			text-decoration: none;
-			color: darken(@text-color, 25%);
+		a {
+			.remove-link-decoration();
+			.set-link-color(darken(@text-color, 25%));
 		}
 	}
 
@@ -95,16 +93,14 @@ footer > .content-wrap {
 						display: none;
 					}
 
-					a,
-					a:visited {
-						text-decoration: none;
-						color: @share-icon-color;
+					a {
+						.remove-link-decoration();
+						.set-link-color(@share-icon-color, lighten(@share-icon-color, 20%));
 						text-shadow: 1px 1px 20px @share-icon-color;
-					}
 
-					a:hover {
-						color: lighten(@share-icon-color, 20%);
-						text-shadow: 1px 1px 20px lighten(@share-icon-color, 20%);
+						&:hover {
+							text-shadow: 1px 1px 20px lighten(@share-icon-color, 20%);
+						}
 					}
 				}
 
