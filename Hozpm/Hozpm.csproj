@@ -151,6 +151,7 @@
     <Content Include="fonts\social-icons.woff" />
     <Content Include="fonts\social-icons.woff2" />
     <Content Include="less\views\group-card.less" />
+    <Content Include="less\views\aside-form.less" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
@@ -168,6 +169,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Catalog\Index.cshtml" />
+    <Content Include="Views\Shared\Site\AsideForm.cshtml" />
+    <Content Include="Views\Shared\Site\ProductList.cshtml" />
+    <Content Include="Views\Shared\Site\ProductListPaging.cshtml" />
+    <Content Include="Views\Shared\Site\BackToTopButton.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
