@@ -2,112 +2,95 @@
 @import (once) '../mixins.less';
 
 .product-list {
+	overflow: hidden;
 	text-align: center;
 
-	.code, .caption, .kit, .image, .link {
-		vertical-align: middle;
-	}
-
-	.code, .caption {
-		font-size: 15px;
+	.code {
+		width: 90px;
 	}
 
 	.caption {
-		text-align: left;
-	}
-
-	.code {
-		font-weight: bold;
+		width: 435px;
 	}
 
 	.kit {
-		color: @bs-success-color;
+		width: 76px;
 	}
 
 	.image {
 		width: 128px;
-		height: 128px;
-		padding: 0px;
-	}
-}
-
-.product-cards {
-	.card-wrap {
-		position: relative;
-		width: 414px;
-		height: 352px;
-		display: inline-block;
-		margin: 0 15px 15px 0;
-
-		&:nth-child(2n) {
-			margin: 0 0 15px 0;
-		}
 	}
 
-	.product-card {
-		position: absolute;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-		background-color: #fafafa;
+	.link {
+		width: auto;
+	}
 
-		transition: left ease-in-out 0.15s, right ease-in-out 0.15s, bottom ease-in-out 0.15s, border-color ease-in-out 0.15s;
-
-		.remove-link-decoration();
-		.set-link-color(#333);
-
-		&:hover {
-			border-color: @bs-primary-color;
-			left: -3px;
-			right: -3px;
-			bottom: -3px;
-			box-shadow: #ccc 1px 1px 5px;
+	tbody {
+		> tr > td {
+			padding: 0;
+			position: relative;
+			height: 128px;
 		}
 
-		.content {
-			width: 414px;
-			height: 352px;
-			padding: 15px;
-			margin-left: auto;
-			margin-right: auto;
+		.wrap {
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			right: -1px;
+			bottom: -1px;
+			border: 1px solid #ddd;
+
+			.remove-link-decoration();
+			.set-link-color(#333);
+			display: block;
+			z-index: 10000;
+
+			transition: left ease-in-out 0.15s, right ease-in-out 0.15s, bottom ease-in-out 0.15s, border-color ease-in-out 0.15s;
+
+			&:hover {
+				border-color: @bs-primary-color;
+				box-shadow: #ccc 1px 1px 5px;
+				left: -6px;
+				right: 3px;
+				bottom: -1px;
+				z-index: 10001;
+				box-shadow: #ccc 3px 0 5px;
+				background-color: #f5f5f5;
+			}
 		}
 
-		.caption {
-			height: 80px;
+		.code, .caption, .kit, .image, .link {
+			float: left;
+			overflow: hidden;
+			height: 128px;
+			padding: 8px;
+			border-right: 1px solid #ddd;
+		}
+
+		.code, .caption {
 			font-size: 15px;
 		}
 
-		.code {
-			height: 22px;
-			text-align: center;
-			color: #999;
-			
-			> span {
-				font-size: 16px;
-				font-weight: bold;
-			}
+		.caption {
+			text-align: left;
 		}
-		
-		.image {
-			margin-bottom: 10px;
+
+		.code {
+			font-weight: bold;
 		}
 
 		.kit {
-			text-align: center;
+			color: @bs-success-color;
+		}
 
-			> span {
-				font-size: 16px;
-				color: @bs-success-color;
-			}
+		.image {
+			height: 128px;
+			padding: 0px;
 		}
 
 		.link {
-			text-align: center;
-			color: @bs-primary-color;
-			font-size: 16px;
+			width: 116px;
+			border-right: none;
 		}
 	}
 }

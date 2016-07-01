@@ -1,56 +1,41 @@
 ﻿<div class="table-responsive">
-	<table class="table table-bordered table-hover product-list">
+	<table class="table table-bordered product-list">
 		<thead>
 			<tr>
-				<td>
+				<td class="code">
 					<h4>Артикул</h4>
 				</td>
-				<td>
+				<td class="caption">
 					<h4>Наименование</h4>
 				</td>
-				<td>
+				<td class="kit">
 					<h4>Набор</h4>
 				</td>
-				<td></td>
-				<td></td>
+				<td class="image"></td>
+				<td class="link"></td>
 			</tr>
 		</thead>
 		<tbody>
 			@for (var i = 1; i < 11; i++)
 			{
 				<tr>
-					<td class="code">A000000</td>
-					<td class="caption">Продукция с описанием среднестатистической длины или даже очень длинным названием или даже невероятно длинным названием омг какой длины хД @i</td>
-					<td class="kit">
-						<span class="glyphicon glyphicon-ok"></span>
-					</td>
-					<td class="image">
-						<img src="http://placehold.it/128x128" alt="" class="img-responsive" />
-					</td>
-					<td class="link">
-						<a href="#" class="btn btn-link">Подробнее</a>
+					<td colspan="5">
+						<a href="#" class="wrap">
+							<div class="code">A000000</div>
+							<div class="caption">Продукция с описанием среднестатистической длины или даже очень длинным названием или даже невероятно длинным названием омг какой длины хД @i</div>
+							<div class="kit">
+								<span class="glyphicon glyphicon-ok"></span>
+							</div>
+							<div class="image">
+								<img src="http://placehold.it/128x128" alt="" class="img-responsive" />
+							</div>
+							<div class="link">
+								<span class="btn btn-link">Подробнее</span>
+							</div>
+						</a>
 					</td>
 				</tr>
 			}
 		</tbody>
 	</table>
-</div>
-
-<div class="product-cards">
-	@for (var i = 1; i < 11; i++)
-	{
-		<div class="card-wrap">
-			<a href="#" class="product-card">
-				<div class="content">
-					<p class="clearfix">
-						<span class="code pull-left"><i>Артикул:</i> <span>A000000</span></span>
-						<span class="kit pull-right">Набор: <span class="glyphicon glyphicon-ok"></span></span>
-					</p>
-					<p class="caption text-justify">Продукция с описанием среднестатистической длины или даже очень длинным названием или даже невероятно длинным названием омг какой длины хД @i</p>
-					<img src="http://placehold.it/285x160" alt="" class="img-responsive center-block image" />
-					<div class="link">Подробнее</div>
-				</div>
-			</a>
-		</div>
-	}
 </div>

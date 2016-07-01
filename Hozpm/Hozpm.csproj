@@ -154,6 +154,7 @@
     <Content Include="less\views\aside-form.less" />
     <Content Include="less\views\back-to-top.less" />
     <Content Include="less\views\product-list.less" />
+    <Content Include="less\views\product-card.less" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
@@ -175,6 +176,7 @@
     <Content Include="Views\Shared\Site\ProductList.cshtml" />
     <Content Include="Views\Shared\Site\ProductListPaging.cshtml" />
     <Content Include="Views\Shared\Site\BackToTopButton.cshtml" />
+    <Content Include="Views\Shared\Site\ProductCard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
