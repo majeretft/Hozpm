@@ -1,8 +1,10 @@
 ﻿<div class="product-cards">
 	@for (var i = 1; i < 11; i++)
 	{
+		var link = i%2 == 0 ? Url.Action("Product", "Catalog") : Url.Action("Kit", "Catalog");
+
 		<div class="card-wrap">
-			<a href="#" class="product-card">
+			<a href="@link" class="product-card">
 				<div class="content">
 					<p class="clearfix">
 						<span class="code pull-left"><i>Артикул:</i> <span>A000000</span></span>

@@ -177,6 +177,8 @@
     <Content Include="Views\Shared\Site\ProductListPaging.cshtml" />
     <Content Include="Views\Shared\Site\BackToTopButton.cshtml" />
     <Content Include="Views\Shared\Site\ProductCard.cshtml" />
+    <Content Include="Views\Catalog\Product.cshtml" />
+    <Content Include="Views\Catalog\Kit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
