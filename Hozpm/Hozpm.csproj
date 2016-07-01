@@ -179,6 +179,10 @@
     <Content Include="Views\Shared\Site\ProductCard.cshtml" />
     <Content Include="Views\Catalog\Product.cshtml" />
     <Content Include="Views\Catalog\Kit.cshtml" />
+    <Content Include="Views\Shared\Site\ProductItem.cshtml" />
+    <Content Include="Views\Shared\Site\SimilarProduct.cshtml" />
+    <Content Include="Views\Shared\Site\ContainsInKit.cshtml" />
+    <Content Include="Views\Shared\Site\ProductsInKit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

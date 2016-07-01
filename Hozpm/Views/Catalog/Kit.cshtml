@@ -3,5 +3,22 @@
     ViewBag.Title = "Kit";
 }
 
-<h2>Kit</h2>
+<div class="page-header">
+	<h1>Название продукции (краткое)</h1>
+</div>
 
+<p class="lead">Полное название продукции</p>
+
+@Html.Partial("Site/ProductItem")
+
+<div class="row">
+	<div class="col-lg-6">
+		<h3>В набор включена следующая продукция</h3>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-lg-6">
+		@Html.Partial("Site/ProductsInKit")
+	</div>
+</div>
