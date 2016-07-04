@@ -1,0 +1,24 @@
+﻿
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>_LayoutManagement</title>
+</head>
+<body>
+
+	@RenderBody()
+
+	@Styles.Render("~/css/bootstrap.css")
+	@RenderSection("styles", false)
+
+	@Scripts.Render("~/js/jquery.js", "~/js/bootstrap.js")
+	@RenderSection("scripts", false)
+
+</body>
+</html>

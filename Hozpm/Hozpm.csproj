@@ -187,6 +187,9 @@
     <Content Include="Views\Shared\Site\ProductsInKit.cshtml" />
     <Content Include="Views\Shared\Site\Breadcrumb.cshtml" />
     <Content Include="Views\Shared\Partial\Catalog\ProductOrderedList.cshtml" />
+    <Content Include="Views\Shared\_LayoutManagement.cshtml" />
+    <Content Include="Views\Management\Index.cshtml" />
+    <Content Include="Views\Management\_ViewStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -203,6 +206,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CatalogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManagementController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
