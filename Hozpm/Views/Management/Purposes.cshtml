@@ -1,7 +1,41 @@
 ﻿
 @{
-    ViewBag.Title = "Purposes";
+	ViewBag.Title = "Назначения";
 }
 
-<h2>Purposes</h2>
+<div class="page-header">
+	<h1>@ViewBag.Title</h1>
+</div>
 
+<div class="table-responsive">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Название</th>
+				<th>Описание</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@for (var i = 0; i < 3; i++)
+			{
+				<tr>
+					<td>@i</td>
+					<td>Название группы @i</td>
+					<td>Описание группы @i</td>
+					<td>
+						<button type="button" class="btn btn-default" title="Редактировать">
+							<span class="glyphicon glyphicon-edit"></span>
+						</button>
+						<button type="button" class="btn btn-danger" title="Удалить">
+							<span class="glyphicon glyphicon-remove"></span>
+						</button>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<button type="button" class="btn btn-primary">Добавить</button>
