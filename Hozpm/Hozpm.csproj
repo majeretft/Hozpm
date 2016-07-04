@@ -190,6 +190,10 @@
     <Content Include="Views\Shared\_LayoutManagement.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
     <Content Include="Views\Management\_ViewStart.cshtml" />
+    <Content Include="Views\Management\Groups.cshtml" />
+    <Content Include="Views\Management\Purposes.cshtml" />
+    <Content Include="Views\Management\Products.cshtml" />
+    <Content Include="Views\Management\Kits.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
