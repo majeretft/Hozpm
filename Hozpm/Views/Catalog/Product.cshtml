@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Product";
+	ViewBag.Title = "Product";
 }
 
 <div class="page-header">
@@ -11,20 +11,8 @@
 
 @Html.Partial("Site/ProductItem")
 
-<div class="row">
-	<div class="col-lg-6">
-		<h3>Эта продукция в другой таре</h3>
-	</div>
-	<div class="col-lg-6">
-		<h3>Данная продукция включена в следующие наборы</h3>
-	</div>
-</div>
+<h3>Эта продукция в другой таре</h3>
+@Html.Partial("Site/SimilarProduct")
 
-<div class="row">
-	<div class="col-lg-6">
-		@Html.Partial("Site/SimilarProduct")
-	</div>
-	<div class="col-lg-6">
-		@Html.Partial("Site/ContainsInKit")
-	</div>
-</div>
+<h3>Данная продукция включена в следующие наборы</h3>
+@Html.Partial("Partial/Catalog/ProductOrderedList")
