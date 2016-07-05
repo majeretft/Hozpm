@@ -139,6 +139,10 @@
     <Content Include="css\site.min.css">
       <DependentUpon>site.css</DependentUpon>
     </Content>
+    <Content Include="css\user.css" />
+    <Content Include="css\user.min.css">
+      <DependentUpon>user.css</DependentUpon>
+    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\social-icons.svg" />
     <Content Include="img\avrgroup_logo.png" />
@@ -178,6 +182,9 @@
     <Content Include="less\views\product-card.less" />
     <Content Include="less\views\product-list-paging.less" />
     <Content Include="less\views\catalog\product-ordered-list.less" />
+    <Content Include="less\_user\login.less" />
+    <Content Include="less\_management\all.less" />
+    <Content Include="less\_user\all.less" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
@@ -215,6 +222,8 @@
     <Content Include="Views\Management\Purposes.cshtml" />
     <Content Include="Views\Management\Products.cshtml" />
     <Content Include="Views\Management\Kits.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\_ViewStart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -243,9 +252,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="less\_management\" />
     <Folder Include="Views\Partial\" />
-    <Folder Include="Views\User\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

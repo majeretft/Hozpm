@@ -11,6 +11,9 @@ namespace Hozpm
 			bundles.Add(new StyleBundle("~/css/site.css")
 				.Include("~/css/site.css"));
 
+			bundles.Add(new StyleBundle("~/css/user.css")
+				.Include("~/css/user.css"));
+
 			bundles.Add(new ScriptBundle("~/js/jquery.js")
 				.Include("~/Scripts/jquery-{version}.js"));
 			bundles.Add(new ScriptBundle("~/js/bootstrap.js")

@@ -1,0 +1,12 @@
+﻿html,
+body {
+  height: 100%;
+}
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login .wrap {
+  flex-basis: 350px;
+}

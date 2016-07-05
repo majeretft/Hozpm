@@ -2,5 +2,9 @@
   {
     "outputFile": "css/site.css",
     "inputFile": "less/all.less"
+  },
+  {
+    "outputFile": "css/user.css",
+    "inputFile": "less/_user/all.less"
   }
 ]
