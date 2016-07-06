@@ -223,13 +223,7 @@
     <Content Include="Views\Shared\Site\ProductsInKit.cshtml" />
     <Content Include="Views\Shared\Site\Breadcrumb.cshtml" />
     <Content Include="Views\Shared\Partial\Catalog\ProductOrderedList.cshtml" />
-    <Content Include="Views\Shared\_LayoutManagement.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
-    <Content Include="Views\Management\_ViewStart.cshtml" />
-    <Content Include="Views\Management\Groups.cshtml" />
-    <Content Include="Views\Management\Purposes.cshtml" />
-    <Content Include="Views\Management\Products.cshtml" />
-    <Content Include="Views\Management\Kits.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

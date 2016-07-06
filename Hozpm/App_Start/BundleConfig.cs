@@ -6,23 +6,29 @@ namespace Hozpm
 	{
 		public static void Register(BundleCollection bundles)
 		{
+			//frameworks css
 			bundles.Add(new StyleBundle("~/css/bootstrap.css")
 				.Include("~/Content/bootstrap.css"));
 			bundles.Add(new StyleBundle("~/css/bootstrap-theme.css")
 				.Include("~/Content/bootstrap-theme.css"));
-			bundles.Add(new StyleBundle("~/css/site.css")
-				.Include("~/css/site.css"));
 
-			bundles.Add(new StyleBundle("~/css/user.css")
-				.Include("~/css/user.css"));
-
+			//frameworks js
 			bundles.Add(new ScriptBundle("~/js/jquery.js")
 				.Include("~/Scripts/jquery-{version}.js"));
 			bundles.Add(new ScriptBundle("~/js/bootstrap.js")
 				.Include("~/Scripts/bootstrap.js"));
-
 			bundles.Add(new ScriptBundle("~/js/knockout.js")
 				.Include("~/Scripts/knockout-{version}.js"));
+			bundles.Add(new ScriptBundle("~/js/require.js")
+				.Include("~/Scripts/require.js"));
+			bundles.Add(new ScriptBundle("~/js/sammy.js")
+				.Include("~/Scripts/sammy-{version}.js"));
+
+			//website
+			bundles.Add(new StyleBundle("~/css/site.css")
+				.Include("~/css/site.css"));
+			bundles.Add(new StyleBundle("~/css/user.css")
+				.Include("~/css/user.css"));
 		}
 	}
 }

@@ -1,8 +1,20 @@
 ﻿
 @{
 	Layout = null;
-	ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<!DOCTYPE html>
 
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>_LayoutManagement</title>
+</head>
+<body>
+
+	123
+
+	@Styles.Render("~/css/bootstrap.css")
+	@Scripts.Render("~/js/jquery.js", "~/js/bootstrap.js", "~/js/require.js", "~/js/sammy.js", "~/js/knockout.js")
+</body>
+</html>
