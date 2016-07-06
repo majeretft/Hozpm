@@ -1,8 +1,9 @@
-﻿@using System.Reflection
+﻿@using System.Diagnostics
+@using System.Reflection
 
 @{
 	Layout = null;
-	var version = Assembly.GetAssembly(typeof (Global)).GetName().Version;
+	var version = FileVersionInfo.GetVersionInfo(Assembly.GetAssembly(typeof (Global)).Location).ProductVersion;
 }
 
 <!DOCTYPE html>
@@ -24,6 +25,11 @@
 				bootstrap: '../scripts/bootstrap',
 				knockout: '../scripts/knockout-3.4.0',
 				sammy: '../scripts/sammy-0.7.5'
+			},
+			shim: {
+				bootstrap: {
+					deps: ['jquery']
+				}
 			}
 		});
 

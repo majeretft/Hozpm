@@ -1,8 +1,10 @@
-import { App as Application } from 'app';
-requirejs(['jquery', 'bootstrap', 'knockout', 'sammy', 'app'], () => {
-    $(() => {
-        const app = new Application();
-        app.init();
+define(["require", "exports", 'app'], function (require, exports, app_1) {
+    "use strict";
+    requirejs(['jquery', 'bootstrap', 'knockout', 'sammy', 'app'], function () {
+        $(function () {
+            var app = new app_1.App();
+            app.init();
+        });
     });
 });
 //# sourceMappingURL=app.loader.js.map
