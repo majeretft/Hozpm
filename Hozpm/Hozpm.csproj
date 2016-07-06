@@ -198,6 +198,7 @@
     <Content Include="scripts\require.js" />
     <Content Include="scripts\sammy-0.7.5.js" />
     <Content Include="scripts\sammy-0.7.5.min.js" />
+    <Content Include="scripts\text.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -257,7 +258,6 @@
     <Folder Include="Views\Partial\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\app.loader.ts" />
     <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="scripts\typings\bootstrap\bootstrap.d.ts" />
     <TypeScriptCompile Include="scripts\typings\jquery\jquery.d.ts" />

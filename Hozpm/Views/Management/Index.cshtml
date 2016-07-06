@@ -3,7 +3,7 @@
 
 @{
 	Layout = null;
-	var version = FileVersionInfo.GetVersionInfo(Assembly.GetAssembly(typeof (Global)).Location).ProductVersion;
+	var version = FileVersionInfo.GetVersionInfo(Assembly.GetAssembly(typeof(Global)).Location).ProductVersion;
 }
 
 <!DOCTYPE html>
@@ -15,7 +15,11 @@
 </head>
 <body>
 
-	<script src="@Url.Content("~/scripts/require.js")" data-main="@Url.Content("~/app/app.loader.js")"></script>
+	<!-- ko component: "navbar-component" --><!-- /ko -->
+
+	@Styles.Render("~/css/bootstrap.css")
+
+	<script src="@Url.Content("~/scripts/require.js")" data-main="@Url.Content("~/app/app")"></script>
 	<script>
 		require.config({
 			urlArgs: 'v=@version',
@@ -24,7 +28,8 @@
 				jquery: '../scripts/jquery-1.12.4',
 				bootstrap: '../scripts/bootstrap',
 				knockout: '../scripts/knockout-3.4.0',
-				sammy: '../scripts/sammy-0.7.5'
+				sammy: '../scripts/sammy-0.7.5',
+				text: '../scripts/text'
 			},
 			shim: {
 				bootstrap: {
@@ -32,10 +37,6 @@
 				}
 			}
 		});
-
-		var fwStyles = [
-			'@Url.Content("~/content/bootstrap.css")'
-		];
 	</script>
 
 </body>
