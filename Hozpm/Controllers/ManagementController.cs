@@ -8,25 +8,5 @@ namespace Hozpm.Controllers
 		{
 			return View();
 		}
-
-		public ActionResult Groups()
-		{
-			return View();
-		}
-
-		public ActionResult Purposes()
-		{
-			return View();
-		}
-
-		public ActionResult Products()
-		{
-			return View();
-		}
-
-		public ActionResult Kits()
-		{
-			return View();
-		}
 	}
 }

@@ -24,11 +24,23 @@ namespace Hozpm
 			bundles.Add(new ScriptBundle("~/js/sammy.js")
 				.Include("~/Scripts/sammy-{version}.js"));
 
-			//website
+			//website css
 			bundles.Add(new StyleBundle("~/css/site.css")
 				.Include("~/css/site.css"));
 			bundles.Add(new StyleBundle("~/css/user.css")
 				.Include("~/css/user.css"));
+
+			//website js
+			bundles.Add(new ScriptBundle("~/app/app.loader.js")
+				.Include("~/app/app.loader.js"));
+			bundles.Add(new ScriptBundle("~/app/app.js")
+				.Include("~/app/app.js"));
+
+
+			bundles.Add(new ScriptBundle("~/XD.js")
+				.Include("~/Scripts/bootstrap.js")
+				.Include("~/app/app.loader.js")
+				.Include("~/app/app.js"));
 		}
 	}
 }
