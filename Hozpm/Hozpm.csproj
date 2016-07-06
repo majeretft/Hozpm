@@ -193,6 +193,8 @@
     <Content Include="scripts\jquery-1.12.4.min.map" />
     <Content Include="scripts\knockout-3.4.0.debug.js" />
     <Content Include="scripts\knockout-3.4.0.js" />
+    <Content Include="scripts\r.js" />
+    <Content Include="scripts\require.js" />
     <Content Include="scripts\sammy-0.7.5.js" />
     <Content Include="scripts\sammy-0.7.5.min.js" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -264,6 +266,7 @@
     <TypeScriptCompile Include="scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="scripts\typings\knockout\knockout.d.ts" />
     <TypeScriptCompile Include="scripts\typings\knockout\tests\jasmine.extensions.d.ts" />
+    <TypeScriptCompile Include="scripts\typings\requirejs\require.d.ts" />
     <TypeScriptCompile Include="scripts\typings\sammyjs\sammyjs.d.ts" />
     <TypeScriptCompile Include="scripts\_management\app.ts" />
   </ItemGroup>
