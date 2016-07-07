@@ -26,15 +26,23 @@
 				<a class="navbar-brand" href="#">Вернуться на сайт</a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-5">
-				<ul class="nav navbar-nav" data-bind="foreach: menu.links">
-					<li data-bind="css: { active: $data.id == $parent.menu.current() }">
-						<a href="#" data-bind="text: $data.text, click: $parent.menu.setCurrent"></a>
+				<ul class="nav navbar-nav" data-bind="foreach: viewsList">
+					<li data-bind="css: { active: id == $parent.currentPageId() }">
+						<a href="#" data-bind="text: linkText, click: $parent.updatePage"></a>
 					</li>
 				</ul>
-				<p class="navbar-text navbar-right">Выполнен вход: <a href="#" class="navbar-link">User 1</a></p>
+				<p class="navbar-text navbar-right">
+					Выполнен вход: <a href="#" class="navbar-link">User 1</a>
+				</p>
 			</div>
 		</div>
 	</nav>
+
+	<div class="container">
+		<div class="page-header">
+			<h1 data-bind="text: pageCaption"></h1>
+		</div>
+	</div>
 
 	@Styles.Render("~/css/bootstrap.css")
 

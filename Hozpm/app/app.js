@@ -2,29 +2,28 @@ define(["require", "exports", 'knockout', 'jquery', 'bootstrap'], function (requ
     "use strict";
     var App = (function () {
         function App() {
-            this.menu = new Menu();
+            var _this = this;
+            this.pageCaption = ko.observable();
+            this.currentPageId = ko.observable();
+            this.viewsList = [
+                { id: 0, linkText: 'Стартовая страница', pageCaption: 'Стартовая страница' },
+                { id: 1, linkText: 'Группы', pageCaption: 'Группы' },
+                { id: 2, linkText: 'Назначения', pageCaption: 'Назначения' },
+                { id: 3, linkText: 'Продукция', pageCaption: 'Продукция' },
+                { id: 4, linkText: 'Наборы', pageCaption: 'Наборы' }
+            ];
+            this.updatePage = function (view) {
+                var pageId = view.id;
+                var pageCaption = view.pageCaption;
+                _this.currentPageId(pageId);
+                _this.pageCaption(pageCaption);
+            };
         }
         App.prototype.init = function () {
             ko.applyBindings(this);
+            this.updatePage(this.viewsList[0]);
         };
         return App;
-    }());
-    var Menu = (function () {
-        function Menu() {
-            var _this = this;
-            this.links = [
-                { id: 0, text: 'Стартовая страница' },
-                { id: 1, text: 'Группы' },
-                { id: 2, text: 'Назначения' },
-                { id: 3, text: 'Продукция' },
-                { id: 4, text: 'Наборы' }
-            ];
-            this.current = ko.observable(3);
-            this.setCurrent = function (context) {
-                _this.current(context.id);
-            };
-        }
-        return Menu;
     }());
     $(function () {
         var app = new App();

@@ -2,32 +2,34 @@
 import $ = require('jquery');
 import 'bootstrap';
 
-interface ILink {
+interface IView {
 	id: number;
-	text: string;
+	linkText: string;
+	pageCaption: string;
 }
 
 class App {
-	public menu = new Menu();
+	public pageCaption = ko.observable<string>();
+	public currentPageId = ko.observable<number>();
+
+	private viewsList: IView[] = [
+		{ id: 0, linkText: 'Стартовая страница', pageCaption: 'Стартовая страница' },
+		{ id: 1, linkText: 'Группы', pageCaption: 'Группы' },
+		{ id: 2, linkText: 'Назначения', pageCaption: 'Назначения' },
+		{ id: 3, linkText: 'Продукция', pageCaption: 'Продукция' },
+		{ id: 4, linkText: 'Наборы', pageCaption: 'Наборы' }
+	];
 
 	public init(): void {
 		ko.applyBindings(this);
+		this.updatePage(this.viewsList[0]);
 	}
-}
 
-class Menu {
-	public links: ILink[] = [
-		{ id: 0, text: 'Стартовая страница' },
-		{ id: 1, text: 'Группы' },
-		{ id: 2, text: 'Назначения' },
-		{ id: 3, text: 'Продукция' },
-		{ id: 4, text: 'Наборы' }
-	];
-
-	public current = ko.observable(3);
-
-	public setCurrent = (context: ILink) => {
-		this.current(context.id);
+	public updatePage = (view: IView): void => {
+		const pageId = view.id;
+		const pageCaption = view.pageCaption;
+		this.currentPageId(pageId);
+		this.pageCaption(pageCaption);
 	}
 }
 
