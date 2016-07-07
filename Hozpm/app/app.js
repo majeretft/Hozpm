@@ -2,17 +2,30 @@ define(["require", "exports", 'knockout', 'jquery', 'bootstrap'], function (requ
     "use strict";
     var App = (function () {
         function App() {
+            this.menu = new Menu();
         }
         App.prototype.init = function () {
-            ko.components.register('navbar-component', {
-                template: { require: 'text!components/navbar/template.html' },
-                viewModel: null
-            });
-            ko.applyBindings(null);
+            ko.applyBindings(this);
         };
         return App;
     }());
-    exports.App = App;
+    var Menu = (function () {
+        function Menu() {
+            var _this = this;
+            this.links = [
+                { id: 0, text: 'Стартовая страница' },
+                { id: 1, text: 'Группы' },
+                { id: 2, text: 'Назначения' },
+                { id: 3, text: 'Продукция' },
+                { id: 4, text: 'Наборы' }
+            ];
+            this.current = ko.observable(3);
+            this.setCurrent = function (context) {
+                _this.current(context.id);
+            };
+        }
+        return Menu;
+    }());
     $(function () {
         var app = new App();
         app.init();
