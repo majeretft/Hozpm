@@ -1,4 +1,7 @@
-﻿@font-face {
+﻿@import (once) 'variables.less';
+@import (once) 'mixins.less';
+
+@font-face {
 	font-family: 'social-icons';
 	src: url('../fonts/social-icons.eot?59928839');
 	src: url('../fonts/social-icons.eot?59928839#iefix') format('embedded-opentype'), url('../fonts/social-icons.woff2?59928839') format('woff2'), url('../fonts/social-icons.woff?59928839') format('woff'), url('../fonts/social-icons.ttf?59928839') format('truetype'), url('../fonts/social-icons.svg?59928839#social-icons') format('svg');
@@ -6,7 +9,9 @@
 	font-style: normal;
 }
 
-[class^="si-"]:before, [class*=" si-"]:before {
+[class^="si-"]:before,
+[class*=" si-"]:before,
+.ya-share2__icon:before {
 	font-family: "social-icons";
 	font-style: normal;
 	font-weight: normal;
@@ -34,82 +39,181 @@
 	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-.si-twitter:before {
-	content: '\e800';
+.si-twitter() {
+	&:before {
+		content: '\e800';
+	}
 }
 
-.si-vkontakte:before {
-	content: '\e801';
+.si-vkontakte() {
+	&:before {
+		content: '\e801';
+	}
 }
 
-.si-facebook:before {
-	content: '\e802';
+.si-facebook() {
+	&:before {
+		content: '\e802';
+	}
 }
 
-.si-at:before {
-	content: '\e803';
+.si-at() {
+	&:before {
+		content: '\e803';
+	}
 }
 
-.si-digg:before {
-	content: '\e804';
+.si-digg() {
+	&:before {
+		content: '\e804';
+	}
 }
 
-.si-linkedin:before {
-	content: '\e805';
+.si-linkedin() {
+	&:before {
+		content: '\e805';
+	}
 }
 
-.si-youtube:before {
-	content: '\e806';
+.si-youtube() {
+	&:before {
+		content: '\e806';
+	}
 }
 
-.si-gplus:before {
-	content: '\e807';
+.si-gplus() {
+	&:before {
+		content: '\e807';
+	}
 }
 
-.si-skype:before {
-	content: '\e808';
+.si-skype() {
+	&:before {
+		content: '\e808';
+	}
 }
 
-.si-whatsapp:before {
-	content: '\e809';
+.si-whatsapp() {
+	&:before {
+		content: '\e809';
+	}
 }
 
-.si-wechat:before {
-	content: '\e80a';
+.si-wechat() {
+	&:before {
+		content: '\e80a';
+	}
 }
 
-.si-reddit:before {
-	content: '\e80b';
+.si-reddit() {
+	&:before {
+		content: '\e80b';
+	}
 }
 
-.si-pinterest:before {
-	content: '\e80c';
+.si-pinterest() {
+	&:before {
+		content: '\e80c';
+	}
 }
 
-.si-delicious:before {
-	content: '\e80d';
+.si-delicious() {
+	&:before {
+		content: '\e80d';
+	}
 }
 
-.si-tumblr:before {
-	content: '\e80e';
+.si-tumblr() {
+	&:before {
+		content: '\e80e';
+	}
 }
 
-.si-evernote:before {
-	content: '\e80f';
+.si-evernote() {
+	&:before {
+		content: '\e80f';
+	}
 }
 
-.si-tencent-weibo:before {
-	content: '\e810';
+.si-tencent-weibo() {
+	&:before {
+		content: '\e810';
+	}
 }
 
-.si-odnoklassniki:before {
-	content: '\e811';
+.si-odnoklassniki() {
+	&:before {
+		content: '\e811';
+	}
 }
 
-.si-icq:before {
-	content: '\e812';
+.si-icq() {
+	&:before {
+		content: '\e812';
+	}
 }
 
-.si-delicious-1:before {
-	content: '\e813';
+.si-delicious-1() {
+	&:before {
+		content: '\e813';
+	}
+}
+
+.ya-share2 {
+	> div {
+		> ul {
+			display: block;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+
+			li {
+				display: inline-block;
+				margin: 10px;
+				padding: 10px;
+
+				.ya-share2__badge {
+					.ya-share2__icon {
+						font-size: 20px/1;
+					}
+				}
+
+				.ya-share2__counter,
+				.ya-share2__title {
+					display: none;
+				}
+
+				a {
+					.remove-link-decoration();
+					.set-link-color(@share-icon-color, lighten(@share-icon-color, 20%));
+					text-shadow: 1px 1px 20px @share-icon-color;
+
+					&:hover {
+						text-shadow: 1px 1px 20px lighten(@share-icon-color, 20%);
+					}
+				}
+			}
+
+			li[class$="vkontakte"] .ya-share2__icon {
+				.si-vkontakte();
+			}
+
+			li[class$="facebook"] .ya-share2__icon {
+				.si-facebook();
+			}
+
+			li[class$="_odnoklassniki"] .ya-share2__icon {
+				.si-odnoklassniki();
+			}
+
+			li[class$="gplus"] .ya-share2__icon {
+				.si-gplus();
+			}
+
+			li[class$="linkedin"] .ya-share2__icon {
+				.si-linkedin();
+			}
+		}
+	}
 }

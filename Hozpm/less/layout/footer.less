@@ -4,7 +4,6 @@
 footer > .content-wrap {
 	@bg-color: #303030;
 	@text-color: #ccc;
-	@share-icon-color: #30e5ff;
 
 	color: @text-color;
 	background-color: @bg-color;
@@ -64,66 +63,6 @@ footer > .content-wrap {
 
 		.copywrite {
 			text-align: left;
-		}
-	}
-
-	.ya-share2 {
-		> div {
-			> ul {
-				display: block;
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				text-align: center;
-
-				li {
-					display: inline-block;
-					margin: 10px;
-					padding: 10px;
-
-					.ya-share2__badge {
-						.ya-share2__icon {
-							font: normal normal normal 20px/1 'social-icons';
-							text-rendering: auto;
-						}
-					}
-
-					.ya-share2__counter,
-					.ya-share2__title {
-						display: none;
-					}
-
-					a {
-						.remove-link-decoration();
-						.set-link-color(@share-icon-color, lighten(@share-icon-color, 20%));
-						text-shadow: 1px 1px 20px @share-icon-color;
-
-						&:hover {
-							text-shadow: 1px 1px 20px lighten(@share-icon-color, 20%);
-						}
-					}
-				}
-
-				li[class$="vkontakte"] .ya-share2__icon:before {
-					content: '\e801';
-				}
-
-				li[class$="facebook"] .ya-share2__icon:before {
-					content: '\e802';
-				}
-
-				li[class$="_odnoklassniki"] .ya-share2__icon:before {
-					content: '\e811';
-				}
-
-				li[class$="gplus"] .ya-share2__icon:before {
-					content: '\e807';
-				}
-
-				li[class$="linkedin"] .ya-share2__icon:before {
-					content: '\e805';
-				}
-			}
 		}
 	}
 }

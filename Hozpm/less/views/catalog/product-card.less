@@ -1,0 +1,79 @@
+﻿@import (once) '../../variables.less';
+@import (once) '../../mixins.less';
+
+.product-cards {
+
+	.card-placeholder {
+		display: inline-block;
+		width: 420px;
+		height: 324px;
+		position: relative;
+
+		.card {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			overflow: hidden;
+			border: 1px solid #ccc;
+			border-radius: @element-border-radius;
+
+			transition: 0.15s ease-in-out;
+			z-index: 2;
+
+			.remove-link-decoration();
+			.set-link-color(inherit);
+
+			&:hover {
+				@coef: 1.05;
+
+				-ms-transform: scale(@coef, @coef); /* IE 9 */
+				-webkit-transform: scale(@coef, @coef); /* Safari */
+				transform: scale(@coef, @coef);
+				box-shadow: 0 0 5px @bs-primary-color;
+				border-color: @bs-primary-color;
+			}
+
+			.content {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				padding: 10px;
+
+				.sign,
+				.caption,
+				.image  {
+					margin-bottom: 5px;
+				}
+
+				.sign {
+					font-size: 16px;
+
+					.code {
+						float: left;
+					}
+
+					.kit {
+						float: right;
+					}
+
+					.kit > .glyphicon {
+						color: @bs-success-color;
+					}
+				}
+
+				.caption {
+					text-align: justify;
+				}
+
+				.image {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+}

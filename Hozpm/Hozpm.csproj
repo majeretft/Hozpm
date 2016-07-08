@@ -182,11 +182,10 @@
     <Content Include="fonts\social-icons.woff" />
     <Content Include="fonts\social-icons.woff2" />
     <Content Include="less\views\group-card.less" />
-    <Content Include="less\views\aside-form.less" />
+    <Content Include="less\views\catalog\aside-form.less" />
     <Content Include="less\views\back-to-top.less" />
-    <Content Include="less\views\product-list.less" />
-    <Content Include="less\views\product-card.less" />
-    <Content Include="less\views\product-list-paging.less" />
+    <Content Include="less\views\catalog\product-card.less" />
+    <Content Include="less\views\catalog\product-list-paging.less" />
     <Content Include="less\views\catalog\product-ordered-list.less" />
     <Content Include="less\_user\login.less" />
     <Content Include="less\_user\all.less" />
@@ -207,25 +206,23 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Partial\Layout\Header.cshtml" />
     <Content Include="Views\Shared\Partial\Layout\Footer.cshtml" />
-    <Content Include="Views\Shared\Site\GroupCard.cshtml" />
+    <Content Include="Views\Shared\Partial\Home\GroupCard.cshtml" />
     <Content Include="Views\Home\CustomerInfo.cshtml" />
     <Content Include="Views\Home\PackingInfo.cshtml" />
-    <Content Include="Views\Home\Catalog.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Catalog\Index.cshtml" />
-    <Content Include="Views\Shared\Site\AsideForm.cshtml" />
-    <Content Include="Views\Shared\Site\ProductList.cshtml" />
-    <Content Include="Views\Shared\Site\ProductListPaging.cshtml" />
-    <Content Include="Views\Shared\Site\BackToTopButton.cshtml" />
-    <Content Include="Views\Shared\Site\ProductCard.cshtml" />
+    <Content Include="Views\Shared\Partial\Catalog\AsideForm.cshtml" />
+    <Content Include="Views\Shared\Partial\Catalog\ProductListPaging.cshtml" />
+    <Content Include="Views\Shared\Partial\BackToTopButton.cshtml" />
+    <Content Include="Views\Shared\Partial\Catalog\ProductCard.cshtml" />
     <Content Include="Views\Catalog\Product.cshtml" />
     <Content Include="Views\Catalog\Kit.cshtml" />
-    <Content Include="Views\Shared\Site\ProductItem.cshtml" />
-    <Content Include="Views\Shared\Site\SimilarProduct.cshtml" />
-    <Content Include="Views\Shared\Site\ContainsInKit.cshtml" />
-    <Content Include="Views\Shared\Site\ProductsInKit.cshtml" />
-    <Content Include="Views\Shared\Site\Breadcrumb.cshtml" />
+    <Content Include="Views\Shared\Partial\Catalog\ProductItem.cshtml" />
+    <Content Include="Views\Shared\Partial\Catalog\SimilarProduct.cshtml" />
+    <Content Include="Views\Shared\Partial\Catalog\KitContent.cshtml" />
+    <Content Include="Views\Shared\Partial\Catalog\ProductsInKit.cshtml" />
+    <Content Include="Views\Shared\Partial\Breadcrumb.cshtml" />
     <Content Include="Views\Shared\Partial\Catalog\ProductOrderedList.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
@@ -256,9 +253,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Partial\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="app\components\named-table\module.ts" />

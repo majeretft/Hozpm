@@ -6,7 +6,8 @@
   font-style: normal;
 }
 [class^="si-"]:before,
-[class*=" si-"]:before {
+[class*=" si-"]:before,
+.ya-share2__icon:before {
   font-family: "social-icons";
   font-style: normal;
   font-weight: normal;
@@ -33,65 +34,61 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-.si-twitter:before {
-  content: '\e800';
+.ya-share2 > div > ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
-.si-vkontakte:before {
+.ya-share2 > div > ul li {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
+.ya-share2 > div > ul li .ya-share2__badge .ya-share2__icon {
+  font-size: 20px;
+}
+.ya-share2 > div > ul li .ya-share2__counter,
+.ya-share2 > div > ul li .ya-share2__title {
+  display: none;
+}
+.ya-share2 > div > ul li a {
+  text-decoration: none;
+  color: #30e5ff;
+  text-shadow: 1px 1px 20px #30e5ff;
+}
+.ya-share2 > div > ul li a:hover,
+.ya-share2 > div > ul li a:visited,
+.ya-share2 > div > ul li a:focus {
+  text-decoration: none;
+}
+.ya-share2 > div > ul li a:hover {
+  color: #96f2ff;
+}
+.ya-share2 > div > ul li a:visited {
+  color: #30e5ff;
+}
+.ya-share2 > div > ul li a:focus {
+  color: #30e5ff;
+}
+.ya-share2 > div > ul li a:hover {
+  text-shadow: 1px 1px 20px #96f2ff;
+}
+.ya-share2 > div > ul li[class$="vkontakte"] .ya-share2__icon:before {
   content: '\e801';
 }
-.si-facebook:before {
+.ya-share2 > div > ul li[class$="facebook"] .ya-share2__icon:before {
   content: '\e802';
 }
-.si-at:before {
-  content: '\e803';
-}
-.si-digg:before {
-  content: '\e804';
-}
-.si-linkedin:before {
-  content: '\e805';
-}
-.si-youtube:before {
-  content: '\e806';
-}
-.si-gplus:before {
-  content: '\e807';
-}
-.si-skype:before {
-  content: '\e808';
-}
-.si-whatsapp:before {
-  content: '\e809';
-}
-.si-wechat:before {
-  content: '\e80a';
-}
-.si-reddit:before {
-  content: '\e80b';
-}
-.si-pinterest:before {
-  content: '\e80c';
-}
-.si-delicious:before {
-  content: '\e80d';
-}
-.si-tumblr:before {
-  content: '\e80e';
-}
-.si-evernote:before {
-  content: '\e80f';
-}
-.si-tencent-weibo:before {
-  content: '\e810';
-}
-.si-odnoklassniki:before {
+.ya-share2 > div > ul li[class$="_odnoklassniki"] .ya-share2__icon:before {
   content: '\e811';
 }
-.si-icq:before {
-  content: '\e812';
+.ya-share2 > div > ul li[class$="gplus"] .ya-share2__icon:before {
+  content: '\e807';
 }
-.si-delicious-1:before {
-  content: '\e813';
+.ya-share2 > div > ul li[class$="linkedin"] .ya-share2__icon:before {
+  content: '\e805';
 }
 header {
   position: relative;
@@ -255,63 +252,6 @@ footer > .content-wrap .bg a:focus {
     text-align: left;
   }
 }
-footer > .content-wrap .ya-share2 > div > ul {
-  display: block;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-footer > .content-wrap .ya-share2 > div > ul li {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px;
-}
-footer > .content-wrap .ya-share2 > div > ul li .ya-share2__badge .ya-share2__icon {
-  font: normal normal normal 20px/1 'social-icons';
-  text-rendering: auto;
-}
-footer > .content-wrap .ya-share2 > div > ul li .ya-share2__counter,
-footer > .content-wrap .ya-share2 > div > ul li .ya-share2__title {
-  display: none;
-}
-footer > .content-wrap .ya-share2 > div > ul li a {
-  text-decoration: none;
-  color: #30e5ff;
-  text-shadow: 1px 1px 20px #30e5ff;
-}
-footer > .content-wrap .ya-share2 > div > ul li a:hover,
-footer > .content-wrap .ya-share2 > div > ul li a:visited,
-footer > .content-wrap .ya-share2 > div > ul li a:focus {
-  text-decoration: none;
-}
-footer > .content-wrap .ya-share2 > div > ul li a:hover {
-  color: #96f2ff;
-}
-footer > .content-wrap .ya-share2 > div > ul li a:visited {
-  color: #30e5ff;
-}
-footer > .content-wrap .ya-share2 > div > ul li a:focus {
-  color: #30e5ff;
-}
-footer > .content-wrap .ya-share2 > div > ul li a:hover {
-  text-shadow: 1px 1px 20px #96f2ff;
-}
-footer > .content-wrap .ya-share2 > div > ul li[class$="vkontakte"] .ya-share2__icon:before {
-  content: '\e801';
-}
-footer > .content-wrap .ya-share2 > div > ul li[class$="facebook"] .ya-share2__icon:before {
-  content: '\e802';
-}
-footer > .content-wrap .ya-share2 > div > ul li[class$="_odnoklassniki"] .ya-share2__icon:before {
-  content: '\e811';
-}
-footer > .content-wrap .ya-share2 > div > ul li[class$="gplus"] .ya-share2__icon:before {
-  content: '\e807';
-}
-footer > .content-wrap .ya-share2 > div > ul li[class$="linkedin"] .ya-share2__icon:before {
-  content: '\e805';
-}
 html,
 body {
   height: 100%;
@@ -369,21 +309,21 @@ footer {
   display: inline-block;
   margin: 8px 10px 0 0;
 }
-.sorting-form {
+.catalog-filter .sorting-form {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.aside-form {
+.catalog-filter .aside-form {
   position: absolute;
   left: 877px;
   top: 64px;
 }
-.aside-form .checkbox-list {
+.catalog-filter .aside-form .checkbox-list {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 5px;
 }
-.aside-form .checkbox-list > div {
+.catalog-filter .aside-form .checkbox-list > div {
   height: 215px;
   overflow: hidden;
   overflow-y: auto;
@@ -401,177 +341,80 @@ footer {
 .back-to-top:focus {
   text-decoration: none;
 }
-.product-list {
-  overflow: hidden;
-  text-align: center;
-}
-.product-list .code {
-  width: 90px;
-}
-.product-list .caption {
-  width: 435px;
-}
-.product-list .kit {
-  width: 76px;
-}
-.product-list .image {
-  width: 128px;
-}
-.product-list .link {
-  width: auto;
-}
-.product-list tbody > tr > td {
-  padding: 0;
-  position: relative;
-  height: 128px;
-}
-.product-list tbody .wrap {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  right: -1px;
-  bottom: -1px;
-  border: 1px solid #ddd;
-  text-decoration: none;
-  color: #333;
-  display: block;
-  z-index: 10000;
-  transition: left ease-in-out 0.15s, right ease-in-out 0.15s, bottom ease-in-out 0.15s, border-color ease-in-out 0.15s;
-}
-.product-list tbody .wrap:hover,
-.product-list tbody .wrap:visited,
-.product-list tbody .wrap:focus {
-  text-decoration: none;
-}
-.product-list tbody .wrap:hover {
-  color: #333;
-}
-.product-list tbody .wrap:visited {
-  color: #333;
-}
-.product-list tbody .wrap:focus {
-  color: #333;
-}
-.product-list tbody .wrap:hover {
-  border-color: #337ab7;
-  box-shadow: #ccc 1px 1px 5px;
-  left: -6px;
-  right: 3px;
-  bottom: -1px;
-  z-index: 10001;
-  box-shadow: #ccc 3px 0 5px;
-  background-color: #f5f5f5;
-}
-.product-list tbody .code,
-.product-list tbody .caption,
-.product-list tbody .kit,
-.product-list tbody .image,
-.product-list tbody .link {
-  float: left;
-  overflow: hidden;
-  height: 128px;
-  padding: 8px;
-  border-right: 1px solid #ddd;
-}
-.product-list tbody .code,
-.product-list tbody .caption {
-  font-size: 15px;
-}
-.product-list tbody .caption {
-  text-align: left;
-}
-.product-list tbody .code {
-  font-weight: bold;
-}
-.product-list tbody .kit {
-  color: #3c763d;
-}
-.product-list tbody .image {
-  height: 128px;
-  padding: 0px;
-}
-.product-list tbody .link {
-  width: 116px;
-  border-right: none;
-}
-.product-cards .card-wrap {
-  position: relative;
-  width: 414px;
-  height: 352px;
+.product-cards .card-placeholder {
   display: inline-block;
-  margin: 0 15px 15px 0;
+  width: 420px;
+  height: 324px;
+  position: relative;
 }
-.product-cards .card-wrap:nth-child(2n) {
-  margin: 0 0 15px 0;
-}
-.product-cards .product-card {
+.product-cards .card-placeholder .card {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  overflow: hidden;
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: transparent;
-  transition: left ease-in-out 0.15s, right ease-in-out 0.15s, bottom ease-in-out 0.15s, border-color ease-in-out 0.15s;
+  transition: 0.15s ease-in-out;
+  z-index: 2;
   text-decoration: none;
-  color: #333;
+  color: inherit;
 }
-.product-cards .product-card:hover,
-.product-cards .product-card:visited,
-.product-cards .product-card:focus {
+.product-cards .card-placeholder .card:hover,
+.product-cards .card-placeholder .card:visited,
+.product-cards .card-placeholder .card:focus {
   text-decoration: none;
 }
-.product-cards .product-card:hover {
-  color: #333;
+.product-cards .card-placeholder .card:hover {
+  color: inherit;
 }
-.product-cards .product-card:visited {
-  color: #333;
+.product-cards .card-placeholder .card:visited {
+  color: inherit;
 }
-.product-cards .product-card:focus {
-  color: #333;
+.product-cards .card-placeholder .card:focus {
+  color: inherit;
 }
-.product-cards .product-card:hover {
+.product-cards .card-placeholder .card:hover {
+  -ms-transform: scale(1.05, 1.05);
+  /* IE 9 */
+  -webkit-transform: scale(1.05, 1.05);
+  /* Safari */
+  transform: scale(1.05, 1.05);
+  box-shadow: 0 0 5px #337ab7;
   border-color: #337ab7;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  box-shadow: #ccc 1px 1px 5px;
 }
-.product-cards .product-card .content {
-  width: 414px;
-  height: 352px;
-  padding: 15px;
-  margin-left: auto;
-  margin-right: auto;
+.product-cards .card-placeholder .card .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
 }
-.product-cards .product-card .caption {
-  height: 80px;
-  font-size: 15px;
+.product-cards .card-placeholder .card .content .sign,
+.product-cards .card-placeholder .card .content .caption,
+.product-cards .card-placeholder .card .content .image {
+  margin-bottom: 5px;
 }
-.product-cards .product-card .code {
-  height: 22px;
-  text-align: center;
-  color: #999;
-}
-.product-cards .product-card .code > span {
+.product-cards .card-placeholder .card .content .sign {
   font-size: 16px;
-  font-weight: bold;
 }
-.product-cards .product-card .image {
-  margin-bottom: 10px;
+.product-cards .card-placeholder .card .content .sign .code {
+  float: left;
 }
-.product-cards .product-card .kit {
-  text-align: center;
+.product-cards .card-placeholder .card .content .sign .kit {
+  float: right;
 }
-.product-cards .product-card .kit > span {
-  font-size: 16px;
+.product-cards .card-placeholder .card .content .sign .kit > .glyphicon {
   color: #3c763d;
 }
-.product-cards .product-card .link {
-  text-align: center;
-  color: #337ab7;
-  font-size: 16px;
+.product-cards .card-placeholder .card .content .caption {
+  text-align: justify;
+}
+.product-cards .card-placeholder .card .content .image {
+  margin-left: auto;
+  margin-right: auto;
 }
 .product-list-pagination {
   text-align: center;

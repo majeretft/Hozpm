@@ -7,15 +7,13 @@ namespace Hozpm
 		public static void Register(BundleCollection bundles)
 		{
 			//frameworks css
-			bundles.Add(new StyleBundle("~/css/bootstrap.css")
+			bundles.Add(new StyleBundle("~/css/bootstrap.css", "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css")
 				.Include("~/Content/bootstrap.css"));
-			bundles.Add(new StyleBundle("~/css/bootstrap-theme.css")
-				.Include("~/Content/bootstrap-theme.css"));
 
 			//frameworks js
-			bundles.Add(new ScriptBundle("~/js/jquery.js")
+			bundles.Add(new ScriptBundle("~/js/jquery.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js")
 				.Include("~/Scripts/jquery-{version}.js"));
-			bundles.Add(new ScriptBundle("~/js/bootstrap.js")
+			bundles.Add(new ScriptBundle("~/js/bootstrap.js", "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js")
 				.Include("~/Scripts/bootstrap.js"));
 			bundles.Add(new ScriptBundle("~/js/knockout.js")
 				.Include("~/Scripts/knockout-{version}.js"));
@@ -34,12 +32,6 @@ namespace Hozpm
 			bundles.Add(new ScriptBundle("~/app/app.loader.js")
 				.Include("~/app/app.loader.js"));
 			bundles.Add(new ScriptBundle("~/app/app.js")
-				.Include("~/app/app.js"));
-
-
-			bundles.Add(new ScriptBundle("~/XD.js")
-				.Include("~/Scripts/bootstrap.js")
-				.Include("~/app/app.loader.js")
 				.Include("~/app/app.js"));
 		}
 	}

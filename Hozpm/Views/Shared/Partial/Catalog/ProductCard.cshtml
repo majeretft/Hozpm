@@ -3,7 +3,21 @@
 	{
 		var link = i%2 == 0 ? Url.Action("Product", "Catalog") : Url.Action("Kit", "Catalog");
 
-		<div class="card-wrap">
+		<div class="card-placeholder">
+			<a href="@link" class="card">
+				<div class="content">
+					<div class="sign clearfix">
+						<span class="code"><i>Артикул:</i> <b>А000000</b></span>
+						<span class="kit"><i>Набор:</i> <span class="glyphicon glyphicon-ok"></span></span>
+					</div>
+					<div class="caption">Продукция с описанием среднестатистической длины или даже очень длинным названием или даже невероятно длинным названием омг какой длины хД @i</div>
+					<img src="http://placehold.it/285x160" alt="" class="img-responsive image"/>
+					<span class="btn btn-link btn-block link">Подробнее</span>
+				</div>
+			</a>
+		</div>
+
+		@*<div class="card-wrap">
 			<a href="@link" class="product-card">
 				<div class="content">
 					<p class="clearfix">
@@ -15,6 +29,6 @@
 					<div class="btn btn-link btn-block link">Подробнее</div>
 				</div>
 			</a>
-		</div>
+		</div>*@
 	}
 </div>
