@@ -1,0 +1,14 @@
+﻿@import (once) '../../variables.less';
+@import (once) '../../mixins.less';
+
+.product-another-container {
+	@element-margin: 15px;
+	@component-margin: 25px;
+
+	margin-bottom: @component-margin;
+
+	.btn {
+		margin-bottom: @element-margin;
+		margin-right: @element-margin;
+	}
+}

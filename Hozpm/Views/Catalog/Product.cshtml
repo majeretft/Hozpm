@@ -7,12 +7,10 @@
 	<h1>Название продукции (краткое)</h1>
 </div>
 
-<p class="lead">Полное название продукции</p>
-
 @Html.Partial("Partial/Catalog/ProductItem")
 
-<h3>Эта продукция в другой таре</h3>
-@Html.Partial("Partial/Catalog/SimilarProduct")
+<h3>Эта продукция в другой таре и упаковке</h3>
+@Html.Partial("Partial/Catalog/ProductAnotherContainer")
 
 <h3>Данная продукция включена в следующие наборы</h3>
 @Html.Partial("Partial/Catalog/ProductOrderedList")

@@ -1,0 +1,39 @@
+﻿@import (once) '../../variables.less';
+@import (once) '../../mixins.less';
+
+.product-ordered-list {
+	@element-margin: 15px;
+	@component-margin: 15px;
+
+	margin-bottom: @component-margin;
+
+	> li {
+		padding-bottom: 5px;
+		margin-bottom: @element-margin;
+
+		> a {
+			display: inline-block;
+			.remove-link-decoration();
+			border-bottom: 1px solid transparent;
+
+			transition: 0.15s ease-in;
+
+			&:hover {
+				border-bottom-color: @bs-primary-color;
+			}
+
+			.caption {
+				display: inline-block;
+				margin-right: @element-margin;
+			}
+
+			.code {
+				display: inline-block;
+				margin: 5px 0;
+				padding: 5px;
+				border: 1px solid #ccc;
+				border-radius: @element-border-radius
+			}
+		}
+	}
+}
