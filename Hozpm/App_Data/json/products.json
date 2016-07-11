@@ -1,0 +1,26 @@
+[
+	{
+		"id": 0,
+		"baseId": 0,
+		"caption": "",
+		"captionShort": "",
+		"description": "",
+		"photoPath": "",
+		"captionUri": "",
+		"code": "",
+		"group": "",
+		"purposes": [ ],
+		"container": {
+			"weight": "",
+			"volume": "",
+			"lenght": "",
+			"width": "",
+			"height": "",
+			"weightText": "",
+			"volumeText": "",
+			"lenghtText": "",
+			"widthText": "",
+			"heightText": ""
+		}
+	}
+]
