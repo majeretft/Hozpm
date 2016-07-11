@@ -2,45 +2,21 @@
 @import (once) '../../mixins.less';
 
 .product-cards {
-
 	.card-placeholder {
-		display: inline-block;
-		width: 420px;
-		height: 324px;
-		position: relative;
+		width: auto;
+		height: auto;
+		margin-bottom: 15px;
 
 		.card {
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			right: 10px;
-			bottom: 10px;
+			display: block;
 			overflow: hidden;
 			border: 1px solid #ccc;
 			border-radius: @element-border-radius;
 
-			transition: 0.15s ease-in-out;
-			z-index: 2;
-
 			.remove-link-decoration();
 			.set-link-color(inherit);
 
-			&:hover {
-				@coef: 1.05;
-
-				-ms-transform: scale(@coef, @coef); /* IE 9 */
-				-webkit-transform: scale(@coef, @coef); /* Safari */
-				transform: scale(@coef, @coef);
-				box-shadow: 0 0 5px @bs-primary-color;
-				border-color: @bs-primary-color;
-			}
-
 			.content {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
 				padding: 10px;
 
 				.sign,
@@ -65,15 +41,67 @@
 					}
 				}
 
-				.caption {
-					text-align: justify;
-				}
-
 				.image {
 					margin-left: auto;
 					margin-right: auto;
 				}
 			}
+		}
+	}
+
+	@media(min-width: @screen-sm-min) {
+		.card-placeholder {
+			display: inline-block;
+			width: 358px;
+			height: 346px;
+			position: relative;
+			margin-bottom: 0;
+
+			.card {
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				right: 10px;
+				bottom: 10px;
+				overflow: hidden;
+				border: 1px solid #ccc;
+				border-radius: @element-border-radius;
+
+				transition: 0.15s ease-in-out;
+				z-index: 2;
+
+				&:hover {
+					@coef: 1.05;
+
+					-ms-transform: scale(@coef, @coef); /* IE 9 */
+					-webkit-transform: scale(@coef, @coef); /* Safari */
+					transform: scale(@coef, @coef);
+					box-shadow: 0 0 5px @bs-primary-color;
+					border-color: @bs-primary-color;
+				}
+
+				.content {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+			}
+		}
+	}
+
+	@media(min-width: @screen-md-min) {
+		.card-placeholder {
+			width: 346px;
+			height: 346px;
+		}
+	}
+
+	@media(min-width: @screen-lg-min) {
+		.card-placeholder {
+			width: 420px;
+			height: 324px;
 		}
 	}
 }

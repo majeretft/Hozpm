@@ -4,8 +4,9 @@
 		var text = "A00000" + i;
 
 		<a href="#" class="btn btn-default btn-lg">
-			Артикул: <b>@text</b>
-			<hr/>
+			<div class="hidden-xs">
+				Артикул: <b>@text</b>
+			</div>
 			Тара: <b>@(Math.Floor(new Random().NextDouble() * i * 100 * new Random().NextDouble()))г</b>
 		</a>
 	}

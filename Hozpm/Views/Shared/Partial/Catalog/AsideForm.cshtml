@@ -1,6 +1,5 @@
-﻿@using (Html.BeginForm("Index", "Catalog", FormMethod.Get, new { @class = "catalog-filter" }))
+﻿@using (Html.BeginForm("Index", "Catalog", FormMethod.Get, new { @class = "catalog-filter collapse in" }))
 {
-
 	<div class="form-inline sorting-form">
 		<div class="form-group">
 			<label>Сортировать по: </label>
@@ -20,7 +19,7 @@
 		</div>
 	</div>
 
-	<div class="col-lg-3 aside-form">
+	<div class="aside-form">
 		<div class="form-group">
 			<label>Группа</label>
 			<select class="form-control">
@@ -65,5 +64,4 @@
 		</div>
 		<button type="submit" class="btn btn-primary btn-block">Применить</button>
 	</div>
-
 }

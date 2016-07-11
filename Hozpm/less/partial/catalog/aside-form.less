@@ -4,21 +4,24 @@
 	@padding-top: 15px;
 	@padding-bottom: @padding-top;
 	@form-inline-height: 34px + @padding-top + @padding-bottom;
-	@screen-lg-left: 877px;
+	@screen-lg-left: 844px;
+	@screen-md-left: 696px;
+
+	position: relative;
 
 	.sorting-form {
-		padding-top: @padding-top;
-		padding-bottom: @padding-bottom;
+		display: none;
 	}
 
 	.aside-form {
-		position: absolute;
-		left: @screen-lg-left;
-		top: @form-inline-height;
+		background-color: #ebebeb;
+		padding: 5px;
+		border-radius: @element-border-radius;
+		overflow: hidden;
 
 		.checkbox-list {
 			> div {
-				@checkbox-count: 8;
+				@checkbox-count: 5;
 				@checkbox-height: 20px;
 				@fist-margin: 10px + 10px;
 				@next-margin: -5px + 10px;
@@ -32,6 +35,40 @@
 			border: 1px solid #ccc;
 			border-radius: @element-border-radius;
 			padding: 5px;
+		}
+	}
+
+	@media(min-width: @screen-md-min) {
+		margin-bottom: 0;
+
+		.sorting-form {
+			display: block;
+			padding-top: @padding-top;
+			padding-bottom: @padding-bottom;
+		}
+
+		.aside-form {
+			background-color: transparent;
+			position: absolute;
+			left: @screen-md-left;
+			top: @form-inline-height;
+
+			.checkbox-list {
+				> div {
+					@checkbox-count: 8;
+					@checkbox-height: 20px;
+					@fist-margin: 10px + 10px;
+					@next-margin: -5px + 10px;
+
+					height: @checkbox-height * @checkbox-count + @fist-margin + (@checkbox-count - 1) * @next-margin;
+				}
+			}
+		}
+	}
+
+	@media(min-width: @screen-lg-min) {
+		.aside-form {
+			left: @screen-lg-left;
 		}
 	}
 }
