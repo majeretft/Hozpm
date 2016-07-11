@@ -275,7 +275,7 @@ main {
 }
 @media (min-width: 992px) {
   main {
-    padding-top: 0;
+    padding-top: 10px;
     padding-bottom: 192px;
   }
 }
@@ -313,6 +313,7 @@ footer {
 .group-card > .caption {
   text-align: center;
   line-height: 26px;
+  font-size: 18px;
 }
 .group-card > .description {
   overflow: hidden;

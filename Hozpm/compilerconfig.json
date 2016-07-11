@@ -6,5 +6,9 @@
   {
     "outputFile": "css/user.css",
     "inputFile": "less/_user/all.less"
+  },
+  {
+    "outputFile": "css/ie.css",
+    "inputFile": "less/ie.less"
   }
 ]

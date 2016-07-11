@@ -139,6 +139,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\ie.css" />
+    <Content Include="css\ie.min.css">
+      <DependentUpon>ie.css</DependentUpon>
+    </Content>
     <Content Include="css\site.css" />
     <Content Include="css\site.min.css">
       <DependentUpon>site.css</DependentUpon>
@@ -192,6 +196,7 @@
     <Content Include="less\_user\all.less" />
     <Content Include="less\partial\catalog\product-item.less" />
     <Content Include="less\partial\catalog\product-another-container.less" />
+    <Content Include="less\ie.less" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />

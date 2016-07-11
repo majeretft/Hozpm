@@ -27,6 +27,8 @@ namespace Hozpm
 				.Include("~/css/site.css"));
 			bundles.Add(new StyleBundle("~/css/user.css")
 				.Include("~/css/user.css"));
+			bundles.Add(new StyleBundle("~/css/ie.css")
+				.Include("~/css/ie.css"));
 
 			//website js
 			bundles.Add(new ScriptBundle("~/app/app.loader.js")
