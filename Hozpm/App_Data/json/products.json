@@ -2,25 +2,25 @@
 	{
 		"id": 0,
 		"baseId": 0,
-		"caption": "",
-		"captionShort": "",
-		"description": "",
-		"photoPath": "",
-		"captionUri": "",
-		"code": "",
-		"group": "",
-		"purposes": [ ],
+		"caption": "Экземпляр тестовой продукции №1 (полное наименование)",
+		"captionShort": "Продукция №1 (краткое название)",
+		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
+		"photoPath": "img/placeholder/placeholder_1x1.png",
+		"captionUri": "ehkzemplyar-testovoj-produkcii-1-polnoe-naimenovanie",
+		"code": "A000000",
+		"group": "0",
+		"purposes": [ 0 ],
 		"container": {
-			"weight": "",
-			"volume": "",
-			"lenght": "",
-			"width": "",
-			"height": "",
-			"weightText": "",
-			"volumeText": "",
-			"lenghtText": "",
-			"widthText": "",
-			"heightText": ""
+			"weight": "250",
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "г",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
 		}
 	}
 ]

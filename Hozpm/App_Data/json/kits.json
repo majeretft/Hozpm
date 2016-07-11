@@ -1,26 +1,26 @@
 [
 	{
 		"id": 0,
-		"productsIncluded": [ ],
-		"caption": "",
-		"captionShort": "",
-		"description": "",
-		"photoPath": "",
-		"captionUri": "",
-		"code": "",
+		"productsIncluded": [ 0 ],
+		"caption": "Мой тестовый набор (полное наименование)",
+		"captionShort": "Мой тестовый набор (полное наименование)",
+		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
+		"photoPath": "img/placeholder/placeholder_1x1.png",
+		"captionUri": "moj-testovyj-nabor-polnoe-naimenovanie",
+		"code": "A000001",
 		"group": 6,
-		"purposes": [ ],
+		"purposes": [ 0 ],
 		"container": {
-			"weight": "",
-			"volume": "",
-			"lenght": "",
-			"width": "",
-			"height": "",
-			"weightText": "",
-			"volumeText": "",
-			"lenghtText": "",
-			"widthText": "",
-			"heightText": ""
+			"weight": "550",
+			"volume": null,
+			"lenght": "25",
+			"width": "15",
+			"height": "25",
+			"weightText": "г",
+			"volumeText": null,
+			"lenghtText": "см",
+			"widthText": "см",
+			"heightText": "см"
 		}
 	}
 ]
