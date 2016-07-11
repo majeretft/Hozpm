@@ -1,0 +1,26 @@
+[
+	{
+		"id": 0,
+		"productsIncluded": [ ],
+		"caption": "",
+		"captionShort": "",
+		"description": "",
+		"photoPath": "",
+		"captionUri": "",
+		"code": "",
+		"group": 6,
+		"purposes": [ ],
+		"container": {
+			"weight": "",
+			"volume": "",
+			"lenght": "",
+			"width": "",
+			"height": "",
+			"weightText": "",
+			"volumeText": "",
+			"lenghtText": "",
+			"widthText": "",
+			"heightText": ""
+		}
+	}
+]
