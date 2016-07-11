@@ -1,12 +1,12 @@
 [
-	{ "id": 0, "captionUri": "", "caption": "флюсы" },
-	{ "id": 1, "captionUri": "", "caption": "флюс-гели" },
-	{ "id": 2, "captionUri": "", "caption": "флюс-люксы" },
-	{ "id": 3, "captionUri": "", "caption": "припои и сплавы" },
-	{ "id": 4, "captionUri": "", "caption": "клеи" },
-	{ "id": 5, "captionUri": "", "caption": "лаки" },
-	{ "id": 6, "captionUri": "", "caption": "наборы" },
-	{ "id": 7, "captionUri": "", "caption": "очистители, пасты, железо хлорное" },
-	{ "id": 8, "captionUri": "", "caption": "смазочные материалы" },
-	{ "id": 9, "captionUri": "", "caption": "разное" }
+	{ "id": 0, "captionUri": "flyusy", "caption": "флюсы" },
+	{ "id": 1, "captionUri": "flyus-geli", "caption": "флюс-гели" },
+	{ "id": 2, "captionUri": "flyus-lyuksy", "caption": "флюс-люксы" },
+	{ "id": 3, "captionUri": "pripoi-i-splavy", "caption": "припои и сплавы" },
+	{ "id": 4, "captionUri": "klei", "caption": "клеи" },
+	{ "id": 5, "captionUri": "laki", "caption": "лаки" },
+	{ "id": 6, "captionUri": "nabory", "caption": "наборы" },
+	{ "id": 7, "captionUri": "ochistiteli-pasty-zhelezo-hlornoe", "caption": "очистители, пасты, железо хлорное" },
+	{ "id": 8, "captionUri": "smazochnye-materialy", "caption": "смазочные материалы" },
+	{ "id": 9, "captionUri": "raznoe", "caption": "разное" }
 ]
