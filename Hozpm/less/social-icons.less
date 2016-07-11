@@ -170,11 +170,17 @@
 
 			li {
 				display: inline-block;
-				margin: 10px;
-				padding: 10px;
+				margin: 15px;
 
-				.ya-share2__badge {
-					.ya-share2__icon {
+				@media(min-width: @screen-md-min) {
+					margin: 10px;
+					padding: 10px;
+				}
+
+				.ya-share2__badge .ya-share2__icon {
+					font-size: 16px/1;
+
+					@media(min-width: @screen-md-min) {
 						font-size: 20px/1;
 					}
 				}

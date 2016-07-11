@@ -43,11 +43,21 @@
 }
 .ya-share2 > div > ul li {
   display: inline-block;
-  margin: 10px;
-  padding: 10px;
+  margin: 15px;
+}
+@media (min-width: 992px) {
+  .ya-share2 > div > ul li {
+    margin: 10px;
+    padding: 10px;
+  }
 }
 .ya-share2 > div > ul li .ya-share2__badge .ya-share2__icon {
-  font-size: 20px;
+  font-size: 16px;
+}
+@media (min-width: 992px) {
+  .ya-share2 > div > ul li .ya-share2__badge .ya-share2__icon {
+    font-size: 20px;
+  }
 }
 .ya-share2 > div > ul li .ya-share2__counter,
 .ya-share2 > div > ul li .ya-share2__title {
@@ -261,53 +271,80 @@ body {
 }
 main {
   padding-top: 52px;
-  padding-bottom: 186px;
+  padding-bottom: 176px;
+}
+@media (min-width: 992px) {
+  main {
+    padding-top: 0;
+    padding-bottom: 192px;
+  }
 }
 footer {
-  height: 186px;
-  margin-top: -186px;
+  height: 176px;
+  margin-top: -176px;
+}
+@media (min-width: 992px) {
+  footer {
+    height: 192px;
+    margin-top: -192px;
+  }
 }
 .group-card {
   border: 1px solid #ddd;
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 25px;
-  width: 358px;
-  height: 619px;
   background-color: transparent;
 }
 .group-card > .photo {
-  height: 203px;
   border-bottom: 1px solid #ddd;
 }
 .group-card > .caption,
 .group-card > .description,
 .group-card > .links {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
   overflow: hidden;
   margin: 0;
 }
 .group-card > .caption {
-  height: 82px;
   text-align: center;
   line-height: 26px;
 }
 .group-card > .description {
-  height: 200px;
   overflow: hidden;
 }
 .group-card .links {
-  height: 134px;
-  padding-bottom: 0;
   border-bottom: none;
 }
 .group-card .links > .btn {
   display: inline-block;
-  margin: 8px 10px 0 0;
+  margin: 10px 10px 0 0;
+}
+@media (min-width: 768px) {
+  .group-card {
+    height: 594px;
+  }
+  .group-card > .photo {
+    height: 203px;
+  }
+  .group-card > .caption {
+    height: 72px;
+  }
+  .group-card > .description {
+    height: 190px;
+  }
+  .group-card .links {
+    height: 129px;
+  }
+}
+@media (min-width: 992px) {
+  .group-card {
+    width: 358px;
+  }
 }
 .back-to-top {
   position: fixed;

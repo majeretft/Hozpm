@@ -4,39 +4,32 @@
 	var mapUrl = $"https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=_arpLO4PE819A1YjFE9m3U46OvMaJ1Kv&width=100%&height=100%&lang=ru_RU&sourceType=constructor";
 }
 
-<div class="container">
-	<div class="row">
-		<div class="col-xs-12">
-			<div class="page-header">
-				<h1>Контактная информация</h1>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<address class="col-xs-12 col-md-6">
-			<div>
-				<p>
-					<strong>Название</strong><br>
-					Улица, строение<br>
-					Страна, область, город
-				</p>
-				<p>
-					<span class="glyphicon glyphicon-earphone"></span> Телефон<br>
-					<span class="glyphicon glyphicon-envelope"></span> <a href="mailto:#">Почта</a>
-				</p>
-			</div>
-			<div>
-				<p>Рабочее время</p>
-				<p>Как проехать</p>
-			</div>
+<div class="page-header">
+	<h1>Контактная информация</h1>
+</div>
+<div class="row">
+	<div class="col-md-5">
+		<address>
+			<p class="lead">
+				<span class="glyphicon glyphicon-earphone"></span> +9 (999) 999-99-99<br>
+			</p>
+			<p class="lead">
+				<span class="glyphicon glyphicon-envelope"></span> <a href="mailto:#">email@email.com</a>
+			</p>
+			<p>Рабочее время</p>
+			<p>
+				<strong>Название</strong><br>
+				Страна, область, город<br>
+				Улица, строение
+			</p>
 		</address>
-		<div class="col-xs-12 col-md-6">
-			<div class="embed-responsive embed-responsive-16by9">
-				<div class="embed-responsive-item">
-					<!--noindex-->
-					<script type="text/javascript" charset="utf-8" src="@mapUrl"></script>
-					<!--/noindex-->
-				</div>
+	</div>
+	<div class="col-md-7">
+		<div class="embed-responsive embed-responsive-16by9">
+			<div class="embed-responsive-item">
+				<!--noindex-->
+				<script type="text/javascript" charset="utf-8" src="@mapUrl"></script>
+				<!--/noindex-->
 			</div>
 		</div>
 	</div>

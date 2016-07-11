@@ -4,7 +4,7 @@
 @border-radius: 4px;
 @border-color: #ddd;
 @bottom-spacing: 25px;
-@element-top-spacing: 15px;
+@element-top-spacing: 10px;
 @element-bottom-spacing: @element-top-spacing;
 
 @photo-width: 358px;
@@ -21,18 +21,15 @@
 	border-radius: @border-radius;
 	overflow: hidden;
 	margin-bottom: @bottom-spacing;
-	width: @photo-width;
-	height: @photo-height + @caption-height + @description-height + @links-height;
 	background-color: @bg-color;
 
 	> .photo {
-		height: @photo-height;
 		border-bottom: 1px solid @border-color;
 	}
 
 	> .caption, > .description, > .links {
-		padding-left: 15px;
-		padding-right: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
 		padding-top: @element-top-spacing;
 		padding-bottom: @element-bottom-spacing;
 		border-bottom: 1px solid @border-color;
@@ -42,24 +39,45 @@
 
 
 	> .caption {
-		height: @caption-height;
 		text-align: center;
 		line-height: 26px;
 	}
 
 	> .description {
-		height: @description-height;
 		overflow: hidden;
 	}
 
 	.links {
-		height: @links-height;
-		padding-bottom: 0;
 		border-bottom: none;
 
 		> .btn {
 			display: inline-block;
-			margin: 8px 10px 0 0;
+			margin: 10px 10px 0 0;
 		}
+	}
+
+	@media(min-width: @screen-sm-min) {
+		//width: @photo-width;
+		height: @photo-height + @caption-height + @description-height + @links-height;
+
+		> .photo {
+			height: @photo-height;
+		}
+
+		> .caption {
+			height: @caption-height;
+		}
+
+		> .description {
+			height: @description-height;
+		}
+
+		.links {
+			height: @links-height;
+		}
+	}
+
+	@media(min-width: @screen-md-min) {
+		width: @photo-width;
 	}
 }

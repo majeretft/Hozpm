@@ -153,6 +153,7 @@
     <Content Include="img\avrgroup_logo_icon.png" />
     <Content Include="img\contact-bg.png" />
     <Content Include="img\factory_1920x130.jpg" />
+    <Content Include="img\favicon.ico" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -15,9 +15,19 @@ body {
 main {
 	padding-top: @navbar-height;
 	padding-bottom: @footer-xs-height;
+
+	@media(min-width: @screen-md-min) {
+		padding-top: 0;
+		padding-bottom: @footer-md-height;
+	}
 }
 
 footer {
 	height: @footer-xs-height;
 	margin-top: -@footer-xs-height;
+
+	@media(min-width: @screen-md-min) {
+		height: @footer-md-height;
+		margin-top: -@footer-md-height;
+	}
 }
