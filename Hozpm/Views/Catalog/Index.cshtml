@@ -60,7 +60,7 @@
 
 			var fnDisableCheckboxList = function() {
 				var isChecked = $(this).is(":checked");
-				ctPurposes.find('div.checkbox').toggleClass('text-muted disabled');
+				ctPurposes.find('div.checkbox')[isChecked ? 'addClass' : 'removeClass']('text-muted disabled');
 				ctPurposes.find('input[type="checkbox"]').prop('disabled', isChecked);
 			}
 
