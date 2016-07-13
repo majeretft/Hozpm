@@ -1,4 +1,5 @@
-﻿
+﻿@model CatalogHomeViewModel
+
 @{
 	ViewBag.Title = "Index";
 }
@@ -52,7 +53,7 @@
 		<p class="visible-xs visible-sm">
 			<button type="button" class="btn btn-block btn-primary" id="toggle-btn"><span>Скрыть</span> фильтры</button>
 		</p>
-		@Html.Partial("Partial/Catalog/AsideForm")
+		@Html.Partial("Partial/Catalog/AsideForm", Model.FormModel)
 	</div>
 </div>
 <div class="row">

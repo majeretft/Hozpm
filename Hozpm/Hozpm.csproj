@@ -259,11 +259,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\Json\FileReader.cs" />
+    <Compile Include="Logic\Json\GroupParser.cs" />
+    <Compile Include="Logic\ModelBuilder.cs" />
+    <Compile Include="Models\CatalogHomeViewModel.cs" />
+    <Compile Include="Models\Entities\AsideFormViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Logic\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.ts" />

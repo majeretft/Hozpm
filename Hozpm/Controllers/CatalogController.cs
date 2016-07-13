@@ -1,4 +1,6 @@
 ﻿using System.Web.Mvc;
+using Hozpm.Logic;
+using Hozpm.Models;
 
 namespace Hozpm.Controllers
 {
@@ -6,7 +8,12 @@ namespace Hozpm.Controllers
 	{
 		public ActionResult Index()
 		{
-			return View();
+			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
+			var formModel = mb.GetAsideFormViewModel();
+
+			var model = new CatalogHomeViewModel {FormModel = formModel};
+
+			return View(model);
 		}
 
 		public ActionResult Product()

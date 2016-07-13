@@ -1,4 +1,6 @@
-﻿@using (Html.BeginForm("Index", "Catalog", FormMethod.Get, new { @class = "catalog-filter collapse in" }))
+﻿@model Hozpm.Models.Entities.AsideFormViewModel
+
+@using (Html.BeginForm("Index", "Catalog", FormMethod.Get, new { @class = "catalog-filter collapse in" }))
 {
 	<div class="form-inline sorting-form">
 		<div class="form-group">
@@ -22,11 +24,7 @@
 	<div class="aside-form">
 		<div class="form-group">
 			<label>Группа</label>
-			<select class="form-control">
-				<option>Группа 1</option>
-				<option>Группа 2</option>
-				<option>Группа 3</option>
-			</select>
+			@Html.DropDownListFor(x => x.Groups, Model.Groups, new { @class = "form-control" })
 			<div class="checkbox">
 				<label>
 					<input type="checkbox"> Любая группа
