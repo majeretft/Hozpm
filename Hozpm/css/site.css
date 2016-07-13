@@ -424,7 +424,7 @@ footer {
 .product-card-placeholder .card {
   display: block;
   overflow: hidden;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   border-radius: 4px;
   text-decoration: none;
   color: inherit;
@@ -444,7 +444,7 @@ footer {
   color: inherit;
 }
 .product-card-placeholder .card .content {
-  padding: 10px;
+  padding-bottom: 10px;
 }
 .product-card-placeholder .card .content .sign,
 .product-card-placeholder .card .content .caption,
@@ -498,6 +498,7 @@ footer {
     border-color: #337ab7;
   }
   .product-card-placeholder .card .content {
+    padding: 10px;
     position: absolute;
     top: 0;
     left: 0;
