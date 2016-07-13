@@ -15,5 +15,7 @@ namespace Hozpm.Models.Entities
 		public bool GroupAny { get; set; }
 		public string GroupSelected { get; set; }
 		public IEnumerable<SelectListItem> Groups { get; set; }
+
+		public bool PurposeAny { get; set; }
 	}
 }
