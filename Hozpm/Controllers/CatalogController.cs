@@ -6,7 +6,7 @@ namespace Hozpm.Controllers
 {
 	public class CatalogController : Controller
 	{
-		public ViewResult Index(string groupSelected, bool? groupAny, bool? purposeAny)
+		public ViewResult Index(string groupSelected, string code, bool? groupAny, bool? purposeAny)
 		{
 			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
 			var formModel = mb.GetAsideFormViewModel();
@@ -17,6 +17,8 @@ namespace Hozpm.Controllers
 				formModel.PurposeAny = purposeAny.Value;
 			if (!string.IsNullOrEmpty(groupSelected))
 				formModel.GroupSelected = groupSelected;
+			if (!string.IsNullOrEmpty(code))
+				formModel.Code = code;
 
 			var model = new CatalogHomeViewModel { FormModel = formModel };
 
