@@ -22,7 +22,8 @@ namespace Hozpm.Logic
 			var result = new CatalogHomeViewModel
 			{
 				FormModel = asideViewModel,
-				Products = GetProducts(_jsonFolderPath)
+				Products = GetProducts(_jsonFolderPath),
+				Kits = GetKits(_jsonFolderPath)
 			};
 
 			return result;
@@ -77,6 +78,15 @@ namespace Hozpm.Logic
 		{
 			var fr = new FileReader();
 			var token = fr.GetProducts(folder);
+
+			var p = new DataParser();
+			return p.ParseProductList(token);
+		}
+
+		private List<CatalogHomeViewModel.Product> GetKits(string folder)
+		{
+			var fr = new FileReader();
+			var token = fr.GetKits(folder);
 
 			var p = new DataParser();
 			return p.ParseProductList(token);

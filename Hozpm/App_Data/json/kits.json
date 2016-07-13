@@ -2,12 +2,12 @@
 	{
 		"id": 0,
 		"productsIncluded": [ 0 ],
-		"caption": "��� �������� ����� (������ ������������)",
-		"captionShort": "��� �������� ����� (������ ������������)",
-		"description": "<h3>�����-�� �������� ���� �������� ���������.</h3> <p>��� <strong>��������</strong> ���������� ����������������:</p> <ul> <li>�� �����</li> <li>��������</li> <li>����������</li> </ul> <p><span style=\"text-decoration: underline;\">�� ����� ������� ��� �������� �������.</span></p>",
-		"photoPath": "img/placeholder/placeholder_1x1.png",
+		"caption": "Мой тестовый набор (полное наименование)",
+		"captionShort": "Мой тестовый набор (полное наименование)",
+		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
+		"photoPath": "img/placeholder/placeholder_16x9.png",
 		"captionUri": "moj-testovyj-nabor-polnoe-naimenovanie",
-		"code": "A000001",
+		"code": "A000010",
 		"group": 6,
 		"purposes": [ 0 ],
 		"container": {
@@ -16,11 +16,35 @@
 			"lenght": "25",
 			"width": "15",
 			"height": "25",
-			"weightText": "�",
+			"weightText": "г",
 			"volumeText": null,
-			"lenghtText": "��",
-			"widthText": "��",
-			"heightText": "��"
+			"lenghtText": "см",
+			"widthText": "см",
+			"heightText": "см"
+		}
+	},
+	{
+		"id": 0,
+		"productsIncluded": [ 0 ],
+		"caption": "Мой тестовый набор №2 (полное наименование)",
+		"captionShort": "Мой тестовый набор №2 (полное наименование)",
+		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
+		"photoPath": "img/placeholder/placeholder_16x9.png",
+		"captionUri": "moj-testovyj-nabor-polnoe-naimenovanie-2",
+		"code": "A000011",
+		"group": 6,
+		"purposes": [ 0 ],
+		"container": {
+			"weight": "550",
+			"volume": null,
+			"lenght": "25",
+			"width": "15",
+			"height": "25",
+			"weightText": "г",
+			"volumeText": null,
+			"lenghtText": "см",
+			"widthText": "см",
+			"heightText": "см"
 		}
 	}
 ]

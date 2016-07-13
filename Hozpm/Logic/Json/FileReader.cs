@@ -10,6 +10,7 @@ namespace Hozpm.Logic.Json
 		public const string GroupsFile = "groups.json";
 		public const string PurposesFile = "purposes.json";
 		public const string ProductsFile = "products.json";
+		public const string KitsFile = "kits.json";
 
 		public T GetToken<T>(string folder, string fileName) where T: JToken
 		{
@@ -44,6 +45,12 @@ namespace Hozpm.Logic.Json
 		{
 			var fr = new FileReader();
 			return fr.GetToken<JArray>(folder, ProductsFile);
+		}
+
+		public JArray GetKits(string folder)
+		{
+			var fr = new FileReader();
+			return fr.GetToken<JArray>(folder, KitsFile);
 		}
 	}
 }

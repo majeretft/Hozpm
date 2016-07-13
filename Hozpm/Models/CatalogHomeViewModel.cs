@@ -16,6 +16,7 @@ namespace Hozpm.Models
 		public AsideFormViewModel FormModel { get; set; }
 
 		public List<Product> Products { get; set; }
+		public List<Product> Kits { get; set; }
 
 		public string FilterCode { get; set; }
 		public string FilterGroup { get; set; }
