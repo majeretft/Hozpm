@@ -89,7 +89,12 @@ namespace Hozpm.Logic
 			var token = fr.GetKits(folder);
 
 			var p = new DataParser();
-			return p.ParseProductList(token);
+			var items = p.ParseProductList(token);
+
+			foreach (var item in items)
+				item.IsKit = true;
+
+			return items;
 		}
 	}
 }

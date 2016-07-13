@@ -223,7 +223,7 @@
     <Content Include="Views\Shared\Partial\Catalog\AsideForm.cshtml" />
     <Content Include="Views\Shared\Partial\Catalog\ProductListPaging.cshtml" />
     <Content Include="Views\Shared\Partial\BackToTopButton.cshtml" />
-    <Content Include="Views\Shared\Partial\Catalog\ProductCard.cshtml" />
+    <Content Include="Views\Shared\Partial\Catalog\ItemCard.cshtml" />
     <Content Include="Views\Catalog\Product.cshtml" />
     <Content Include="Views\Catalog\Kit.cshtml" />
     <Content Include="Views\Shared\Partial\Catalog\ProductItem.cshtml" />
@@ -234,7 +234,6 @@
     <Content Include="Views\Shared\Partial\Catalog\ProductOrderedList.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
-    <Content Include="Views\Shared\Partial\Catalog\KitCard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

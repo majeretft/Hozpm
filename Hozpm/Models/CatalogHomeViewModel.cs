@@ -11,6 +11,7 @@ namespace Hozpm.Models
 			public string Caption { get; set; }
 			public string CaptionUri { get; set; }
 			public string PhotoPath { get; set; }
+			public bool IsKit { get; set; }
 		}
 
 		public AsideFormViewModel FormModel { get; set; }

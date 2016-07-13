@@ -10,6 +10,10 @@
 		<div class="content">
 			<div class="sign clearfix">
 				<span class="code"><i>Артикул:</i> <b>@Model.Code</b></span>
+				@if (Model.IsKit)
+				{
+					<span class="kit"><i>Набор:</i> <span class="glyphicon glyphicon-ok"></span></span>
+				}
 			</div>
 			<div class="caption">@Model.Caption</div>
 			<img src="@Url.Content($"~/{Model.PhotoPath}")" alt="" class="img-responsive image" />

@@ -110,11 +110,11 @@
 	<div class="col-md-9 col-lg-9">
 		@foreach (var m in Model.Products)
 		{
-			@Html.Partial("Partial/Catalog/ProductCard", m)
+			@Html.Partial("Partial/Catalog/ItemCard", m)
 		}
 		@foreach (var m in Model.Kits)
 		{
-			@Html.Partial("Partial/Catalog/KitCard", m)
+			@Html.Partial("Partial/Catalog/ItemCard", m)
 		}
 	</div>
 </div>
