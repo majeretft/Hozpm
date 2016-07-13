@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic;
 
@@ -37,5 +38,21 @@ namespace Hozpm.Models.Entities
 			new SelectListItem { Selected = true, Value = "code", Text = "Артикул"},
 			new SelectListItem { Value = "caption", Text = "Наименование"}
 		};
+
+		public string GetSelectedGroupText
+		{
+			get
+			{
+				return GroupAny ? "Любая группа" : Groups.FirstOrDefault(x => x.Value == GroupSelected)?.Text;
+			}
+		}
+
+		public List<string> GetSelectedPurposesText
+		{
+			get
+			{
+				return PurposeAny ? new List<string> {"Любое назначение"} : Purposes.Where(x => x.Selected).Select(x => x.Text).ToList();
+			}
+		}
 	}
 }

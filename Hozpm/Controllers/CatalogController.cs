@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic;
 using Hozpm.Models;
@@ -48,7 +49,13 @@ namespace Hozpm.Controllers
 				}
 			}
 
-			var model = new CatalogHomeViewModel { FormModel = formModel };
+			var model = new CatalogHomeViewModel
+			{
+				FormModel = formModel,
+				FilterCode = formModel.Code,
+				FilterGroup = formModel.GetSelectedGroupText,
+				FilterPurposes = formModel.GetSelectedPurposesText
+			};
 
 			return View(model);
 		}
