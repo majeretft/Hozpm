@@ -577,3 +577,9 @@ footer {
   margin-bottom: 15px;
   margin-right: 15px;
 }
+.component-margin {
+  margin-bottom: 25px;
+}
+.element-margin {
+  margin-bottom: 10px;
+}
