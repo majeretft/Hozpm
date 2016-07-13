@@ -1,107 +1,106 @@
 ﻿@import (once) '../../variables.less';
 @import (once) '../../mixins.less';
 
-.product-cards {
-	.card-placeholder {
-		width: auto;
-		height: auto;
-		margin-bottom: 15px;
+.product-card-placeholder {
+	width: auto;
+	height: auto;
+	margin-bottom: 15px;
 
-		.card {
-			display: block;
-			overflow: hidden;
-			border: 1px solid #ccc;
-			border-radius: @element-border-radius;
+	.card {
+		display: block;
+		overflow: hidden;
+		border: 1px solid #ccc;
+		border-radius: @element-border-radius;
+		.remove-link-decoration();
+		.set-link-color(inherit);
 
-			.remove-link-decoration();
-			.set-link-color(inherit);
+		.content {
+			padding: 10px;
 
-			.content {
-				padding: 10px;
+			.sign,
+			.caption,
+			.image {
+				margin-bottom: 5px;
+			}
 
-				.sign,
-				.caption,
-				.image  {
-					margin-bottom: 5px;
+			.sign {
+				font-size: 16px;
+
+				.code {
+					float: left;
 				}
 
-				.sign {
-					font-size: 16px;
-
-					.code {
-						float: left;
-					}
-
-					.kit {
-						float: right;
-					}
-
-					.kit > .glyphicon {
-						color: @bs-success-color;
-					}
+				.kit {
+					float: right;
 				}
 
-				.image {
-					margin-left: auto;
-					margin-right: auto;
+				.kit > .glyphicon {
+					color: @bs-success-color;
 				}
+			}
+
+			.image {
+				margin-left: auto;
+				margin-right: auto;
+				max-height: 200px;
 			}
 		}
 	}
 
 	@media(min-width: @screen-sm-min) {
-		.card-placeholder {
-			display: inline-block;
-			width: 358px;
-			height: 346px;
-			position: relative;
-			margin-bottom: 0;
+		display: inline-block;
+		width: 358px;
+		height: 346px;
+		position: relative;
+		margin-bottom: 0;
 
-			.card {
+		.card {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			overflow: hidden;
+			border: 1px solid #ccc;
+			border-radius: @element-border-radius;
+			transition: 0.15s ease-in-out;
+			z-index: 2;
+
+			&:hover {
+				@coef: 1.05;
+
+				-ms-transform: scale(@coef, @coef); /* IE 9 */
+				-webkit-transform: scale(@coef, @coef); /* Safari */
+				transform: scale(@coef, @coef);
+				box-shadow: 0 0 5px @bs-primary-color;
+				border-color: @bs-primary-color;
+			}
+
+			.content {
 				position: absolute;
-				top: 10px;
-				left: 10px;
-				right: 10px;
-				bottom: 10px;
-				overflow: hidden;
-				border: 1px solid #ccc;
-				border-radius: @element-border-radius;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
 
-				transition: 0.15s ease-in-out;
-				z-index: 2;
-
-				&:hover {
-					@coef: 1.05;
-
-					-ms-transform: scale(@coef, @coef); /* IE 9 */
-					-webkit-transform: scale(@coef, @coef); /* Safari */
-					transform: scale(@coef, @coef);
-					box-shadow: 0 0 5px @bs-primary-color;
-					border-color: @bs-primary-color;
-				}
-
-				.content {
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
+				.caption {
+					height: 60px;
 				}
 			}
 		}
 	}
 
 	@media(min-width: @screen-md-min) {
-		.card-placeholder {
-			width: 346px;
-			height: 346px;
-		}
+		width: 346px;
+		height: 346px;
 	}
 
 	@media(min-width: @screen-lg-min) {
-		.card-placeholder {
-			width: 420px;
-			height: 324px;
+		width: 420px;
+		height: 346px;
+
+		.card .content .image {
+			max-height: 180px;
 		}
 	}
 }

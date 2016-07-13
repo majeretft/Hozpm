@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic;
-using Hozpm.Models;
 
 namespace Hozpm.Controllers
 {
@@ -12,9 +10,7 @@ namespace Hozpm.Controllers
 		public ViewResult Index()
 		{
 			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
-			var formModel = mb.GetAsideFormViewModel();
-
-			var model = new CatalogHomeViewModel { FormModel = formModel };
+			var model = mb.GetCatalogHomeViewModel();
 
 			return View(model);
 		}
@@ -23,7 +19,8 @@ namespace Hozpm.Controllers
 		public ViewResult Index(string displaySelected, string orderSelected, string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListModel[] purposes)
 		{
 			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
-			var formModel = mb.GetAsideFormViewModel();
+			var model = mb.GetCatalogHomeViewModel();
+			var formModel = model.FormModel;
 
 			if (groupAny.HasValue)
 				formModel.GroupAny = groupAny.Value;
@@ -49,18 +46,15 @@ namespace Hozpm.Controllers
 				}
 			}
 
-			var model = new CatalogHomeViewModel
-			{
-				FormModel = formModel,
-				FilterCode = formModel.Code,
-				FilterGroup = formModel.GetSelectedGroupText,
-				FilterPurposes = formModel.GetSelectedPurposesText
-			};
+			model.FormModel = formModel;
+			model.FilterCode = formModel.Code;
+			model.FilterGroup = formModel.GetSelectedGroupText;
+			model.FilterPurposes = formModel.GetSelectedPurposesText;
 
 			return View(model);
 		}
 
-		public ActionResult Product()
+		public ActionResult Product(string item)
 		{
 			return View();
 		}

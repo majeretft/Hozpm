@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic.Json;
+using Hozpm.Models;
 using Hozpm.Models.Entities;
 
 namespace Hozpm.Logic
@@ -15,12 +16,24 @@ namespace Hozpm.Logic
 			_jsonFolderPath = jsonFolderPath;
 		}
 
-		public AsideFormViewModel GetAsideFormViewModel()
+		public CatalogHomeViewModel GetCatalogHomeViewModel()
+		{
+			var asideViewModel = GetAsideFormViewModel();
+			var result = new CatalogHomeViewModel
+			{
+				FormModel = asideViewModel,
+				Products = GetProducts(_jsonFolderPath)
+			};
+
+			return result;
+		}
+
+		private AsideFormViewModel GetAsideFormViewModel()
 		{
 			var result = new AsideFormViewModel
 			{
 				Groups = GetGroups(_jsonFolderPath),
-				Purposes = GetPurposes(_jsonFolderPath)
+				Purposes = GetPurposes(_jsonFolderPath),
 			};
 
 			return result;
@@ -32,9 +45,9 @@ namespace Hozpm.Logic
 			var token = fr.GetGroups(folder);
 
 			var p = new DataParser();
-			var groups = p.ParseFilterRuleList(token);
+			var items = p.ParseFilterRuleList(token);
 
-			var result = groups.Select(x => new SelectListItem
+			var result = items.Select(x => new SelectListItem
 			{
 				Text = x.Caption,
 				Value = x.CaptionUri
@@ -49,15 +62,24 @@ namespace Hozpm.Logic
 			var token = fr.GetPurposes(folder);
 
 			var p = new DataParser();
-			var purposes = p.ParseFilterRuleList(token);
+			var items = p.ParseFilterRuleList(token);
 
-			var result = purposes.Select(x => new CheckboxListModel
+			var result = items.Select(x => new CheckboxListModel
 			{
 				Text = x.Caption,
 				Value = x.CaptionUri
 			}).ToList();
 
 			return result;
+		}
+
+		private List<CatalogHomeViewModel.Product> GetProducts(string folder)
+		{
+			var fr = new FileReader();
+			var token = fr.GetProducts(folder);
+
+			var p = new DataParser();
+			return p.ParseProductList(token);
 		}
 	}
 }
