@@ -347,18 +347,6 @@ footer {
     width: 358px;
   }
 }
-.back-to-top {
-  position: fixed;
-  left: 82%;
-  top: 70%;
-  font-size: 36px;
-  text-decoration: none;
-}
-.back-to-top:hover,
-.back-to-top:visited,
-.back-to-top:focus {
-  text-decoration: none;
-}
 .product-item .image {
   width: 250px;
   height: 250px;
