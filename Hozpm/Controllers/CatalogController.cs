@@ -19,7 +19,7 @@ namespace Hozpm.Controllers
 		}
 
 		[HttpPost, ValidateAntiForgeryToken]
-		public ViewResult Index(string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListModel[] purposes)
+		public ViewResult Index(string displaySelected, string orderSelected, string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListModel[] purposes)
 		{
 			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
 			var formModel = mb.GetAsideFormViewModel();
@@ -32,7 +32,11 @@ namespace Hozpm.Controllers
 				formModel.GroupSelected = groupSelected;
 			if (!string.IsNullOrEmpty(code))
 				formModel.Code = code;
-			if (purposes != null)
+			if (!string.IsNullOrEmpty(displaySelected))
+				formModel.DisplaySelected = displaySelected;
+			if (!string.IsNullOrEmpty(orderSelected))
+				formModel.OrderSelected = orderSelected;
+			if (purposes != null && purposes.Any(x => x.Selected))
 			{
 				foreach (var p in purposes)
 				{

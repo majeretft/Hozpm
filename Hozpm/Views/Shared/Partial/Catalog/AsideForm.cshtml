@@ -7,19 +7,11 @@
 	<div class="form-inline sorting-form">
 		<div class="form-group">
 			<label>Сортировать по: </label>
-			<select class="form-control">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-			</select>
+			@Html.DropDownListFor(x => x.OrderSelected, Model.OrderList, new { @class = "form-control" })
 		</div>
 		<div class="form-group">
 			<label>Отображать по: </label>
-			<select class="form-control">
-				<option>10</option>
-				<option>20</option>
-				<option>30</option>
-			</select>
+			@Html.DropDownListFor(x => x.DisplaySelected, Model.DisplayList, new { @class = "form-control" })
 		</div>
 	</div>
 
