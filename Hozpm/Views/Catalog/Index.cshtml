@@ -20,26 +20,57 @@
 
 @section scripts {
 	<script type="text/javascript">
-		$(function () {
+		$(function() {
 			var form = $('form.collapse');
 			var btn = $('#toggle-btn');
 
-			$(form).on('show.bs.collapse', function () {
+			$(form).on('show.bs.collapse', function() {
 				$(btn).children('span').text('Скрыть');
 			});
 
-			$(form).on('hide.bs.collapse', function () {
+			$(form).on('hide.bs.collapse', function() {
 				$(btn).children('span').text('Отобразить');
 			});
 
-			$(window).resize(function () {
+			$(window).resize(function() {
 				var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 				w && w >= 992 ? $(form).collapse('show') : $(form).collapse('hide');
 			});
 
-			$(btn).click(function () {
+			$(btn).click(function() {
 				$(form).collapse('toggle');
 			});
+
+			var ctForm = $('form.catalog-filter');
+			var ctOrderList = $('#@nameof(Model.FormModel.OrderSelected)');
+			var ctDisplayList = $('#@nameof(Model.FormModel.DisplaySelected)');
+			var ctGroups = $('#@nameof(Model.FormModel.GroupSelected)');
+			var ctGroupAny = $('#@nameof(Model.FormModel.GroupAny)');
+			var ctPurposes = $('.checkbox-list');
+			var ctPurposeAny = $('#@nameof(Model.FormModel.PurposeAny)');
+
+			var fnSubmit = function () {
+				ctForm.submit();
+			}
+
+			var fnDisableSelectList = function() {
+				var isChecked = $(this).is(":checked");
+				ctGroups.prop('disabled', isChecked);
+			}
+
+			var fnDisableCheckboxList = function() {
+				var isChecked = $(this).is(":checked");
+				ctPurposes.find('div.checkbox').toggleClass('text-muted disabled');
+				ctPurposes.find('input[type="checkbox"]').prop('disabled', isChecked);
+			}
+
+			ctOrderList.change(fnSubmit);
+			ctDisplayList.change(fnSubmit);
+			ctGroupAny.change(fnDisableSelectList);
+			ctPurposeAny.change(fnDisableCheckboxList);
+
+			fnDisableSelectList.apply(ctGroupAny);
+			fnDisableCheckboxList.apply(ctPurposeAny);
 		});
 	</script>
 }

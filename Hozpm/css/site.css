@@ -417,6 +417,7 @@ footer {
     position: absolute;
     left: 696px;
     top: 64px;
+    z-index: 2;
   }
   .catalog-filter .aside-form .checkbox-list > div {
     height: 215px;
