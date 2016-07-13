@@ -12,6 +12,8 @@ namespace Hozpm.Models.Entities
 			public string Caption { get; set; }
 		}
 
+		public bool GroupAny { get; set; }
+		public string GroupSelected { get; set; }
 		public IEnumerable<SelectListItem> Groups { get; set; }
 	}
 }

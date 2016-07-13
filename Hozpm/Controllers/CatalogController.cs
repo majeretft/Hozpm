@@ -6,12 +6,17 @@ namespace Hozpm.Controllers
 {
 	public class CatalogController : Controller
 	{
-		public ActionResult Index()
+		public ViewResult Index(string groupSelected, bool? groupAny)
 		{
 			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
 			var formModel = mb.GetAsideFormViewModel();
 
-			var model = new CatalogHomeViewModel {FormModel = formModel};
+			if (groupAny.HasValue)
+				formModel.GroupAny = groupAny.Value;
+			if (!string.IsNullOrEmpty(groupSelected))
+				formModel.GroupSelected = groupSelected;
+
+			var model = new CatalogHomeViewModel { FormModel = formModel };
 
 			return View(model);
 		}

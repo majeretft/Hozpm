@@ -24,10 +24,10 @@
 	<div class="aside-form">
 		<div class="form-group">
 			<label>Группа</label>
-			@Html.DropDownListFor(x => x.Groups, Model.Groups, new { @class = "form-control" })
+			@Html.DropDownListFor(x => x.GroupSelected, Model.Groups, new { @class = "form-control" })
 			<div class="checkbox">
 				<label>
-					<input type="checkbox"> Любая группа
+					<input type="checkbox" id="@nameof(Model.GroupAny)" name="@nameof(Model.GroupAny)" value="true" checked="@Model.GroupAny"> Любая группа
 				</label>
 			</div>
 		</div>
