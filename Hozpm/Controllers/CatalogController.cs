@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using Hozpm.Logic;
 using Hozpm.Models;
 
@@ -6,7 +7,19 @@ namespace Hozpm.Controllers
 {
 	public class CatalogController : Controller
 	{
-		public ViewResult Index(string groupSelected, string code, bool? groupAny, bool? purposeAny)
+		[HttpGet]
+		public ViewResult Index()
+		{
+			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
+			var formModel = mb.GetAsideFormViewModel();
+
+			var model = new CatalogHomeViewModel { FormModel = formModel };
+
+			return View(model);
+		}
+
+		[HttpPost, ValidateAntiForgeryToken]
+		public ViewResult Index(string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListModel[] purposes)
 		{
 			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
 			var formModel = mb.GetAsideFormViewModel();
@@ -19,6 +32,17 @@ namespace Hozpm.Controllers
 				formModel.GroupSelected = groupSelected;
 			if (!string.IsNullOrEmpty(code))
 				formModel.Code = code;
+			if (purposes != null)
+			{
+				foreach (var p in purposes)
+				{
+					var purpose = formModel.Purposes.FirstOrDefault(x => x.Value == p.Value);
+					if (purpose == null)
+						continue;
+
+					purpose.Selected = p.Selected;
+				}
+			}
 
 			var model = new CatalogHomeViewModel { FormModel = formModel };
 

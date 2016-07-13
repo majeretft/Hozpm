@@ -6,22 +6,22 @@ using Newtonsoft.Json.Linq;
 
 namespace Hozpm.Logic.Json
 {
-	public class GroupParser
+	public class DataParser
 	{
-		public IEnumerable<AsideFormViewModel.Group> ParseList(JArray token)
+		public IEnumerable<AsideFormViewModel.FilterRule> ParseFilterRuleList(JArray token)
 		{
 			if (token == null)
 				throw new ArgumentNullException(nameof(token));
 
-			return token.OfType<JObject>().Select(Parse).ToList();
+			return token.OfType<JObject>().Select(ParseFilterRule).ToList();
 		}
 
-		public AsideFormViewModel.Group Parse(JObject token)
+		public AsideFormViewModel.FilterRule ParseFilterRule(JObject token)
 		{
 			if (token == null)
 				throw new ArgumentNullException(nameof(token));
 
-			var result = new AsideFormViewModel.Group
+			var result = new AsideFormViewModel.FilterRule
 			{
 				Caption = token.Value<string>("caption"),
 				CaptionUri = token.Value<string>("captionUri"),

@@ -259,8 +259,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\CheckboxListModel.cs" />
+    <Compile Include="Logic\Json\DataParser.cs" />
     <Compile Include="Logic\Json\FileReader.cs" />
-    <Compile Include="Logic\Json\GroupParser.cs" />
     <Compile Include="Logic\ModelBuilder.cs" />
     <Compile Include="Models\CatalogHomeViewModel.cs" />
     <Compile Include="Models\Entities\AsideFormViewModel.cs" />
