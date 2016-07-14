@@ -348,8 +348,7 @@ footer {
   }
 }
 .product-item .image {
-  width: 250px;
-  height: 250px;
+  width: 400px;
   margin-bottom: 20px;
   border-radius: 4px;
   margin-left: auto;
@@ -366,6 +365,11 @@ footer {
   .product-item .image {
     float: left;
     margin-right: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .product-item .image {
+    width: 500px;
   }
 }
 .catalog-filter {
@@ -537,16 +541,11 @@ footer {
 .product-ordered-list > li > a {
   display: inline-block;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: 0.15s ease-in;
 }
 .product-ordered-list > li > a:hover,
 .product-ordered-list > li > a:visited,
 .product-ordered-list > li > a:focus {
   text-decoration: none;
-}
-.product-ordered-list > li > a:hover {
-  border-bottom-color: #337ab7;
 }
 .product-ordered-list > li > a .caption {
   display: inline-block;

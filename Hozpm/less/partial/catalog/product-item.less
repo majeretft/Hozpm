@@ -4,8 +4,7 @@
 .product-item {
 
 	.image {
-		width: 250px;
-		height: 250px;
+		width: 400px;
 		margin-bottom: 20px;
 		border-radius: @element-border-radius;
 		margin-left: auto;
@@ -24,6 +23,12 @@
 		.image {
 			float: left;
 			margin-right: 20px;
+		}
+	}
+
+	@media(min-width: @screen-md-min) {
+		.image {
+			width: 500px;
 		}
 	}
 }
