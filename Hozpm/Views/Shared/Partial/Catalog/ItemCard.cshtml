@@ -1,8 +1,7 @@
-﻿@model CatalogHomeViewModel.Product
-
+﻿@model Hozpm.Logic.Entities.ProductBase
 
 @{
-	var link = Url.Action("Product", "Catalog" , new { Item = Model.CaptionUri });
+	var link = Url.Action("Product", "Catalog" , new { Item = Model.Uri });
 }
 
 <div class="product-card-placeholder">
@@ -10,13 +9,13 @@
 		<div class="content">
 			<div class="sign clearfix">
 				<span class="code"><i>Артикул:</i> <b>@Model.Code</b></span>
-				@if (Model.IsKit)
+				@if (Model.GetIsKit)
 				{
 					<span class="kit"><i>Набор:</i> <span class="glyphicon glyphicon-ok"></span></span>
 				}
 			</div>
 			<div class="caption">@Model.Caption</div>
-			<img src="@Url.Content($"~/{Model.PhotoPath}")" alt="" class="img-responsive image" />
+			<img src="@Url.Content($"~/img/{Model.PhotoPath}")" alt="" class="img-responsive image" />
 			<span class="btn btn-link btn-block link">Подробнее</span>
 		</div>
 	</a>

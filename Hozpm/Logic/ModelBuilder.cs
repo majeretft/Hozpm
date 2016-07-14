@@ -1,15 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using Hozpm.Logic.Entities;
 using Hozpm.Logic.Json;
 using Hozpm.Models;
 using Hozpm.Models.Entities;
+using Newtonsoft.Json.Linq;
+using Filter = Hozpm.Logic.Entities.Filter;
 
 namespace Hozpm.Logic
 {
 	public class ModelBuilder
 	{
 		private readonly string _jsonFolderPath;
+
+		private delegate JToken GetToken(string jsonFolderPath);
 
 		public ModelBuilder(string jsonFolderPath)
 		{
@@ -22,8 +28,22 @@ namespace Hozpm.Logic
 			var result = new CatalogHomeViewModel
 			{
 				FormModel = asideViewModel,
-				Products = GetProducts(_jsonFolderPath),
-				Kits = GetKits(_jsonFolderPath)
+				Products = GetProducts(),
+				Kits = GetKits()
+			};
+
+			return result;
+		}
+
+		public ProductViewModel GetProductViewModel(string uri)
+		{
+			var product = GetProduct(uri);
+			var analogicProducts = GetAnalogicProducts(product.AnalogyId);
+
+			var result = new ProductViewModel
+			{
+				Product = product,
+				AnalogicProducts = analogicProducts
 			};
 
 			return result;
@@ -31,70 +51,78 @@ namespace Hozpm.Logic
 
 		private AsideFormViewModel GetAsideFormViewModel()
 		{
+			var groups = GetFilters(path => new FileReader().GetGroups(path));
+			var selectListItems = groups.Select(x => new SelectListItem
+			{
+				Value = x.Id.ToString(),
+				Text = x.Text
+			}).ToList();
+
+			if (selectListItems.Any())
+				selectListItems.First().Selected = true;
+
+			var purposes = GetFilters(path => new FileReader().GetPurposes(path));
+			var checkboxListItems = purposes.Select(x => new CheckboxListModel
+			{
+				Id = x.Id.ToString(),
+				Text = x.Text
+			}).ToList();
+
 			var result = new AsideFormViewModel
 			{
-				Groups = GetGroups(_jsonFolderPath),
-				Purposes = GetPurposes(_jsonFolderPath),
+				Groups = selectListItems,
+				Purposes = checkboxListItems
 			};
 
 			return result;
 		}
 
-		private List<SelectListItem> GetGroups(string folder)
+		private IEnumerable<Filter> GetFilters(GetToken function)
 		{
-			var fr = new FileReader();
-			var token = fr.GetGroups(folder);
+			if (function == null)
+				throw new ArgumentNullException(nameof(function));
+
+			var token = function(_jsonFolderPath);
 
 			var p = new DataParser();
-			var items = p.ParseFilterRuleList(token);
-
-			var result = items.Select(x => new SelectListItem
-			{
-				Text = x.Caption,
-				Value = x.CaptionUri
-			}).ToList();
-
-			return result;
+			return p.ParseFilters(token);
 		}
 
-		private List<CheckboxListModel> GetPurposes(string folder)
+		private Product GetProduct(string uri)
 		{
-			var fr = new FileReader();
-			var token = fr.GetPurposes(folder);
+			var items = GetProducts();
 
-			var p = new DataParser();
-			var items = p.ParseFilterRuleList(token);
-
-			var result = items.Select(x => new CheckboxListModel
-			{
-				Text = x.Caption,
-				Value = x.CaptionUri
-			}).ToList();
-
-			return result;
+			return items.First(x => x.Uri.Equals(uri));
 		}
 
-		private List<CatalogHomeViewModel.Product> GetProducts(string folder)
+		private IEnumerable<Product> GetProducts()
 		{
 			var fr = new FileReader();
-			var token = fr.GetProducts(folder);
+			var token = fr.GetProducts(_jsonFolderPath);
 
 			var p = new DataParser();
-			return p.ParseProductList(token);
+			return p.ParseProducts(token);
 		}
 
-		private List<CatalogHomeViewModel.Product> GetKits(string folder)
+		private IEnumerable<Product> GetAnalogicProducts(int analogyId)
+		{
+			var products = GetProducts();
+
+			if (products == null)
+				return null;
+
+			var p = products.ToList();
+
+			return !p.Any() ? null : p.Where(x => x.AnalogyId == analogyId);
+		}
+
+		private IEnumerable<Kit> GetKits()
 		{
 			var fr = new FileReader();
-			var token = fr.GetKits(folder);
+			var token = fr.GetKits(_jsonFolderPath);
 
 			var p = new DataParser();
-			var items = p.ParseProductList(token);
-
-			foreach (var item in items)
-				item.IsKit = true;
-
-			return items;
+			return p.ParseKits(token);
 		}
 	}
 }

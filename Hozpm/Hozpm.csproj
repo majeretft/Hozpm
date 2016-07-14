@@ -232,6 +232,7 @@
     <Content Include="Views\Shared\Partial\Catalog\ProductOrderedList.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\Catalog\NotFound.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -258,11 +259,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Logic\CheckboxListModel.cs" />
+    <Compile Include="Logic\Entities\Container.cs" />
+    <Compile Include="Logic\Entities\Filter.cs" />
+    <Compile Include="Logic\Entities\Kit.cs" />
+    <Compile Include="Logic\Entities\Product.cs" />
+    <Compile Include="Logic\Entities\ProductBase.cs" />
     <Compile Include="Logic\Json\DataParser.cs" />
     <Compile Include="Logic\Json\FileReader.cs" />
     <Compile Include="Logic\ModelBuilder.cs" />
     <Compile Include="Models\CatalogHomeViewModel.cs" />
     <Compile Include="Models\Entities\AsideFormViewModel.cs" />
+    <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

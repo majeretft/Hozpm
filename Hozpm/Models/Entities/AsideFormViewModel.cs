@@ -7,24 +7,17 @@ namespace Hozpm.Models.Entities
 {
 	public class AsideFormViewModel
 	{
-		public class FilterRule
-		{
-			public int Id { get; set; }
-			public string CaptionUri { get; set; }
-			public string Caption { get; set; }
-		}
-
 		public bool GroupAny { get; set; }
 		public string GroupSelected { get; set; }
-		public List<SelectListItem> Groups { get; set; }
+		public IEnumerable<SelectListItem> Groups { get; set; }
 
 		public bool PurposeAny { get; set; }
-		public List<CheckboxListModel> Purposes { get; set; }
+		public IEnumerable<CheckboxListModel> Purposes { get; set; }
 
 		public string Code { get; set; }
 
 		public string DisplaySelected { get; set; }
-		public List<SelectListItem> DisplayList => new List<SelectListItem>
+		public IEnumerable<SelectListItem> DisplayList => new List<SelectListItem>
 		{
 			new SelectListItem { Selected = true, Value = "10", Text = "10"},
 			new SelectListItem { Value = "20", Text = "20"},
@@ -33,7 +26,7 @@ namespace Hozpm.Models.Entities
 		};
 
 		public string OrderSelected { get; set; }
-		public List<SelectListItem> OrderList => new List<SelectListItem>
+		public IEnumerable<SelectListItem> OrderList => new List<SelectListItem>
 		{
 			new SelectListItem { Selected = true, Value = "code", Text = "Артикул"},
 			new SelectListItem { Value = "caption", Text = "Наименование"}

@@ -32,10 +32,12 @@
 				<div>
 					@for (var i = 0; i < Model.Purposes.Count(); i++)
 					{
+						var purposes = Model.Purposes.ToList();
+
 						<div class="checkbox">
 							<label>
-								@Html.HiddenFor(x => Model.Purposes[i].Value)
-								@Html.CheckBoxFor(x => Model.Purposes[i].Selected) @Model.Purposes[i].Text
+								@Html.HiddenFor(x => purposes[i].Value)
+								@Html.CheckBoxFor(x => purposes[i].Selected) @purposes[i].Text
 							</label>
 						</div>
 					}

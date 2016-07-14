@@ -1,16 +1,20 @@
-﻿
+﻿@model ProductViewModel
+
 @{
 	ViewBag.Title = "Product";
 }
 
 <div class="page-header">
-	<h1>Название продукции (краткое)</h1>
+	<h1>@Model.Product.CaptionShort</h1>
 </div>
 
-@Html.Partial("Partial/Catalog/ProductItem")
+@Html.Partial("Partial/Catalog/ProductItem", Model.Product)
 
-<h3>Эта продукция в другой таре и упаковке</h3>
-@Html.Partial("Partial/Catalog/ProductAnotherContainer")
+@if (Model.AnalogicProducts != null && Model.AnalogicProducts.Any())
+{
+	<h3>Эта продукция в другой таре и упаковке</h3>
+	@Html.Partial("Partial/Catalog/ProductAnotherContainer", Model.AnalogicProducts)
+}
 
 <h3>Данная продукция включена в следующие наборы</h3>
 @Html.Partial("Partial/Catalog/ProductOrderedList")

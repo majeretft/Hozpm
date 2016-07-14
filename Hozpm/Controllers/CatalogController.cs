@@ -6,10 +6,12 @@ namespace Hozpm.Controllers
 {
 	public class CatalogController : Controller
 	{
+		private const string JsonPath = "~/App_Data/json";
+
 		[HttpGet]
 		public ViewResult Index()
 		{
-			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
+			var mb = new ModelBuilder(Server.MapPath(JsonPath));
 			var model = mb.GetCatalogHomeViewModel();
 
 			return View(model);
@@ -18,7 +20,7 @@ namespace Hozpm.Controllers
 		[HttpPost, ValidateAntiForgeryToken]
 		public ViewResult Index(string displaySelected, string orderSelected, string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListModel[] purposes)
 		{
-			var mb = new ModelBuilder(Server.MapPath("~/App_Data/json"));
+			var mb = new ModelBuilder(Server.MapPath(JsonPath));
 			var model = mb.GetCatalogHomeViewModel();
 			var formModel = model.FormModel;
 
@@ -56,10 +58,21 @@ namespace Hozpm.Controllers
 
 		public ActionResult Product(string item)
 		{
-			return View();
+			if (string.IsNullOrEmpty(item))
+				return RedirectToAction("NotFound");
+
+			var mb = new ModelBuilder(Server.MapPath(JsonPath));
+			var model = mb.GetProductViewModel(item);
+
+			return View(model);
 		}
 
 		public ActionResult Kit()
+		{
+			return View();
+		}
+
+		public ViewResult NotFound()
 		{
 			return View();
 		}

@@ -1,13 +1,44 @@
-﻿<div class="product-another-container">
-	@for (var i = 1; i < 8; i++)
+﻿@model IEnumerable<Hozpm.Logic.Entities.ProductBase>
+
+<div class="product-another-container">
+	@foreach (var p in Model)
 	{
-		var text = "A00000" + i;
+		var c = p.Container;
 
 		<a href="#" class="btn btn-default btn-lg">
 			<div class="hidden-xs">
-				Артикул: <b>@text</b>
+				Артикул: <b>@p.Code</b>
 			</div>
-			Тара: <b>@(Math.Floor(new Random().NextDouble() * i * 100 * new Random().NextDouble()))г</b>
+			@if (c != null)
+			{
+				if (c.Weight.HasValue && !string.IsNullOrEmpty(c.WeightText))
+				{
+					<span class="weight">
+						Масса: <b><span>@c.Weight</span>@c.WeightText</b>
+					</span>
+				}
+
+				if (c.Volume.HasValue && !string.IsNullOrEmpty(c.VolumeText))
+				{
+					<span class="volume">
+						Объем: <b><span>@c.Volume</span>@c.VolumeText</b>
+					</span>
+				}
+
+				if (c.Length.HasValue && c.Width.HasValue && c.Height.HasValue
+					&& !string.IsNullOrEmpty(c.LengthText) && !string.IsNullOrEmpty(c.WidthText) && !string.IsNullOrEmpty(c.HeightText))
+				{
+					<span class="dimensions">
+						ДхШхВ:
+						<span class="text-nowrap">
+							<b><span>@c.Length.Value</span>@c.LengthText</b> x
+							<b><span>@c.Width.Value</span>@c.WidthText</b> x
+							<b><span>@c.Height.Value</span>@c.HeightText</b>
+						</span>
+					</span>
+				}
+			}
+			<div class="btn btn-link btn-block">Посмотреть</div>
 		</a>
 	}
 </div>

@@ -561,7 +561,7 @@ footer {
 .product-another-container {
   margin-bottom: 25px;
 }
-.product-another-container .btn {
+.product-another-container > .btn {
   margin-bottom: 15px;
   margin-right: 15px;
   border-radius: 4px;

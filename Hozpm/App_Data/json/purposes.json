@@ -1,7 +1,6 @@
 [
 	{
 		"id": 0,
-		"captionUri": "testovoe-naznachenie",
-		"caption": "Тестовое назначение"
+		"text": "Тестовое назначение"
 	}
 ]

@@ -12,7 +12,7 @@ namespace Hozpm.Logic.Json
 		public const string ProductsFile = "products.json";
 		public const string KitsFile = "kits.json";
 
-		public T GetToken<T>(string folder, string fileName) where T: JToken
+		public JToken GetToken(string folder, string fileName)
 		{
 			if (string.IsNullOrEmpty(folder))
 				throw new ArgumentNullException(nameof(folder));
@@ -25,32 +25,40 @@ namespace Hozpm.Logic.Json
 			using (var file = File.OpenText(path))
 			using (var reader = new JsonTextReader(file))
 			{
-				return (T) JToken.ReadFrom(reader);
+				return JToken.ReadFrom(reader);
 			}
 		}
 
 		public JArray GetGroups(string folder)
 		{
 			var fr = new FileReader();
-			return fr.GetToken<JArray>(folder, GroupsFile);
+			var items = fr.GetToken(folder, GroupsFile);
+
+			return items as JArray;
 		}
 
 		public JArray GetPurposes(string folder)
 		{
 			var fr = new FileReader();
-			return fr.GetToken<JArray>(folder, PurposesFile);
+			var items = fr.GetToken(folder, PurposesFile);
+
+			return items as JArray;
 		}
 
 		public JArray GetProducts(string folder)
 		{
 			var fr = new FileReader();
-			return fr.GetToken<JArray>(folder, ProductsFile);
+			var items = fr.GetToken(folder, ProductsFile);
+
+			return items as JArray;
 		}
 
 		public JArray GetKits(string folder)
 		{
 			var fr = new FileReader();
-			return fr.GetToken<JArray>(folder, KitsFile);
+			var items = fr.GetToken(folder, KitsFile);
+
+			return items as JArray;
 		}
 	}
 }

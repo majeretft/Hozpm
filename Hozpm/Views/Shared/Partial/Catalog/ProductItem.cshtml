@@ -1,43 +1,51 @@
-﻿<div class="product-item clearfix">
+﻿@model Hozpm.Logic.Entities.ProductBase
+
+<div class="product-item clearfix">
 	<div class="clearfix">
-		<img src="@Url.Content("~/img/placeholder/placeholder_16x9.png")" alt="" class="img-responsive image" />
+		<img src="@Url.Content($"~/img/{Model.PhotoPath}")" alt="" class="img-responsive image" />
 		<p class="code">
-			Артикул: <b>A000000</b>
+			Артикул: <b>@Model.Code</b>
 		</p>
-		<p class="kit">
-			Набор: <span class="glyphicon glyphicon-ok"></span>
-		</p>
-		<p class="weight">
-			Масса: <b>XX</b>
-		</p>
-		<p class="volume">
-			Объем: <b>XX</b>
-		</p>
-		<p class="dimensions">
-			Размер тары: <span class="text-nowrap"><b>XX</b> x <b>XX</b> x <b>XX</b></span>
-		</p>
+		@if (Model.GetIsKit)
+		{
+			<p class="kit">
+				Набор: <span class="glyphicon glyphicon-ok"></span>
+			</p>
+		}
+		@if (Model.Container != null)
+		{
+			var c = Model.Container;
+
+			if (c.Weight.HasValue && !string.IsNullOrEmpty(c.WeightText))
+			{
+				<p class="weight">
+					Масса: <b><span>@c.Weight</span>@c.WeightText</b>
+				</p>
+			}
+
+			if (c.Volume.HasValue && !string.IsNullOrEmpty(c.VolumeText))
+			{
+				<p class="volume">
+					Объем: <b><span>@c.Volume</span>@c.VolumeText</b>
+				</p>
+			}
+
+			if (c.Length.HasValue && c.Width.HasValue && c.Height.HasValue
+				&& !string.IsNullOrEmpty(c.LengthText) && !string.IsNullOrEmpty(c.WidthText) && !string.IsNullOrEmpty(c.HeightText))
+			{
+				<p class="dimensions">
+					ДхШхВ:
+					<span class="text-nowrap">
+						<b><span>@c.Length.Value</span>@c.LengthText</b> x 
+						<b><span>@c.Width.Value</span>@c.WidthText</b> x 
+						<b><span>@c.Height.Value</span>@c.HeightText</b>
+					</span>
+				</p>
+			}
+		}
 	</div>
-	<p class="lead caption-full">Полное и длиннющее название продукции (полное)</p>
+	<p class="lead caption-full">@Model.Caption</p>
 	<div class="description">
-		<p>
-			Резьбовые опоры применяются в качестве ножек металлических и деревянных конструкций и могут использоваться для регулирования высоты.
-			Изделия применяются при сборке складских стеллажей, торгового оборудования, офисной мебели, шкафов, диванов, кроватей, спортивного инвентаря и других конструкций.
-		</p>
-		<p>
-			Производство резьбовых опор для металлических и деревянных конструкций.
-		</p>
-		<div>
-			<h5>Регулируемых опоры применяются:</h5>
-			<ul>
-				<li>В качестве ножек стеллажей, корпусной и офисной мебели, спортивных снарядов и прочих конструкций</li>
-				<li>Для регулирования высоты всей конструкции или ее отдельных частей</li>
-			</ul>
-		</div>
-		<h5>Возможно изготовление нестандартных изделий:</h5>
-		<ul>
-			<li>Возможен подбор цвета основания</li>
-			<li>Изготовление опоры со стержнем необходимой длины</li>
-			<li>Изготовление с использованием нержавеющего или оцинкованного стержня</li>
-		</ul>
+		@Html.Raw(Model.Description)
 	</div>
 </div>

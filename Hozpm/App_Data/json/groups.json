@@ -1,52 +1,42 @@
 [
 	{
 		"id": 0,
-		"captionUri": "flyusy",
-		"caption": "Флюсы"
+		"text": "Флюсы"
 	},
 	{
 		"id": 1,
-		"captionUri": "flyus-geli",
-		"caption": "Флюс-гели"
+		"text": "Флюс-гели"
 	},
 	{
 		"id": 2,
-		"captionUri": "flyus-lyuksy",
-		"caption": "Флюс-люксы"
+		"text": "Флюс-люксы"
 	},
 	{
 		"id": 3,
-		"captionUri": "pripoi-i-splavy",
-		"caption": "Припои и сплавы"
+		"text": "Припои и сплавы"
 	},
 	{
 		"id": 4,
-		"captionUri": "klei",
-		"caption": "Клеи"
+		"text": "Клеи"
 	},
 	{
 		"id": 5,
-		"captionUri": "laki",
-		"caption": "Лаки"
+		"text": "Лаки"
 	},
 	{
 		"id": 6,
-		"captionUri": "nabory",
-		"caption": "Наборы"
+		"text": "Наборы"
 	},
 	{
 		"id": 7,
-		"captionUri": "ochistiteli-pasty-zhelezo-hlornoe",
-		"caption": "Очистители, пасты, железо хлорное"
+		"text": "Очистители, пасты, железо хлорное"
 	},
 	{
 		"id": 8,
-		"captionUri": "smazochnye-materialy",
-		"caption": "Смазочные материалы"
+		"text": "Смазочные материалы"
 	},
 	{
 		"id": 9,
-		"captionUri": "raznoe",
-		"caption": "Разное"
+		"text": "Разное"
 	}
 ]

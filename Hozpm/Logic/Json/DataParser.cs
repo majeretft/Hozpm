@@ -1,59 +1,101 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Hozpm.Models;
-using Hozpm.Models.Entities;
+using Hozpm.Logic.Entities;
 using Newtonsoft.Json.Linq;
 
 namespace Hozpm.Logic.Json
 {
 	public class DataParser
 	{
-		public List<AsideFormViewModel.FilterRule> ParseFilterRuleList(JArray token)
+		private Container ParseContainer(JToken token)
 		{
 			if (token == null)
 				throw new ArgumentNullException(nameof(token));
 
-			return token.OfType<JObject>().Select(ParseFilterRule).ToList();
-		}
-
-		public AsideFormViewModel.FilterRule ParseFilterRule(JObject token)
-		{
-			if (token == null)
-				throw new ArgumentNullException(nameof(token));
-
-			var result = new AsideFormViewModel.FilterRule
+			return new Container
 			{
-				Caption = token.Value<string>("caption"),
-				CaptionUri = token.Value<string>("captionUri"),
-				Id = token.Value<int>("id")
+				Weight = token.Value<double?>("weight"),
+				Volume = token.Value<double?>("volume"),
+				Length = token.Value<double?>("lenght"),
+				Width = token.Value<double?>("width"),
+				Height = token.Value<double?>("height"),
+				WeightText = token.Value<string>("weightText"),
+				VolumeText = token.Value<string>("volumeText"),
+				LengthText = token.Value<string>("lenghtText"),
+				WidthText = token.Value<string>("widthText"),
+				HeightText = token.Value<string>("heightText")
 			};
-
-			return result;
 		}
 
-		public List<CatalogHomeViewModel.Product> ParseProductList(JArray token)
+		public void ParseProductBase(ProductBase target, JObject token)
+		{
+			if (target == null)
+				throw new ArgumentNullException(nameof(target));
+			if (token == null)
+				throw new ArgumentNullException(nameof(token));
+
+			target.Caption = token.Value<string>("caption");
+			target.CaptionShort = token.Value<string>("captionShort");
+			target.Code = token.Value<string>("code");
+			target.Description = token.Value<string>("description");
+			target.GroupId = token.Value<int>("groupId");
+			target.Id = token.Value<int>("Id");
+			target.PhotoPath = token.Value<string>("photoPath");
+			target.Uri = token.Value<string>("uri");
+			target.PurposeIds = token.Values("purposeIds").Select(y => y.Value<int>());
+
+			var container = token["container"];
+			if (container == null)
+				return;
+
+			target.Container = ParseContainer(container);
+		}
+
+		public IEnumerable<Product> ParseProducts(JToken token)
 		{
 			if (token == null)
 				throw new ArgumentNullException(nameof(token));
 
-			return token.OfType<JObject>().Select(ParseProduct).ToList();
+			return token
+				.OfType<JObject>()
+				.Select(x =>
+				{
+					var result = new Product();
+					ParseProductBase(result, x);
+					result.AnalogyId = x.Value<int>("analogyId");
+					return result;
+				});
 		}
 
-		public CatalogHomeViewModel.Product ParseProduct(JObject token)
+		public IEnumerable<Kit> ParseKits(JToken token)
 		{
 			if (token == null)
 				throw new ArgumentNullException(nameof(token));
 
-			var result = new CatalogHomeViewModel.Product
-			{
-				Code = token.Value<string>("code"),
-				Caption = token.Value<string>("caption"),
-				CaptionUri = token.Value<string>("captionUri"),
-				PhotoPath = token.Value<string>("photoPath")
-			};
+			return token
+				.OfType<JObject>()
+				.Select(x =>
+				{
+					var result = new Kit();
+					ParseProductBase(result, x);
+					result.ProductsIncluded = x.Values("productsIncluded").Select(y => y.Value<int>());
+					return result;
+				});
+		}
 
-			return result;
+		public IEnumerable<Filter> ParseFilters(JToken token)
+		{
+			if (token == null)
+				throw new ArgumentNullException(nameof(token));
+
+			return token
+				.OfType<JObject>()
+				.Select(x => new Filter
+				{
+					Text = x.Value<string>("text"),
+					Id = x.Value<int>("id")
+				});
 		}
 	}
 }
