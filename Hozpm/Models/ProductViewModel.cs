@@ -6,6 +6,7 @@ namespace Hozpm.Models
 	public class ProductViewModel
 	{
 		public Product Product { get; set; }
-		public IEnumerable<Product> AnalogicProducts { get; set; }
+		public IEnumerable<ProductBase> AnalogicProducts { get; set; }
+		public IEnumerable<ProductBase> IncludedInKits { get; set; }
 	}
 }

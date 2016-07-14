@@ -1,13 +1,17 @@
-﻿<ol class="product-ordered-list">
-	@for (var i = 0; i < 4; i++)
+﻿@model IEnumerable<Hozpm.Logic.Entities.ProductBase>
+
+<ol class="product-ordered-list">
+	@foreach (var p in Model)
 	{
+		var link = Url.Action("Product", "Catalog", new { Item = p.Uri });
+
 		<li>
-			<a href="#">
+			<a href="@link">
 				<div class="code">
 					<span class="text">Артикул:</span>
-					<span class="value">А000000</span>
+					<span class="value">@p.Code</span>
 				</div>
-				<div class="caption">Полное наименование продукции, которая включена в набор</div>
+				<div class="caption">@p.Caption</div>
 			</a>
 		</li>
 	}

@@ -40,10 +40,13 @@ namespace Hozpm.Logic.Json
 			target.Code = token.Value<string>("code");
 			target.Description = token.Value<string>("description");
 			target.GroupId = token.Value<int>("groupId");
-			target.Id = token.Value<int>("Id");
+			target.Id = token.Value<int>("id");
 			target.PhotoPath = token.Value<string>("photoPath");
 			target.Uri = token.Value<string>("uri");
-			target.PurposeIds = token.Values("purposeIds").Select(y => y.Value<int>());
+
+			var purposes = token["purposeIds"];
+			if (purposes != null)
+				target.PurposeIds = purposes.Values<int>();
 
 			var container = token["container"];
 			if (container == null)
@@ -79,7 +82,11 @@ namespace Hozpm.Logic.Json
 				{
 					var result = new Kit();
 					ParseProductBase(result, x);
-					result.ProductsIncluded = x.Values("productsIncluded").Select(y => y.Value<int>());
+
+					var purposes = x["productsIncluded"];
+					if (purposes != null)
+						result.ProductsIncluded = purposes.Values<int>();
+
 					return result;
 				});
 		}

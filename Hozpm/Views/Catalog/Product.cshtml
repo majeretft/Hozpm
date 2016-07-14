@@ -16,5 +16,8 @@
 	@Html.Partial("Partial/Catalog/ProductAnotherContainer", Model.AnalogicProducts)
 }
 
-<h3>Данная продукция включена в следующие наборы</h3>
-@Html.Partial("Partial/Catalog/ProductOrderedList")
+@if (Model.IncludedInKits != null && Model.IncludedInKits.Any())
+{
+	<h3>Данная продукция включена в следующие наборы</h3>
+	@Html.Partial("Partial/Catalog/ProductOrderedList", Model.IncludedInKits)
+}

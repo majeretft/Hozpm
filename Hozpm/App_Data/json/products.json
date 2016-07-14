@@ -24,7 +24,7 @@
 		}
 	},
 	{
-		"id": 0,
+		"id": 1,
 		"analogyId": 0,
 		"caption": "Другой экземпляр тестовой продукции (полное наименование)",
 		"captionShort": "Продукция №2 (краткое название)",
@@ -32,7 +32,7 @@
 		"photoPath": "placeholder/placeholder_16x9.png",
 		"uri": "test-product-2",
 		"code": "A000001",
-		"groupId": 0,
+		"groupId": 1,
 		"purposeIds": [ 0 ],
 		"container": {
 			"weight": 250,
@@ -48,7 +48,7 @@
 		}
 	},
 	{
-		"id": 0,
+		"id": 2,
 		"analogyId": 0,
 		"caption": "Решил добавить третий экземпляр тестовой продукции чтобы было на чем тестить (полное наименование)",
 		"captionShort": "Продукция №3 (краткое название)",
@@ -56,7 +56,7 @@
 		"photoPath": "placeholder/placeholder_16x9.png",
 		"uri": "my-awesome-product-3",
 		"code": "A000002",
-		"groupId": 0,
+		"groupId": 2,
 		"purposeIds": [ 0 ],
 		"container": {
 			"weight": 250,

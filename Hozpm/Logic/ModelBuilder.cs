@@ -38,12 +38,14 @@ namespace Hozpm.Logic
 		public ProductViewModel GetProductViewModel(string uri)
 		{
 			var product = GetProduct(uri);
-			var analogicProducts = GetAnalogicProducts(product.AnalogyId);
+			var analogicProducts = GetAnalogicProducts(product.Id, product.AnalogyId);
+			var includedInKits = GetIncludedInKits(product.Id);
 
 			var result = new ProductViewModel
 			{
 				Product = product,
-				AnalogicProducts = analogicProducts
+				AnalogicProducts = analogicProducts,
+				IncludedInKits = includedInKits
 			};
 
 			return result;
@@ -104,7 +106,7 @@ namespace Hozpm.Logic
 			return p.ParseProducts(token);
 		}
 
-		private IEnumerable<Product> GetAnalogicProducts(int analogyId)
+		private IEnumerable<Product> GetAnalogicProducts(int id, int analogyId)
 		{
 			var products = GetProducts();
 
@@ -113,7 +115,14 @@ namespace Hozpm.Logic
 
 			var p = products.ToList();
 
-			return !p.Any() ? null : p.Where(x => x.AnalogyId == analogyId);
+			return !p.Any() ? null : p.Where(x => x.Id != id && x.AnalogyId == analogyId);
+		}
+
+		private IEnumerable<ProductBase> GetIncludedInKits(int productId)
+		{
+			var kits = GetKits();
+
+			return kits.Where(x => x.ProductsIncluded != null && x.ProductsIncluded.Contains(productId));
 		}
 
 		private IEnumerable<Kit> GetKits()

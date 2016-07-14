@@ -3,9 +3,10 @@
 <div class="product-another-container">
 	@foreach (var p in Model)
 	{
+		var link = Url.Action("Product", "Catalog", new { Item = p.Uri });
 		var c = p.Container;
 
-		<a href="#" class="btn btn-default btn-lg">
+		<a href="@link" class="btn btn-default btn-lg">
 			<div class="hidden-xs">
 				Артикул: <b>@p.Code</b>
 			</div>
