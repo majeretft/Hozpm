@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic.Entities;
+using Hozpm.Logic.Interface;
 using Hozpm.Logic.Json;
 using Hozpm.Models;
 using Hozpm.Models.Entities;
@@ -11,7 +12,7 @@ using Filter = Hozpm.Logic.Entities.Filter;
 
 namespace Hozpm.Logic
 {
-	public class ModelBuilder
+	public class ModelBuilder : IModelProvider
 	{
 		private readonly string _jsonFolderPath;
 

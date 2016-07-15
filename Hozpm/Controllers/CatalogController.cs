@@ -1,18 +1,23 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic;
+using Hozpm.Logic.Interface;
 
 namespace Hozpm.Controllers
 {
 	public class CatalogController : Controller
 	{
-		private const string JsonPath = "~/App_Data/json";
+		private readonly IModelProvider _modelProvider;
+
+		public CatalogController(IModelProvider modelProvider)
+		{
+			_modelProvider = modelProvider;
+		}
 
 		[HttpGet]
 		public ViewResult Index()
 		{
-			var mb = new ModelBuilder(Server.MapPath(JsonPath));
-			var model = mb.GetCatalogHomeViewModel();
+			var model = _modelProvider.GetCatalogHomeViewModel();
 
 			return View(model);
 		}
@@ -20,8 +25,7 @@ namespace Hozpm.Controllers
 		[HttpPost, ValidateAntiForgeryToken]
 		public ViewResult Index(string displaySelected, string orderSelected, string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListModel[] purposes)
 		{
-			var mb = new ModelBuilder(Server.MapPath(JsonPath));
-			var model = mb.GetCatalogHomeViewModel();
+			var model = _modelProvider.GetCatalogHomeViewModel();
 			var formModel = model.FormModel;
 
 			if (groupAny.HasValue)
@@ -61,8 +65,7 @@ namespace Hozpm.Controllers
 			if (string.IsNullOrEmpty(item))
 				return RedirectToAction("NotFound");
 
-			var mb = new ModelBuilder(Server.MapPath(JsonPath));
-			var model = mb.GetProductViewModel(item);
+			var model = _modelProvider.GetProductViewModel(item);
 
 			return View(model);
 		}
@@ -72,8 +75,7 @@ namespace Hozpm.Controllers
 			if (string.IsNullOrEmpty(item))
 				return RedirectToAction("NotFound");
 
-			var mb = new ModelBuilder(Server.MapPath(JsonPath));
-			var model = mb.GetKitViewModel(item);
+			var model = _modelProvider.GetKitViewModel(item);
 
 			return View(model);
 		}
