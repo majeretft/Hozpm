@@ -269,6 +269,7 @@
     <Compile Include="Logic\ModelBuilder.cs" />
     <Compile Include="Models\CatalogHomeViewModel.cs" />
     <Compile Include="Models\Entities\AsideFormViewModel.cs" />
+    <Compile Include="Models\KitViewModel.cs" />
     <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

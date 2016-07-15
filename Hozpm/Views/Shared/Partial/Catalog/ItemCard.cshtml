@@ -1,7 +1,8 @@
 ﻿@model Hozpm.Logic.Entities.ProductBase
 
 @{
-	var link = Url.Action("Product", "Catalog" , new { Item = Model.Uri });
+	var action = Model.GetIsKit ? "Kit" : "Product";
+	var link = Url.Action(action, "Catalog" , new { Item = Model.Uri });
 }
 
 <div class="product-card-placeholder">

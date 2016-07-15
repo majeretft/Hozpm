@@ -39,13 +39,27 @@ namespace Hozpm.Logic
 		{
 			var product = GetProduct(uri);
 			var analogicProducts = GetAnalogicProducts(product.Id, product.AnalogyId);
-			var includedInKits = GetIncludedInKits(product.Id);
+			var includedInKits = GetRelativeKits(product.Id);
 
 			var result = new ProductViewModel
 			{
 				Product = product,
 				AnalogicProducts = analogicProducts,
-				IncludedInKits = includedInKits
+				RelativeKits = includedInKits
+			};
+
+			return result;
+		}
+
+		public KitViewModel GetKitViewModel(string uri)
+		{
+			var item = GetKit(uri);
+			var included = GetIncludedProducts(item.ProductsIncluded);
+
+			var result = new KitViewModel
+			{
+				Kit = item,
+				IncludedProducts = included
 			};
 
 			return result;
@@ -118,11 +132,18 @@ namespace Hozpm.Logic
 			return !p.Any() ? null : p.Where(x => x.Id != id && x.AnalogyId == analogyId);
 		}
 
-		private IEnumerable<ProductBase> GetIncludedInKits(int productId)
+		private IEnumerable<ProductBase> GetRelativeKits(int productId)
 		{
 			var kits = GetKits();
 
 			return kits.Where(x => x.ProductsIncluded != null && x.ProductsIncluded.Contains(productId));
+		}
+
+		private IEnumerable<ProductBase> GetIncludedProducts(IEnumerable<int> includedProductIds)
+		{
+			var products = GetProducts();
+
+			return products.Where(x => includedProductIds.Contains(x.Id));
 		}
 
 		private IEnumerable<Kit> GetKits()
@@ -132,6 +153,13 @@ namespace Hozpm.Logic
 
 			var p = new DataParser();
 			return p.ParseKits(token);
+		}
+
+		private Kit GetKit(string uri)
+		{
+			var items = GetKits();
+
+			return items.First(x => x.Uri.Equals(uri));
 		}
 	}
 }

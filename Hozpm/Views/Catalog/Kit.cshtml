@@ -1,22 +1,17 @@
-﻿
+﻿@model KitViewModel
+
 @{
 	ViewBag.Title = "Kit";
 }
 
 <div class="page-header">
-	<h1>Название продукции (краткое)</h1>
+	<h1>@Model.Kit.CaptionShort</h1>
 </div>
 
-@Html.Partial("Partial/Catalog/ProductItem")
+@Html.Partial("Partial/Catalog/ProductItem", Model.Kit)
 
-<div class="row">
-	<div class="col-lg-6">
-		<h3>В набор включена следующая продукция</h3>
-	</div>
-</div>
-
-<div class="row">
-	<div class="col-xs-12">
-		@Html.Partial("Partial/Catalog/ProductOrderedList")
-	</div>
-</div>
+@if (Model.IncludedProducts != null && Model.IncludedProducts.Any())
+{
+	<h3>В набор включена следующая продукция</h3>
+	@Html.Partial("Partial/Catalog/ProductOrderedList", Model.IncludedProducts)
+}

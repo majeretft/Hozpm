@@ -7,6 +7,6 @@ namespace Hozpm.Models
 	{
 		public Product Product { get; set; }
 		public IEnumerable<ProductBase> AnalogicProducts { get; set; }
-		public IEnumerable<ProductBase> IncludedInKits { get; set; }
+		public IEnumerable<ProductBase> RelativeKits { get; set; }
 	}
 }

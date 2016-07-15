@@ -67,9 +67,15 @@ namespace Hozpm.Controllers
 			return View(model);
 		}
 
-		public ActionResult Kit()
+		public ActionResult Kit(string item)
 		{
-			return View();
+			if (string.IsNullOrEmpty(item))
+				return RedirectToAction("NotFound");
+
+			var mb = new ModelBuilder(Server.MapPath(JsonPath));
+			var model = mb.GetKitViewModel(item);
+
+			return View(model);
 		}
 
 		public ViewResult NotFound()
