@@ -25,11 +25,11 @@ namespace Hozpm.Logic
 		public CatalogHomeViewModel GetCatalogHomeViewModel()
 		{
 			var asideViewModel = GetAsideFormViewModel();
+
 			var result = new CatalogHomeViewModel
 			{
 				FormModel = asideViewModel,
-				Products = GetProducts(),
-				Kits = GetKits()
+				Items = GetItems()
 			};
 
 			return result;
@@ -67,7 +67,7 @@ namespace Hozpm.Logic
 
 		private AsideFormViewModel GetAsideFormViewModel()
 		{
-			var groups = GetFilters(path => new FileReader().GetGroups(path));
+			var groups = GetFilters(path => new FileReader(path).GetGroups());
 			var selectListItems = groups.Select(x => new SelectListItem
 			{
 				Value = x.Id.ToString(),
@@ -77,7 +77,7 @@ namespace Hozpm.Logic
 			if (selectListItems.Any())
 				selectListItems.First().Selected = true;
 
-			var purposes = GetFilters(path => new FileReader().GetPurposes(path));
+			var purposes = GetFilters(path => new FileReader(path).GetPurposes());
 			var checkboxListItems = purposes.Select(x => new CheckboxListModel
 			{
 				Id = x.Id.ToString(),
@@ -113,8 +113,8 @@ namespace Hozpm.Logic
 
 		private IEnumerable<Product> GetProducts()
 		{
-			var fr = new FileReader();
-			var token = fr.GetProducts(_jsonFolderPath);
+			var fr = new FileReader(_jsonFolderPath);
+			var token = fr.GetProducts();
 
 			var p = new DataParser();
 			return p.ParseProducts(token);
@@ -148,8 +148,8 @@ namespace Hozpm.Logic
 
 		private IEnumerable<Kit> GetKits()
 		{
-			var fr = new FileReader();
-			var token = fr.GetKits(_jsonFolderPath);
+			var fr = new FileReader(_jsonFolderPath);
+			var token = fr.GetKits();
 
 			var p = new DataParser();
 			return p.ParseKits(token);
@@ -160,6 +160,18 @@ namespace Hozpm.Logic
 			var items = GetKits();
 
 			return items.First(x => x.Uri.Equals(uri));
+		}
+
+		private IEnumerable<ProductBase> GetItems()
+		{
+			var p = GetProducts();
+			var k = GetKits();
+
+			var result = new List<ProductBase>();
+			result.AddRange(p);
+			result.AddRange(k);
+
+			return result;
 		}
 	}
 }

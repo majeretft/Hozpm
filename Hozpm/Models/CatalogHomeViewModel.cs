@@ -8,8 +8,7 @@ namespace Hozpm.Models
 	{
 		public AsideFormViewModel FormModel { get; set; }
 
-		public IEnumerable<Product> Products { get; set; }
-		public IEnumerable<Kit> Kits { get; set; }
+		public IEnumerable<ProductBase> Items { get; set; }
 
 		public string FilterCode { get; set; }
 		public string FilterGroup { get; set; }
