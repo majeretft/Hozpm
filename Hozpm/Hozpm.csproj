@@ -212,6 +212,7 @@
     <Content Include="less\partial\catalog\product-item.less" />
     <Content Include="less\partial\catalog\product-another-container.less" />
     <Content Include="less\ie.less" />
+    <None Include="Properties\PublishProfiles\rc.pubxml" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
