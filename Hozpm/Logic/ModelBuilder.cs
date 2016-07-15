@@ -12,6 +12,7 @@ using Filter = Hozpm.Logic.Entities.Filter;
 
 namespace Hozpm.Logic
 {
+	[Obsolete("Use ModelProvider instead, because this class does not provide functionality for aside form and caching.")]
 	public class ModelBuilder : IModelProvider
 	{
 		private readonly string _jsonFolderPath;
