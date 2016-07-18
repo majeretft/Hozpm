@@ -1,6 +1,6 @@
 ﻿namespace Hozpm.Logic
 {
-	public class CheckboxListModel
+	public class CheckboxListItem
 	{
 		public string Id { get; set; }
 		public bool Selected { get; set; }

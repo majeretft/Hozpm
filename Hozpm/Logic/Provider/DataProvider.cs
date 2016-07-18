@@ -1,49 +1,164 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Caching;
 using Hozpm.Logic.Abstract;
 using Hozpm.Logic.Entities;
+using Hozpm.Logic.Json;
 
 namespace Hozpm.Logic.Provider
 {
 	public class DataProvider : IDataProvider
 	{
+		private readonly FileReader _fr;
+		private readonly Cache _cache;
+
+		public DataProvider(string folder)
+		{
+			_fr = new FileReader(folder);
+			_cache = HttpRuntime.Cache;
+		}
+
 		public IEnumerable<Filter> GetGroups()
 		{
-			throw new System.NotImplementedException();
+			const string cacheKey = "Groups";
+			var cachedResult = _cache[cacheKey] as IEnumerable<Filter>;
+
+			if (cachedResult != null)
+				return cachedResult;
+
+			var token = _fr.GetGroups();
+			var result = new DataParser().ParseFilters(token);
+
+			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+
+			return result;
 		}
 
 		public IEnumerable<Filter> GetPurposes()
 		{
-			throw new System.NotImplementedException();
+			const string cacheKey = "Purposes";
+			var cachedResult = _cache[cacheKey] as IEnumerable<Filter>;
+
+			if (cachedResult != null)
+				return cachedResult;
+
+			var token = _fr.GetPurposes();
+			var result = new DataParser().ParseFilters(token);
+
+			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+
+			return result;
 		}
 
 		public Product GetProduct(string uri)
 		{
-			throw new System.NotImplementedException();
+			if (string.IsNullOrEmpty(uri))
+				throw new ArgumentNullException(nameof(uri));
+
+			var items = GetProducts();
+
+			return items.FirstOrDefault(x => x.Uri.Equals(uri));
 		}
 
 		public Kit GetKit(string uri)
 		{
-			throw new System.NotImplementedException();
+			if (string.IsNullOrEmpty(uri))
+				throw new ArgumentNullException(nameof(uri));
+
+			var items = GetKits();
+
+			return items.FirstOrDefault(x => x.Uri.Equals(uri));
 		}
 
 		public IEnumerable<ProductBase> GetItems()
 		{
-			throw new System.NotImplementedException();
+			const string cacheKey = "Items";
+			var cachedResult = _cache[cacheKey] as IEnumerable<ProductBase>;
+
+			if (cachedResult != null)
+				return cachedResult;
+
+			var p = GetProducts();
+			var k = GetKits();
+
+			var result = new List<ProductBase>();
+			result.AddRange(p);
+			result.AddRange(k);
+
+			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+
+			return result;
 		}
 
 		public IEnumerable<Product> GetAnalogicProducts(int productId, int analogyId)
 		{
-			throw new System.NotImplementedException();
+			if (productId < 0)
+				throw new ArgumentOutOfRangeException(nameof(productId));
+			if (analogyId < 0)
+				throw new ArgumentOutOfRangeException(nameof(analogyId));
+
+			var products = GetProducts();
+
+			return products.Where(x => x.Id != productId && x.AnalogyId == analogyId);
 		}
 
 		public IEnumerable<ProductBase> GetRelativeKits(int productId)
 		{
-			throw new System.NotImplementedException();
+			if (productId < 0)
+				throw new ArgumentOutOfRangeException(nameof(productId));
+
+			var kits = GetKits();
+
+			return kits.Where(x => x.ProductsIncluded != null && x.ProductsIncluded.Contains(productId));
 		}
 
 		public IEnumerable<ProductBase> GetIncludedProducts(IEnumerable<int> includedProductIds)
 		{
-			throw new System.NotImplementedException();
+			if (includedProductIds == null)
+				throw new ArgumentNullException(nameof(includedProductIds));
+
+			var list = includedProductIds.ToList();
+
+			if (!list.Any())
+				return null;
+
+			var products = GetProducts();
+
+			return products.Where(x => list.Contains(x.Id));
+		}
+
+		protected IEnumerable<Product> GetProducts()
+		{
+			const string cacheKey = "Products";
+			var cachedResult = _cache[cacheKey] as IEnumerable<Product>;
+
+			if (cachedResult != null)
+				return cachedResult;
+
+			var token = _fr.GetProducts();
+			var result = new DataParser().ParseProducts(token);
+
+			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+
+			return result;
+		}
+
+		protected IEnumerable<Kit> GetKits()
+		{
+			const string cacheKey = "Kits";
+			var cachedResult = _cache[cacheKey] as IEnumerable<Kit>;
+
+			if (cachedResult != null)
+				return cachedResult;
+
+			var token = _fr.GetKits();
+			var result = new DataParser().ParseKits(token);
+
+			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+
+			return result;
 		}
 	}
 }

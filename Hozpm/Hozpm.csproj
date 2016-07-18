@@ -283,7 +283,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Logic\CheckboxListModel.cs" />
+    <Compile Include="Logic\CheckboxListItem.cs" />
     <Compile Include="Logic\Abstract\IDataProvider.cs" />
     <Compile Include="Logic\Abstract\IModelProvider.cs" />
     <Compile Include="Logic\Provider\DataProvider.cs" />
@@ -294,7 +294,6 @@
     <Compile Include="Logic\Entities\ProductBase.cs" />
     <Compile Include="Logic\Json\DataParser.cs" />
     <Compile Include="Logic\Json\FileReader.cs" />
-    <Compile Include="Logic\ModelBuilder.cs" />
     <Compile Include="Logic\Provider\ModelProvider.cs" />
     <Compile Include="Models\CatalogHomeViewModel.cs" />
     <Compile Include="Models\Entities\AsideFormViewModel.cs" />

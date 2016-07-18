@@ -23,7 +23,7 @@ namespace Hozpm.Controllers
 		}
 
 		[HttpPost, ValidateAntiForgeryToken]
-		public ViewResult Index(string displaySelected, string orderSelected, string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListModel[] purposes)
+		public ViewResult Index(string displaySelected, string orderSelected, string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListItem[] purposes)
 		{
 			var model = _modelProvider.GetCatalogHomeViewModel();
 			var formModel = model.FormModel;

@@ -2,8 +2,8 @@ using System;
 using System.Web;
 using System.Web.Hosting;
 using Hozpm;
-using Hozpm.Logic;
 using Hozpm.Logic.Abstract;
+using Hozpm.Logic.Provider;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Ninject;
 using Ninject.Web.Common;
@@ -63,7 +63,13 @@ namespace Hozpm
 		/// <param name="kernel">The kernel.</param>
 		private static void RegisterServices(IKernel kernel)
 		{
-			kernel.Bind<IModelProvider>().To<ModelBuilder>().WithConstructorArgument("jsonFolderPath", HostingEnvironment.MapPath("~/App_Data/json"));
+			kernel.Bind<IDataProvider>()
+				.To<DataProvider>()
+				.WithConstructorArgument("folder", HostingEnvironment.MapPath("~/App_Data/json"));
+
+			kernel.Bind<IModelProvider>()
+				.To<ModelProvider>()
+				.WithConstructorArgument("dataProvider", kernel.Get<IDataProvider>());
 		}
 	}
 }

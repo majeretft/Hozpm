@@ -12,7 +12,7 @@ namespace Hozpm.Models.Entities
 		public IEnumerable<SelectListItem> Groups { get; set; }
 
 		public bool PurposeAny { get; set; }
-		public IEnumerable<CheckboxListModel> Purposes { get; set; }
+		public IEnumerable<CheckboxListItem> Purposes { get; set; }
 
 		public string Code { get; set; }
 
