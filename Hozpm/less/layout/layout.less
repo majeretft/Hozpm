@@ -26,8 +26,16 @@ footer {
 	height: @footer-xs-height;
 	margin-top: -@footer-xs-height;
 
+	.content-wrap > div.container {
+		height: @footer-xs-height - 44px;
+	}
+
 	@media(min-width: @screen-md-min) {
 		height: @footer-md-height;
 		margin-top: -@footer-md-height;
+
+		.content-wrap > div.container {
+			height: @footer-md-height - 44px;
+		}
 	}
 }

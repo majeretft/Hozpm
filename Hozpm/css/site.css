@@ -283,10 +283,16 @@ footer {
   height: 176px;
   margin-top: -176px;
 }
+footer .content-wrap > div.container {
+  height: 132px;
+}
 @media (min-width: 992px) {
   footer {
     height: 192px;
     margin-top: -192px;
+  }
+  footer .content-wrap > div.container {
+    height: 148px;
   }
 }
 .group-card {

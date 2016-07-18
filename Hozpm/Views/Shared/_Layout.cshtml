@@ -7,11 +7,11 @@
 	<title>@ViewBag.Title - My ASP.NET Application</title>
 	<link href="@Url.Content("~/img/favicon.ico")" rel="shortcut icon">
 
-	@Styles.Render("~/css/bootstrap.css", "~/css/site.css")
+	@Styles.Render("~/css/bootstrap", "~/css/site")
 	@RenderSection("styles", false)
 
 	<!--[if lt IE 9]>
-	@Styles.Render("~/css/ie.css")
+	@Styles.Render("~/css/ie")
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" charset="utf-8"></script>
@@ -38,7 +38,7 @@
 		@Html.Partial("Partial/Layout/Footer")
 	</footer>
 
-	@Scripts.Render("~/js/jquery.js", "~/js/bootstrap.js")
+	@Scripts.Render("~/js/jquery", "~/js/bootstrap")
 	<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
 	@RenderSection("scripts", false)
 
