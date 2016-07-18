@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic;
-using Hozpm.Logic.Interface;
+using Hozpm.Logic.Abstract;
 
 namespace Hozpm.Controllers
 {

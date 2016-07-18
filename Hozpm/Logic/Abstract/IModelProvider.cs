@@ -1,6 +1,6 @@
 ﻿using Hozpm.Models;
 
-namespace Hozpm.Logic.Interface
+namespace Hozpm.Logic.Abstract
 {
 	public interface IModelProvider
 	{

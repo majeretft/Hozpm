@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
+using Hozpm.Logic.Abstract;
 using Hozpm.Logic.Entities;
-using Hozpm.Logic.Interface;
 using Hozpm.Logic.Json;
 using Hozpm.Models;
 using Hozpm.Models.Entities;
@@ -13,7 +13,7 @@ using Filter = Hozpm.Logic.Entities.Filter;
 namespace Hozpm.Logic
 {
 	[Obsolete("Use ModelProvider instead, because this class does not provide functionality for aside form and caching.")]
-	public class ModelBuilder : IModelProvider
+	public class ModelBuilder : IModelProvider, IDataProvider
 	{
 		private readonly string _jsonFolderPath;
 
@@ -69,7 +69,7 @@ namespace Hozpm.Logic
 
 		private AsideFormViewModel GetAsideFormViewModel()
 		{
-			var groups = GetFilters(path => new FileReader(path).GetGroups());
+			var groups = GetGroups();
 			var selectListItems = groups.Select(x => new SelectListItem
 			{
 				Value = x.Id.ToString(),
@@ -79,7 +79,7 @@ namespace Hozpm.Logic
 			if (selectListItems.Any())
 				selectListItems.First().Selected = true;
 
-			var purposes = GetFilters(path => new FileReader(path).GetPurposes());
+			var purposes = GetPurposes();
 			var checkboxListItems = purposes.Select(x => new CheckboxListModel
 			{
 				Id = x.Id.ToString(),
@@ -106,7 +106,17 @@ namespace Hozpm.Logic
 			return p.ParseFilters(token);
 		}
 
-		private Product GetProduct(string uri)
+		public IEnumerable<Filter> GetGroups()
+		{
+			return GetFilters(path => new FileReader(path).GetGroups());
+		}
+
+		public IEnumerable<Filter> GetPurposes()
+		{
+			return GetFilters(path => new FileReader(path).GetPurposes());
+		}
+
+		public Product GetProduct(string uri)
 		{
 			var items = GetProducts();
 
@@ -122,7 +132,7 @@ namespace Hozpm.Logic
 			return p.ParseProducts(token);
 		}
 
-		private IEnumerable<Product> GetAnalogicProducts(int id, int analogyId)
+		public IEnumerable<Product> GetAnalogicProducts(int id, int analogyId)
 		{
 			var products = GetProducts();
 
@@ -134,14 +144,14 @@ namespace Hozpm.Logic
 			return !p.Any() ? null : p.Where(x => x.Id != id && x.AnalogyId == analogyId);
 		}
 
-		private IEnumerable<ProductBase> GetRelativeKits(int productId)
+		public IEnumerable<ProductBase> GetRelativeKits(int productId)
 		{
 			var kits = GetKits();
 
 			return kits.Where(x => x.ProductsIncluded != null && x.ProductsIncluded.Contains(productId));
 		}
 
-		private IEnumerable<ProductBase> GetIncludedProducts(IEnumerable<int> includedProductIds)
+		public IEnumerable<ProductBase> GetIncludedProducts(IEnumerable<int> includedProductIds)
 		{
 			var products = GetProducts();
 
@@ -157,14 +167,14 @@ namespace Hozpm.Logic
 			return p.ParseKits(token);
 		}
 
-		private Kit GetKit(string uri)
+		public Kit GetKit(string uri)
 		{
 			var items = GetKits();
 
 			return items.First(x => x.Uri.Equals(uri));
 		}
 
-		private IEnumerable<ProductBase> GetItems()
+		public IEnumerable<ProductBase> GetItems()
 		{
 			var p = GetProducts();
 			var k = GetKits();

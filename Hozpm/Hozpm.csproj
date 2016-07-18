@@ -284,7 +284,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Logic\CheckboxListModel.cs" />
-    <Compile Include="Logic\Interface\IModelProvider.cs" />
+    <Compile Include="Logic\Abstract\IDataProvider.cs" />
+    <Compile Include="Logic\Abstract\IModelProvider.cs" />
     <Compile Include="Logic\Provider\DataProvider.cs" />
     <Compile Include="Logic\Entities\Container.cs" />
     <Compile Include="Logic\Entities\Filter.cs" />

@@ -3,7 +3,7 @@ using System.Web;
 using System.Web.Hosting;
 using Hozpm;
 using Hozpm.Logic;
-using Hozpm.Logic.Interface;
+using Hozpm.Logic.Abstract;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;
 using Ninject;
 using Ninject.Web.Common;
