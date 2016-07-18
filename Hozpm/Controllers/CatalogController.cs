@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
+using System.Web.UI;
 using Hozpm.Logic;
 using Hozpm.Logic.Abstract;
 
@@ -15,6 +16,7 @@ namespace Hozpm.Controllers
 		}
 
 		[HttpGet]
+		[OutputCache(Duration = 600, Location = OutputCacheLocation.Any)]
 		public ViewResult Index()
 		{
 			var model = _modelProvider.GetCatalogHomeViewModel();
@@ -60,6 +62,7 @@ namespace Hozpm.Controllers
 			return View(model);
 		}
 
+		[OutputCache(Duration = 600, Location = OutputCacheLocation.Any)]
 		public ActionResult Product(string item)
 		{
 			if (string.IsNullOrEmpty(item))
@@ -70,6 +73,7 @@ namespace Hozpm.Controllers
 			return View(model);
 		}
 
+		[OutputCache(Duration = 600, Location = OutputCacheLocation.Any)]
 		public ActionResult Kit(string item)
 		{
 			if (string.IsNullOrEmpty(item))
@@ -80,6 +84,7 @@ namespace Hozpm.Controllers
 			return View(model);
 		}
 
+		[OutputCache(Duration = 3600, Location = OutputCacheLocation.Any)]
 		public ViewResult NotFound()
 		{
 			return View();

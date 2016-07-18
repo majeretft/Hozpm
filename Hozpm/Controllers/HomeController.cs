@@ -1,7 +1,9 @@
 ﻿using System.Web.Mvc;
+using System.Web.UI;
 
 namespace Hozpm.Controllers
 {
+	[OutputCache(Duration = 3600, Location = OutputCacheLocation.Any)]
 	public class HomeController : Controller
 	{
 		public ActionResult Index()
