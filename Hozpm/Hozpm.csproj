@@ -188,6 +188,10 @@
     <Content Include="less\all.less" />
     <Content Include="app\components\readme.md" />
     <Content Include="app\components\named-table\style.less" />
+    <Content Include="App_Data\json\groups.json" />
+    <Content Include="App_Data\json\kits.json" />
+    <Content Include="App_Data\json\products.json" />
+    <Content Include="App_Data\json\purposes.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -294,9 +298,7 @@
     <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <TypeScriptCompile Include="app\app.ts" />
     <TypeScriptCompile Include="app\components\named-table\module.ts" />
