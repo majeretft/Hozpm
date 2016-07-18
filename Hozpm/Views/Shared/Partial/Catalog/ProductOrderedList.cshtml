@@ -3,7 +3,8 @@
 <ol class="product-ordered-list">
 	@foreach (var p in Model)
 	{
-		var link = Url.Action("Product", "Catalog", new { Item = p.Uri });
+		var action = p.GetIsKit ? "Kit" : "Product";
+		var link = Url.Action(action, "Catalog", new { Item = p.Uri });
 
 		<li>
 			<a href="@link">
