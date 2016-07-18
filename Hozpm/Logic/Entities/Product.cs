@@ -2,7 +2,7 @@
 {
 	public class Product : ProductBase
 	{
-		public int AnalogyId { get; set; }
+		public int? AnalogyId { get; set; }
 
 		public override bool GetIsKit => false;
 	}

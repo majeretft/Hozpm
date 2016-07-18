@@ -66,7 +66,7 @@ namespace Hozpm.Logic.Json
 				{
 					var result = new Product();
 					ParseProductBase(result, x);
-					result.AnalogyId = x.Value<int>("analogyId");
+					result.AnalogyId = x.Value<int?>("analogyId");
 					return result;
 				});
 		}

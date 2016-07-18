@@ -31,7 +31,10 @@ namespace Hozpm.Logic.Provider
 		public ProductViewModel GetProductViewModel(string uri)
 		{
 			var product = _dataProvider.GetProduct(uri);
-			var analogicProducts = _dataProvider.GetAnalogicProducts(product.Id, product.AnalogyId);
+
+			var analogicProducts = product.AnalogyId.HasValue 
+				? _dataProvider.GetAnalogicProducts(product.Id, product.AnalogyId.Value) 
+				: null;
 			var includedInKits = _dataProvider.GetRelativeKits(product.Id);
 
 			var result = new ProductViewModel
