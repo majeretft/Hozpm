@@ -304,6 +304,9 @@ footer .content-wrap > div.container {
 }
 .group-card > .photo {
   border-bottom: 1px solid #ddd;
+  max-height: 250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .group-card > .caption,
 .group-card > .description,
@@ -337,6 +340,7 @@ footer .content-wrap > div.container {
   }
   .group-card > .photo {
     height: 203px;
+    max-height: 100%;
   }
   .group-card > .caption {
     height: 72px;

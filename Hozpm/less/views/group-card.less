@@ -25,6 +25,9 @@
 
 	> .photo {
 		border-bottom: 1px solid @border-color;
+		max-height: 250px;
+
+		.margin-center();
 	}
 
 	> .caption, > .description, > .links {
@@ -58,11 +61,11 @@
 	}
 
 	@media(min-width: @screen-sm-min) {
-		//width: @photo-width;
 		height: @photo-height + @caption-height + @description-height + @links-height;
 
 		> .photo {
 			height: @photo-height;
+			max-height: 100%;
 		}
 
 		> .caption {
