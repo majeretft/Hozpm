@@ -31,7 +31,7 @@ namespace Hozpm.Logic
 			var result = new CatalogHomeViewModel
 			{
 				FormModel = asideViewModel,
-				Items = GetItems()
+				Items = ((IDataProvider)this).GetItems()
 			};
 
 			return result;
@@ -39,9 +39,9 @@ namespace Hozpm.Logic
 
 		public ProductViewModel GetProductViewModel(string uri)
 		{
-			var product = GetProduct(uri);
-			var analogicProducts = GetAnalogicProducts(product.Id, product.AnalogyId);
-			var includedInKits = GetRelativeKits(product.Id);
+			var product = ((IDataProvider) this).GetProduct(uri);
+			var analogicProducts = ((IDataProvider) this).GetAnalogicProducts(product.Id, product.AnalogyId);
+			var includedInKits = ((IDataProvider) this).GetRelativeKits(product.Id);
 
 			var result = new ProductViewModel
 			{
@@ -55,8 +55,8 @@ namespace Hozpm.Logic
 
 		public KitViewModel GetKitViewModel(string uri)
 		{
-			var item = GetKit(uri);
-			var included = GetIncludedProducts(item.ProductsIncluded);
+			var item = ((IDataProvider) this).GetKit(uri);
+			var included = ((IDataProvider) this).GetIncludedProducts(item.ProductsIncluded);
 
 			var result = new KitViewModel
 			{
@@ -69,7 +69,7 @@ namespace Hozpm.Logic
 
 		private AsideFormViewModel GetAsideFormViewModel()
 		{
-			var groups = GetGroups();
+			var groups = ((IDataProvider) this).GetGroups();
 			var selectListItems = groups.Select(x => new SelectListItem
 			{
 				Value = x.Id.ToString(),
@@ -79,7 +79,7 @@ namespace Hozpm.Logic
 			if (selectListItems.Any())
 				selectListItems.First().Selected = true;
 
-			var purposes = GetPurposes();
+			var purposes = ((IDataProvider) this).GetPurposes();
 			var checkboxListItems = purposes.Select(x => new CheckboxListModel
 			{
 				Id = x.Id.ToString(),
@@ -106,17 +106,17 @@ namespace Hozpm.Logic
 			return p.ParseFilters(token);
 		}
 
-		public IEnumerable<Filter> GetGroups()
+		IEnumerable<Filter> IDataProvider.GetGroups()
 		{
 			return GetFilters(path => new FileReader(path).GetGroups());
 		}
 
-		public IEnumerable<Filter> GetPurposes()
+		IEnumerable<Filter> IDataProvider.GetPurposes()
 		{
 			return GetFilters(path => new FileReader(path).GetPurposes());
 		}
 
-		public Product GetProduct(string uri)
+		Product IDataProvider.GetProduct(string uri)
 		{
 			var items = GetProducts();
 
@@ -132,7 +132,7 @@ namespace Hozpm.Logic
 			return p.ParseProducts(token);
 		}
 
-		public IEnumerable<Product> GetAnalogicProducts(int id, int analogyId)
+		IEnumerable<Product> IDataProvider.GetAnalogicProducts(int id, int analogyId)
 		{
 			var products = GetProducts();
 
@@ -144,14 +144,14 @@ namespace Hozpm.Logic
 			return !p.Any() ? null : p.Where(x => x.Id != id && x.AnalogyId == analogyId);
 		}
 
-		public IEnumerable<ProductBase> GetRelativeKits(int productId)
+		IEnumerable<ProductBase> IDataProvider.GetRelativeKits(int productId)
 		{
 			var kits = GetKits();
 
 			return kits.Where(x => x.ProductsIncluded != null && x.ProductsIncluded.Contains(productId));
 		}
 
-		public IEnumerable<ProductBase> GetIncludedProducts(IEnumerable<int> includedProductIds)
+		IEnumerable<ProductBase> IDataProvider.GetIncludedProducts(IEnumerable<int> includedProductIds)
 		{
 			var products = GetProducts();
 
@@ -167,14 +167,14 @@ namespace Hozpm.Logic
 			return p.ParseKits(token);
 		}
 
-		public Kit GetKit(string uri)
+		Kit IDataProvider.GetKit(string uri)
 		{
 			var items = GetKits();
 
 			return items.First(x => x.Uri.Equals(uri));
 		}
 
-		public IEnumerable<ProductBase> GetItems()
+		IEnumerable<ProductBase> IDataProvider.GetItems()
 		{
 			var p = GetProducts();
 			var k = GetKits();
