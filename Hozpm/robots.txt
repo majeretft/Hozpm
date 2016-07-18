@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /
+Disallow: /error/*
 
 Host: http://hozpm.ru
 # Sitemap: http://hozpm.ru/sitemap.xml

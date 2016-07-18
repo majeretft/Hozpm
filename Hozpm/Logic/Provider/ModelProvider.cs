@@ -28,37 +28,50 @@ namespace Hozpm.Logic.Provider
 			return result;
 		}
 
-		public ProductViewModel GetProductViewModel(string uri)
+		public bool TryGetProductViewModel(string uri, out ProductViewModel result)
 		{
 			var product = _dataProvider.GetProduct(uri);
+
+			if (product == null)
+			{
+				result = null;
+				return false;
+			}
 
 			var analogicProducts = product.AnalogyId.HasValue 
 				? _dataProvider.GetAnalogicProducts(product.Id, product.AnalogyId.Value) 
 				: null;
 			var includedInKits = _dataProvider.GetRelativeKits(product.Id);
 
-			var result = new ProductViewModel
+			result = new ProductViewModel
 			{
 				Product = product,
 				AnalogicProducts = analogicProducts,
 				RelativeKits = includedInKits
 			};
 
-			return result;
+			return true;
 		}
 
-		public KitViewModel GetKitViewModel(string uri)
+		public bool TryGetKitViewModel(string uri, out KitViewModel result)
 		{
 			var item = _dataProvider.GetKit(uri);
+
+			if (item == null)
+			{
+				result = null;
+				return false;
+			}
+
 			var included = _dataProvider.GetIncludedProducts(item.ProductsIncluded);
 
-			var result = new KitViewModel
+			result = new KitViewModel
 			{
 				Kit = item,
 				IncludedProducts = included
 			};
 
-			return result;
+			return true;
 		}
 
 		protected AsideFormViewModel GetAsideFormViewModel()

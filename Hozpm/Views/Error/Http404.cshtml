@@ -1,0 +1,18 @@
+﻿
+@{
+	ViewBag.Title = "Ошибка 404";
+}
+
+<div class="page-header">
+	<h1>@ViewBag.Title</h1>
+</div>
+<p class="lead">
+	К сожалению, во время обработки запроса произошла ошибка.
+	<br />
+	Запрошенная страница не найдена.
+</p>
+<p>
+	Попробуйте начать с <a href="@Url.Action("Index", "Home")">главной страницы</a>.
+	<br />
+	Или откройте <a href="@Url.Action("Index", "Catalog")">каталог</a>.
+</p>

@@ -5,7 +5,7 @@ namespace Hozpm.Logic.Abstract
 	public interface IModelProvider
 	{
 		CatalogHomeViewModel GetCatalogHomeViewModel();
-		ProductViewModel GetProductViewModel(string uri);
-		KitViewModel GetKitViewModel(string uri);
+		bool TryGetProductViewModel(string uri, out ProductViewModel result);
+		bool TryGetKitViewModel(string uri, out KitViewModel result);
 	}
 }
