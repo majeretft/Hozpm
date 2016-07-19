@@ -7,6 +7,12 @@ namespace Hozpm.Models.Entities
 {
 	public class AsideFormViewModel
 	{
+		public AsideFormViewModel()
+		{
+			GroupAny = true;
+			PurposeAny = true;
+		}
+
 		public bool GroupAny { get; set; }
 		public string GroupSelected { get; set; }
 		public IEnumerable<SelectListItem> Groups { get; set; }
