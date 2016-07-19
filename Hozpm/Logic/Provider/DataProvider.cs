@@ -23,10 +23,13 @@ namespace Hozpm.Logic.Provider
 		public IEnumerable<Filter> GetGroups()
 		{
 			const string cacheKey = "Groups";
+
+#if !DEBUG
 			var cachedResult = _cache[cacheKey] as IEnumerable<Filter>;
 
 			if (cachedResult != null)
 				return cachedResult;
+#endif
 
 			var token = _fr.GetGroups();
 			var result = new DataParser().ParseFilters(token);
@@ -39,10 +42,13 @@ namespace Hozpm.Logic.Provider
 		public IEnumerable<Filter> GetPurposes()
 		{
 			const string cacheKey = "Purposes";
+
+#if !DEBUG
 			var cachedResult = _cache[cacheKey] as IEnumerable<Filter>;
 
 			if (cachedResult != null)
 				return cachedResult;
+#endif
 
 			var token = _fr.GetPurposes();
 			var result = new DataParser().ParseFilters(token);
@@ -75,10 +81,13 @@ namespace Hozpm.Logic.Provider
 		public IEnumerable<ProductBase> GetItems()
 		{
 			const string cacheKey = "Items";
+
+#if !DEBUG
 			var cachedResult = _cache[cacheKey] as IEnumerable<ProductBase>;
 
 			if (cachedResult != null)
 				return cachedResult;
+#endif
 
 			var p = GetProducts();
 			var k = GetKits();
@@ -137,10 +146,13 @@ namespace Hozpm.Logic.Provider
 		protected IEnumerable<Product> GetProducts()
 		{
 			const string cacheKey = "Products";
+
+#if !DEBUG
 			var cachedResult = _cache[cacheKey] as IEnumerable<Product>;
 
 			if (cachedResult != null)
 				return cachedResult;
+#endif
 
 			var token = _fr.GetProducts();
 			var result = new DataParser().ParseProducts(token);
@@ -153,10 +165,13 @@ namespace Hozpm.Logic.Provider
 		protected IEnumerable<Kit> GetKits()
 		{
 			const string cacheKey = "Kits";
+
+#if !DEBUG
 			var cachedResult = _cache[cacheKey] as IEnumerable<Kit>;
 
 			if (cachedResult != null)
 				return cachedResult;
+#endif
 
 			var token = _fr.GetKits();
 			var result = new DataParser().ParseKits(token);
