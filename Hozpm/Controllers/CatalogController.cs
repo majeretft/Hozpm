@@ -83,6 +83,13 @@ namespace Hozpm.Controllers
 			return RedirectToAction("Http404", "Error");
 		}
 
+		public ViewResult ViewAll()
+		{
+			var model = _modelProvider.GetCatalogHomeViewModel();
+
+			return View(model);
+		}
+
 		private static void HandleNotFoundError(Exception ex)
 		{
 			Elmah.ErrorSignal.FromCurrentContext().Raise(ex);
