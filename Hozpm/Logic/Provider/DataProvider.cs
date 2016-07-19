@@ -92,6 +92,11 @@ namespace Hozpm.Logic.Provider
 			return result;
 		}
 
+		public ItemListFluent GetFluentItems()
+		{
+			return new ItemListFluent(GetItems());
+		}
+
 		public IEnumerable<Product> GetAnalogicProducts(int productId, int analogyId)
 		{
 			if (productId < 0)

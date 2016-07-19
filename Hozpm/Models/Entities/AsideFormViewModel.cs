@@ -28,8 +28,8 @@ namespace Hozpm.Models.Entities
 		public string OrderSelected { get; set; }
 		public IEnumerable<SelectListItem> OrderList => new List<SelectListItem>
 		{
-			new SelectListItem { Selected = true, Value = "code", Text = "Артикул"},
-			new SelectListItem { Value = "caption", Text = "Наименование"}
+			new SelectListItem { Selected = true, Value = OrderEnum.Code.ToString(), Text = "Артикул"},
+			new SelectListItem { Value = OrderEnum.Caption.ToString(), Text = "Наименование"}
 		};
 
 		public string GetSelectedGroupText

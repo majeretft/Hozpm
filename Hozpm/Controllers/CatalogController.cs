@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Web.UI;
 using Hozpm.Logic;
 using Hozpm.Logic.Abstract;
+using Hozpm.Logic.Entities;
 using Hozpm.Logic.Exception;
 using Hozpm.Models;
 
@@ -30,38 +31,19 @@ namespace Hozpm.Controllers
 		[HttpPost, ValidateAntiForgeryToken]
 		public ViewResult Index(string displaySelected, string orderSelected, string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListItem[] purposes)
 		{
-			var model = _modelProvider.GetCatalogHomeViewModel();
-			var formModel = model.FormModel;
-
-			if (groupAny.HasValue)
-				formModel.GroupAny = groupAny.Value;
-			if (purposeAny.HasValue)
-				formModel.PurposeAny = purposeAny.Value;
-			if (!string.IsNullOrEmpty(groupSelected))
-				formModel.GroupSelected = groupSelected;
-			if (!string.IsNullOrEmpty(code))
-				formModel.Code = code;
-			if (!string.IsNullOrEmpty(displaySelected))
-				formModel.DisplaySelected = displaySelected;
-			if (!string.IsNullOrEmpty(orderSelected))
-				formModel.OrderSelected = orderSelected;
-			if (purposes != null && purposes.Any(x => x.Selected))
+			var formSettings = new FormSettings
 			{
-				foreach (var p in purposes)
-				{
-					var purpose = formModel.Purposes.FirstOrDefault(x => x.Value == p.Value);
-					if (purpose == null)
-						continue;
+				OrderSelected = orderSelected,
+				DisplaySelected = displaySelected,
+				GroupSelected = groupSelected,
+				Code = code,
+				GroupAny = groupAny,
+				PurposeAny = purposeAny,
+				Purposes = purposes
+			};
 
-					purpose.Selected = p.Selected;
-				}
-			}
-
-			model.FormModel = formModel;
-			model.FilterCode = formModel.Code;
-			model.FilterGroup = formModel.GetSelectedGroupText;
-			model.FilterPurposes = formModel.GetSelectedPurposesText;
-
+			var model = _modelProvider.GetCatalogHomeViewModel(formSettings);
+			
 			return View(model);
 		}
 

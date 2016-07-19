@@ -294,7 +294,11 @@
     <Compile Include="Logic\CheckboxListItem.cs" />
     <Compile Include="Logic\Abstract\IDataProvider.cs" />
     <Compile Include="Logic\Abstract\IModelProvider.cs" />
+    <Compile Include="Logic\Constants.cs" />
+    <Compile Include="Logic\Entities\FormSettings.cs" />
+    <Compile Include="Logic\Entities\ItemListFluent.cs" />
     <Compile Include="Logic\Exception\ProductItemNotFoundException.cs" />
+    <Compile Include="Logic\OrderEnum.cs" />
     <Compile Include="Logic\Provider\DataProvider.cs" />
     <Compile Include="Logic\Entities\Container.cs" />
     <Compile Include="Logic\Entities\Filter.cs" />

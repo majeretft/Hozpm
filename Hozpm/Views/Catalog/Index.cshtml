@@ -102,15 +102,22 @@
 		}
 		@if (!string.IsNullOrEmpty(Model.FilterCode))
 		{
-			<span class="label label-default text-uppercase"><span>A</span>@Model.FilterCode</span>
+			<span class="label label-default text-uppercase">@Model.FilterCode</span>
 		}
 	</div>
 </div>
 <div class="row">
 	<div class="col-md-9 col-lg-9">
-		@foreach (var m in Model.Items)
+		@if (!Model.Items.Any())
 		{
-			@Html.Partial("Partial/Catalog/ItemCard", m)
+			<p class="text-info">По данному запросу ничего не найдено</p>
+		}
+		else
+		{
+			foreach (var m in Model.Items)
+			{
+				@Html.Partial("Partial/Catalog/ItemCard", m)
+			}
 		}
 	</div>
 </div>
