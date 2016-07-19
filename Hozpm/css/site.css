@@ -541,6 +541,9 @@ footer .content-wrap > div.container {
 .product-list-pagination {
   text-align: center;
 }
+.product-list-pagination a:hover {
+  cursor: pointer;
+}
 .product-ordered-list {
   margin-bottom: 15px;
 }

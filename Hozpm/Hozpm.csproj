@@ -86,6 +86,7 @@
       <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Net" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -255,8 +256,6 @@
     <Content Include="Views\Catalog\Kit.cshtml" />
     <Content Include="Views\Shared\Partial\Catalog\ProductItem.cshtml" />
     <Content Include="Views\Shared\Partial\Catalog\ProductAnotherContainer.cshtml" />
-    <Content Include="Views\Shared\Partial\Catalog\KitContent.cshtml" />
-    <Content Include="Views\Shared\Partial\Catalog\ProductsInKit.cshtml" />
     <Content Include="Views\Shared\Partial\Breadcrumb.cshtml" />
     <Content Include="Views\Shared\Partial\Catalog\ProductOrderedList.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
@@ -311,6 +310,7 @@
     <Compile Include="Logic\Provider\ModelProvider.cs" />
     <Compile Include="Models\CatalogHomeViewModel.cs" />
     <Compile Include="Models\Entities\AsideFormViewModel.cs" />
+    <Compile Include="Models\Entities\PaginationViewModel.cs" />
     <Compile Include="Models\KitViewModel.cs" />
     <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

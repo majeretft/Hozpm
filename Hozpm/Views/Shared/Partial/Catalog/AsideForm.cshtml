@@ -1,8 +1,10 @@
-﻿@model Hozpm.Models.Entities.AsideFormViewModel
+﻿@model AsideFormViewModel
 
 @using (Html.BeginForm("Index", "Catalog", FormMethod.Post, new { @class = "catalog-filter collapse in" }))
 {
 	@Html.AntiForgeryToken()
+
+	@Html.HiddenFor(x => x.PageNumber)
 
 	<div class="form-inline sorting-form">
 		<div class="form-group">
@@ -57,8 +59,5 @@
 			</div>
 		</div>
 		<button type="submit" class="btn btn-primary btn-block">Применить</button>
-		<noscript>
-			<a href="@Url.Action("ViewAll", "Catalog")" class="btn btn-primary btn-block">Отобразить всю продукцию</a>
-		</noscript>
 	</div>
 }

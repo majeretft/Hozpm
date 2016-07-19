@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic.Abstract;
 using Hozpm.Logic.Entities;
@@ -20,11 +21,30 @@ namespace Hozpm.Logic.Provider
 		{
 			var asideViewModel = GetAsideFormViewModel();
 
+			var items = _dataProvider.GetItems().ToList();
+
 			var result = new CatalogHomeViewModel
 			{
 				FormModel = asideViewModel,
-				Items = _dataProvider.GetItems()
+				Items = items
 			};
+
+			var itemsCount = items.Count;
+			var pageSize = int.Parse(asideViewModel.DisplayList.First(x => x.Selected).Value);
+			var itemsExceedPage = itemsCount > pageSize;
+			const int currentPage = 1;
+
+			if (!itemsExceedPage)
+				return result;
+
+			var paginationViewModel = new PaginationViewModel
+			{
+				CurrentPage = currentPage,
+				PageCount = (int) Math.Ceiling((double) itemsCount / pageSize)
+			};
+
+			result.RequiresPagination = true;
+			result.PaginationModel = paginationViewModel;
 
 			return result;
 		}
@@ -57,13 +77,17 @@ namespace Hozpm.Logic.Provider
 				}
 			}
 
+			// Skipping X items after all operation
 			// Selecting top X items after all operations
 			var displayCount = formSettings.GetDisplaySelected;
+			var skipCount = (formSettings.GetPageNumber - 1) * displayCount;
+			if (skipCount > 0)
+				itemsFluent.Skip(skipCount);
 			if (displayCount > 0)
 				itemsFluent.Take(displayCount);
 
 			// Getting the result items list
-			var items = itemsFluent.ToEnumerable();
+			var items = itemsFluent.ToEnumerable().ToList();
 
 			var asideViewModel = GetAsideFormViewModel(formSettings);
 
@@ -76,6 +100,23 @@ namespace Hozpm.Logic.Provider
 			result.FilterCode = result.FormModel.Code;
 			result.FilterGroup = result.FormModel.GetSelectedGroupText;
 			result.FilterPurposes = result.FormModel.GetSelectedPurposesText;
+
+			var itemsCount = itemsFluent.Count;
+			var pageSize = int.Parse(asideViewModel.DisplayList.First(x => x.Selected).Value);
+			var itemsExceedPage = itemsCount > pageSize;
+			var currentPage = formSettings.GetPageNumber;
+
+			if (!itemsExceedPage)
+				return result;
+
+			var paginationViewModel = new PaginationViewModel
+			{
+				CurrentPage = currentPage,
+				PageCount = (int) Math.Ceiling((double) itemsCount / pageSize)
+			};
+
+			result.RequiresPagination = true;
+			result.PaginationModel = paginationViewModel;
 
 			return result;
 		}

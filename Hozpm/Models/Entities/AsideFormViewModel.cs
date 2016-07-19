@@ -13,6 +13,11 @@ namespace Hozpm.Models.Entities
 			PurposeAny = true;
 		}
 
+		/// <summary>
+		/// Page number for external pagination control
+		/// </summary>
+		public int PageNumber { get; set; }
+
 		public bool GroupAny { get; set; }
 		public string GroupSelected { get; set; }
 		public IEnumerable<SelectListItem> Groups { get; set; }

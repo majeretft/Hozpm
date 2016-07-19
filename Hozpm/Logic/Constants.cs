@@ -7,6 +7,7 @@
 			public const int DisplaySelectedDefault = 10;
 			public const OrderEnum OrderSelectedDefault = OrderEnum.Code;
 			public const int GroupSelectedDefault = 0;
+			public const int PageNumberDefault = 1;
 		}
 	}
 }

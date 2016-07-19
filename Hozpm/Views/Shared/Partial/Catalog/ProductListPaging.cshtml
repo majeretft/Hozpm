@@ -1,11 +1,42 @@
-﻿<nav class="product-list-pagination">
+﻿@model PaginationViewModel
+
+@{
+	var total = Model.PageCount;
+	var current = Model.CurrentPage;
+}
+
+<nav class="product-list-pagination">
 	<ul class="pagination">
-		<li><a href="#">&laquo;</a></li>
-		<li><a href="#">1</a></li>
-		<li><a href="#">2</a></li>
-		<li><a href="#">3</a></li>
-		<li><a href="#">4</a></li>
-		<li><a href="#">5</a></li>
-		<li><a href="#">&raquo;</a></li>
+		<li class="@(current == 1 ? "disabled" : string.Empty)">
+			@if (current == 1)
+			{
+				<a>
+					<span class="glyphicon glyphicon-arrow-left"></span> <span class="hidden-xs">Предыдущая страница</span>
+				</a>
+			}
+			else
+			{
+				<a data-target="@(current - 1)">
+					<span class="glyphicon glyphicon-arrow-left"></span> <span class="hidden-xs">Предыдущая страница</span>
+				</a>
+			}
+		</li>
+		<li>
+			<a data-target="">@current из @total</a>
+		</li>
+		<li class="@(current == total ? "disabled" : string.Empty)">
+			@if (current == total)
+			{
+				<a>
+					<span class="glyphicon glyphicon-arrow-right"></span> <span class="hidden-xs">Следующая страница</span>
+				</a>
+			}
+			else
+			{
+				<a data-target="@(current + 1)">
+					<span class="glyphicon glyphicon-arrow-right"></span> <span class="hidden-xs">Следующая страница</span>
+				</a>
+			}
+		</li>
 	</ul>
 </nav>

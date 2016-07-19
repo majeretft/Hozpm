@@ -20,7 +20,8 @@
 
 @section scripts {
 	<script type="text/javascript">
-		$(function() {
+		$(function () {
+			// ---------------------------------------------------------------------
 			var form = $('form.collapse');
 			var btn = $('#toggle-btn');
 
@@ -41,6 +42,7 @@
 				$(form).collapse('toggle');
 			});
 
+			// ---------------------------------------------------------------------
 			var ctForm = $('form.catalog-filter');
 			var ctOrderList = $('#@nameof(Model.FormModel.OrderSelected)');
 			var ctDisplayList = $('#@nameof(Model.FormModel.DisplaySelected)');
@@ -71,6 +73,18 @@
 
 			fnDisableSelectList.apply(ctGroupAny);
 			fnDisableCheckboxList.apply(ctPurposeAny);
+
+			// ---------------------------------------------------------------------
+			var asideForm = $('form.catalog-filter');
+			var pageNumberField = asideForm.children('#PageNumber');
+			var pagingLinks = $('nav.product-list-pagination a[data-target]');
+			pagingLinks.click(function() {
+				var targetPage = $(this).data('target');
+				if (targetPage == null || targetPage === "")
+					return;
+				pageNumberField.val(targetPage);
+				asideForm.submit();
+			});
 		});
 	</script>
 }
@@ -78,6 +92,17 @@
 <div class="page-header">
 	<h1>Каталог</h1>
 </div>
+
+<noscript>
+	<div class="row">
+		<div class="col-xs-12 col-md-9">
+			<div class="alert alert-warning">
+				Для работы формы используется <i>javascript</i>. Если вы не можете включить эту функцию в браузере - воспользуйтесь
+				<a href="@Url.Action("ViewAll", "Catalog")" class="alert-link">этой ссылкой для просмотра полного списка продукции</a>
+			</div>
+		</div>
+	</div>
+</noscript>
 
 <div class="row">
 	<div class="col-xs-12">
@@ -106,7 +131,7 @@
 		}
 	</div>
 </div>
-<div class="row">
+<div class="row element-margin">
 	<div class="col-md-9 col-lg-9">
 		@if (!Model.Items.Any())
 		{
@@ -121,8 +146,12 @@
 		}
 	</div>
 </div>
-<div class="row">
-	<div class="col-md-9 col-lg-9">
-		@Html.Partial("Partial/Catalog/ProductListPaging")
+
+@if (Model.RequiresPagination)
+{
+	<div class="row">
+		<div class="col-md-9 col-lg-9">
+			@Html.Partial("Partial/Catalog/ProductListPaging", Model.PaginationModel)
+		</div>
 	</div>
-</div>
+}

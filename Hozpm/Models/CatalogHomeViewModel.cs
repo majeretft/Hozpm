@@ -13,5 +13,8 @@ namespace Hozpm.Models
 		public string FilterCode { get; set; }
 		public string FilterGroup { get; set; }
 		public IEnumerable<string> FilterPurposes { get; set; }
+
+		public bool RequiresPagination { get; set; }
+		public PaginationViewModel PaginationModel { get; set; }
 	}
 }

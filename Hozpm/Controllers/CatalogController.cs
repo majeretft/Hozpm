@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Web.Mvc;
 using System.Web.UI;
 using Hozpm.Logic;
@@ -29,7 +28,15 @@ namespace Hozpm.Controllers
 		}
 
 		[HttpPost, ValidateAntiForgeryToken]
-		public ViewResult Index(string displaySelected, string orderSelected, string groupSelected, string code, bool? groupAny, bool? purposeAny, params CheckboxListItem[] purposes)
+		public ViewResult Index(
+			string displaySelected, 
+			string pageNumber, 
+			string orderSelected, 
+			string groupSelected, 
+			string code, 
+			bool? groupAny, 
+			bool? purposeAny, 
+			params CheckboxListItem[] purposes)
 		{
 			var formSettings = new FormSettings
 			{
@@ -39,7 +46,8 @@ namespace Hozpm.Controllers
 				Code = code,
 				GroupAny = groupAny,
 				PurposeAny = purposeAny,
-				Purposes = purposes
+				Purposes = purposes,
+				PageNumber = pageNumber
 			};
 
 			var model = _modelProvider.GetCatalogHomeViewModel(formSettings);

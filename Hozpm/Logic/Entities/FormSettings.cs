@@ -12,7 +12,23 @@ namespace Hozpm.Logic.Entities
 		public string Code { get; set; }
 		public bool? GroupAny { get; set; }
 		public bool? PurposeAny { get; set; }
+		public string PageNumber { get; set; }
 		public IEnumerable<CheckboxListItem> Purposes { get; set; }
+
+		public bool GetGroupAny => GroupAny.HasValue && GroupAny.Value;
+		public bool GetPurposeAny => PurposeAny.HasValue && PurposeAny.Value;
+		public bool HasSelectedPurposes => Purposes.Any(x => x.Selected);
+
+		public int GetPageNumber
+		{
+			get
+			{
+				int result;
+				if (int.TryParse(PageNumber, out result) && result > 0)
+					return result;
+				return Constants.Form.PageNumberDefault;
+			}
+		}
 
 		public int GetDisplaySelected
 		{
@@ -48,13 +64,7 @@ namespace Hozpm.Logic.Entities
 				var code = Code?.Trim();
 				return string.IsNullOrEmpty(code) ? string.Empty : $"A{code}";
 			}
-		} 
-
-		public bool GetGroupAny => GroupAny.HasValue && GroupAny.Value;
-
-		public bool GetPurposeAny => PurposeAny.HasValue && PurposeAny.Value;
-
-		public bool HasSelectedPurposes => Purposes.Any(x => x.Selected);
+		}
 
 		public IEnumerable<int> GetSelectedPurposes
 		{
@@ -71,6 +81,6 @@ namespace Hozpm.Logic.Entities
 
 				return result;
 			}
-		} 
+		}
 	}
 }
