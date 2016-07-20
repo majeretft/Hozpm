@@ -21,70 +21,75 @@
 @section scripts {
 	<script type="text/javascript">
 		$(function () {
-			// ---------------------------------------------------------------------
-			var form = $('form.collapse');
-			var btn = $('#toggle-btn');
+			var form = ('form.catalog-filter');
+			var btnFormVisibility = $('#toggle-btn');
 
-			$(form).on('show.bs.collapse', function() {
-				$(btn).children('span').text('Скрыть');
-			});
+			var collapseHandler = function () {
+				$(form).on('show.bs.collapse', function () {
+					$(btnFormVisibility).children('span').text('Скрыть');
+				});
 
-			$(form).on('hide.bs.collapse', function() {
-				$(btn).children('span').text('Отобразить');
-			});
+				$(form).on('hide.bs.collapse', function () {
+					$(btnFormVisibility).children('span').text('Отобразить');
+				});
 
-			$(window).resize(function() {
-				var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-				w && w >= 992 ? $(form).collapse('show') : $(form).collapse('hide');
-			});
+				$(window).resize(function () {
+					var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+					w && w >= 992 ? $(form).collapse('show') : $(form).collapse('hide');
+				});
 
-			$(btn).click(function() {
-				$(form).collapse('toggle');
-			});
-
-			// ---------------------------------------------------------------------
-			var ctForm = $('form.catalog-filter');
-			var ctOrderList = $('#@nameof(Model.FormModel.OrderSelected)');
-			var ctDisplayList = $('#@nameof(Model.FormModel.DisplaySelected)');
-			var ctGroups = $('#@nameof(Model.FormModel.GroupSelected)');
-			var ctGroupAny = $('#@nameof(Model.FormModel.GroupAny)');
-			var ctPurposes = $('.checkbox-list');
-			var ctPurposeAny = $('#@nameof(Model.FormModel.PurposeAny)');
-
-			var fnSubmit = function () {
-				ctForm.submit();
+				$(btnFormVisibility).click(function () {
+					$(form).collapse('toggle');
+				});
 			}
 
-			var fnDisableSelectList = function() {
-				var isChecked = $(this).is(":checked");
-				ctGroups.prop('disabled', isChecked);
+			var formIteractionHandler = function() {
+				var ctOrderList = $('#@nameof(Model.FormModel.OrderSelected)');
+				var ctDisplayList = $('#@nameof(Model.FormModel.DisplaySelected)');
+				var ctGroups = $('#@nameof(Model.FormModel.GroupSelected)');
+				var ctGroupAny = $('#@nameof(Model.FormModel.GroupAny)');
+				var ctPurposes = $('.checkbox-list');
+				var ctPurposeAny = $('#@nameof(Model.FormModel.PurposeAny)');
+
+				var fnSubmit = function () {
+					$(form).submit();
+				}
+
+				var fnDisableSelectList = function() {
+					var isChecked = $(this).is(":checked");
+					ctGroups.prop('disabled', isChecked);
+				}
+
+				var fnDisableCheckboxList = function() {
+					var isChecked = $(this).is(":checked");
+					$(ctPurposes).find('div.checkbox')[isChecked ? 'addClass' : 'removeClass']('text-muted disabled');
+					$(ctPurposes).find('input[type="checkbox"]').prop('disabled', isChecked);
+				}
+
+				$(ctOrderList).change(fnSubmit);
+				$(ctDisplayList).change(fnSubmit);
+				$(ctGroupAny).change(fnDisableSelectList);
+				$(ctPurposeAny).change(fnDisableCheckboxList);
+
+				fnDisableSelectList.apply(ctGroupAny);
+				fnDisableCheckboxList.apply(ctPurposeAny);
 			}
 
-			var fnDisableCheckboxList = function() {
-				var isChecked = $(this).is(":checked");
-				ctPurposes.find('div.checkbox')[isChecked ? 'addClass' : 'removeClass']('text-muted disabled');
-				ctPurposes.find('input[type="checkbox"]').prop('disabled', isChecked);
+			var pagunationHandler = function() {
+				var pageNumberField = $(form).children('#PageNumber');
+				var pagingLinks = $('nav.product-list-pagination a[data-target]');
+				$(pagingLinks).click(function () {
+					var targetPage = $(this).data('target');
+					if (targetPage == null || targetPage === "")
+						return;
+					$(pageNumberField).val(targetPage);
+					$(form).submit();
+				});
 			}
 
-			ctOrderList.change(fnSubmit);
-			ctDisplayList.change(fnSubmit);
-			ctGroupAny.change(fnDisableSelectList);
-			ctPurposeAny.change(fnDisableCheckboxList);
-
-			fnDisableSelectList.apply(ctGroupAny);
-			fnDisableCheckboxList.apply(ctPurposeAny);
-
-			// ---------------------------------------------------------------------
-			var asideForm = $('form.catalog-filter');
-			var pageNumberField = asideForm.children('#PageNumber');
-			var pagingLinks = $('nav.product-list-pagination a[data-target]');
-			pagingLinks.click(function() {
-				var targetPage = $(this).data('target');
-				if (targetPage == null || targetPage === "")
-					return;
-				pageNumberField.val(targetPage);
-				asideForm.submit();
-			});
+			collapseHandler();
+			formIteractionHandler();
+			pagunationHandler();
 		});
 	</script>
 }
