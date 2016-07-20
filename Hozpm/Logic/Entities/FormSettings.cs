@@ -17,7 +17,7 @@ namespace Hozpm.Logic.Entities
 
 		public bool GetGroupAny => GroupAny.HasValue && GroupAny.Value;
 		public bool GetPurposeAny => PurposeAny.HasValue && PurposeAny.Value;
-		public bool HasSelectedPurposes => Purposes.Any(x => x.Selected);
+		public bool HasSelectedPurposes => Purposes != null && Purposes.Any(x => x.Selected);
 
 		public int GetPageNumber
 		{

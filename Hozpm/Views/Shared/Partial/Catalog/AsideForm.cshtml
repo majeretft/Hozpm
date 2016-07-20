@@ -4,7 +4,7 @@
 {
 	@Html.AntiForgeryToken()
 
-	@Html.HiddenFor(x => x.PageNumber)
+	<input type="hidden" id="@nameof(Model.PageNumber)" name="@nameof(Model.PageNumber)" value="@Model.PageNumber"/>
 
 	<div class="form-inline sorting-form">
 		<div class="form-group">

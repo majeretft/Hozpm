@@ -19,34 +19,11 @@ namespace Hozpm.Logic.Provider
 
 		public CatalogHomeViewModel GetCatalogHomeViewModel()
 		{
-			var asideViewModel = GetAsideFormViewModel();
-
-			var items = _dataProvider.GetItems().ToList();
-
-			var result = new CatalogHomeViewModel
+			return GetCatalogHomeViewModel(new FormSettings
 			{
-				FormModel = asideViewModel,
-				Items = items
-			};
-
-			var itemsCount = items.Count;
-			var pageSize = int.Parse(asideViewModel.DisplayList.First(x => x.Selected).Value);
-			var itemsExceedPage = itemsCount > pageSize;
-			const int currentPage = 1;
-
-			if (!itemsExceedPage)
-				return result;
-
-			var paginationViewModel = new PaginationViewModel
-			{
-				CurrentPage = currentPage,
-				PageCount = (int) Math.Ceiling((double) itemsCount / pageSize)
-			};
-
-			result.RequiresPagination = true;
-			result.PaginationModel = paginationViewModel;
-
-			return result;
+				GroupAny = true,
+				PurposeAny = true
+			});
 		}
 
 		public CatalogHomeViewModel GetCatalogHomeViewModel(FormSettings formSettings)
@@ -77,46 +54,43 @@ namespace Hozpm.Logic.Provider
 				}
 			}
 
-			// Skipping X items after all operation
-			// Selecting top X items after all operations
-			var displayCount = formSettings.GetDisplaySelected;
-			var skipCount = (formSettings.GetPageNumber - 1) * displayCount;
-			if (skipCount > 0)
-				itemsFluent.Skip(skipCount);
-			if (displayCount > 0)
-				itemsFluent.Take(displayCount);
-
-			// Getting the result items list
+			// Getting the filtered items list
 			var items = itemsFluent.ToEnumerable().ToList();
 
-			var asideViewModel = GetAsideFormViewModel(formSettings);
+			var pageSize = formSettings.GetDisplaySelected;
+			var itemsExceedPage = pageSize > 0 && items.Count > pageSize;
+
+			PaginationViewModel paginationViewModel = null;
+			if (itemsExceedPage)
+			{
+				var currentPage = formSettings.GetPageNumber;
+				var pageCount = (int) Math.Ceiling((double) items.Count/pageSize);
+
+				var skipCount = (currentPage - 1) * pageSize;
+				if (skipCount > 0)
+					items = items.Skip(skipCount).ToList();
+				items = items.Take(pageSize).ToList();
+
+				paginationViewModel = new PaginationViewModel
+				{
+					CurrentPage = currentPage,
+					PageCount = pageCount
+				};
+			}
+
+			var asideViewModel = GetAsideFormViewModel(formSettings, itemsExceedPage);
 
 			var result = new CatalogHomeViewModel
 			{
 				FormModel = asideViewModel,
-				Items = items
+				Items = items,
+				RequiresPagination = itemsExceedPage,
+				PaginationModel = paginationViewModel
 			};
 
 			result.FilterCode = result.FormModel.Code;
 			result.FilterGroup = result.FormModel.GetSelectedGroupText;
 			result.FilterPurposes = result.FormModel.GetSelectedPurposesText;
-
-			var itemsCount = itemsFluent.Count;
-			var pageSize = int.Parse(asideViewModel.DisplayList.First(x => x.Selected).Value);
-			var itemsExceedPage = itemsCount > pageSize;
-			var currentPage = formSettings.GetPageNumber;
-
-			if (!itemsExceedPage)
-				return result;
-
-			var paginationViewModel = new PaginationViewModel
-			{
-				CurrentPage = currentPage,
-				PageCount = (int) Math.Ceiling((double) itemsCount / pageSize)
-			};
-
-			result.RequiresPagination = true;
-			result.PaginationModel = paginationViewModel;
 
 			return result;
 		}
@@ -195,7 +169,7 @@ namespace Hozpm.Logic.Provider
 			return result;
 		}
 
-		protected AsideFormViewModel GetAsideFormViewModel(FormSettings formSettings)
+		protected AsideFormViewModel GetAsideFormViewModel(FormSettings formSettings, bool requirePagination)
 		{
 			var result = GetAsideFormViewModel();
 
@@ -205,6 +179,9 @@ namespace Hozpm.Logic.Provider
 			result.Code = formSettings.GetCode;
 			result.DisplaySelected = formSettings.GetDisplaySelected.ToString();
 			result.OrderSelected = formSettings.GetOrderSelected.ToString();
+
+			if (!requirePagination)
+				result.PageNumber = Constants.Form.PageNumberDefault;
 
 			if (!formSettings.HasSelectedPurposes)
 				return result;

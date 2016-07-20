@@ -8,8 +8,6 @@ namespace Hozpm.Logic.Entities
 	{
 		private IEnumerable<ProductBase> _items;
 
-		public int Count => _items.Count();
-
 		public ItemListFluent(IEnumerable<ProductBase> items)
 		{
 			_items = items;

@@ -8,8 +8,9 @@ namespace Hozpm.Controllers
 		public ActionResult Index(string code)
 		{
 			int c;
-			if (int.TryParse(code, out c))
-				Response.StatusCode = c;
+			Response.StatusCode = int.TryParse(code, out c) && c != 0 
+				? c 
+				: (int) HttpStatusCode.InternalServerError;
 
 			return View();
 		}
