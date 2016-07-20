@@ -98,16 +98,18 @@
 	<h1>@ViewBag.Title</h1>
 </div>
 
+<!--noindex-->
 <noscript>
 	<div class="row">
 		<div class="col-xs-12 col-md-9">
 			<div class="alert alert-warning">
 				Для работы формы используется <i>javascript</i>. Если вы не можете включить эту функцию в браузере - воспользуйтесь
-				<a href="@Url.Action("ViewAll", "Catalog")" class="alert-link">этой ссылкой для просмотра полного списка продукции</a>
+				<a href="@Url.Action("ViewAll", "Catalog")" rel="nofollow" class="alert-link">этой ссылкой для просмотра полного списка продукции</a>
 			</div>
 		</div>
 	</div>
 </noscript>
+<!--/noindex-->
 
 <div class="row">
 	<div class="col-xs-12">

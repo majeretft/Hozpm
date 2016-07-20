@@ -100,7 +100,7 @@ namespace Hozpm.Controllers
 				DisplaySelected = "0"
 			});
 
-			return View("Index", model);
+			return View(model);
 		}
 
 		private static void HandleNotFoundError(Exception ex)

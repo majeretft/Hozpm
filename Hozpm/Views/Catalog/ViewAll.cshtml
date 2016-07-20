@@ -1,23 +1,52 @@
 ﻿@model CatalogHomeViewModel
 
 @{
-	ViewBag.Title = "Index";
+	ViewBag.Title = "Каталог - полный список";
+}
+
+@section styles {
+	<style>
+		.collapsing {
+			position: static;
+		}
+	</style>
 }
 
 <div class="page-header">
-	<h1>Каталог</h1>
+	<h1>@ViewBag.Title</h1>
 </div>
 
-<p class="lead text-info">Вся продукция на одной странице</p>
-
-@if (!Model.Items.Any())
-{
-	<p class="text-info">По данному запросу ничего не найдено</p>
-}
-else
-{
-	foreach (var m in Model.Items)
-	{
-		@Html.Partial("Partial/Catalog/ItemCard", m)
-	}
-}
+<div class="row element-margin">
+	<div class="col-xs-12">
+		@if (!string.IsNullOrEmpty(Model.FilterGroup))
+		{
+			<span class="label label-primary text-uppercase">@Model.FilterGroup</span>
+		}
+		@if (Model.FilterPurposes != null && Model.FilterPurposes.Any())
+		{
+			foreach (var filterPurpose in Model.FilterPurposes)
+			{
+				<span class="label label-danger text-uppercase">@filterPurpose</span>
+			}
+		}
+		@if (!string.IsNullOrEmpty(Model.FilterCode))
+		{
+			<span class="label label-default text-uppercase">@Model.FilterCode</span>
+		}
+	</div>
+</div>
+<div class="row element-margin">
+	<div class="col-md-9 col-lg-9">
+		@if (!Model.Items.Any())
+		{
+			<p class="text-info">По данному запросу ничего не найдено</p>
+		}
+		else
+		{
+			foreach (var m in Model.Items)
+			{
+				@Html.Partial("Partial/Catalog/ItemCard", m)
+			}
+		}
+	</div>
+</div>
