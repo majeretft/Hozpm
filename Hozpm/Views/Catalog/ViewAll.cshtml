@@ -12,6 +12,13 @@
 	</style>
 }
 
+@section head {
+	@if (!string.IsNullOrEmpty(Request.Url?.Scheme))
+	{
+		<link rel="canonical" href="@Url.Action("Index", "Catalog", null, Request.Url.Scheme)"/>
+	}
+}
+
 <div class="page-header">
 	<h1>@ViewBag.Title</h1>
 </div>

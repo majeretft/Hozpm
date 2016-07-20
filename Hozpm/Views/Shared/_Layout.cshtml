@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@ViewBag.Title</title>
 	<link href="@Url.Content("~/img/favicon.ico")" rel="shortcut icon">
+	@RenderSection("head", false)
 
 	@Styles.Render("~/css/bootstrap", "~/css/site")
 	@RenderSection("styles", false)
@@ -43,5 +44,8 @@
 	<script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
 	@RenderSection("scripts", false)
 
+	<!--noindex-->
+	@* Коды счетчиков метрики и аналитики *@
+	<!--/noindex-->
 </body>
 </html>

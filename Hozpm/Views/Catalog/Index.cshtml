@@ -43,7 +43,7 @@
 				});
 			}
 
-			var formIteractionHandler = function() {
+			var formIteractionHandler = function () {
 				var ctOrderList = $('#@nameof(Model.FormModel.OrderSelected)');
 				var ctDisplayList = $('#@nameof(Model.FormModel.DisplaySelected)');
 				var ctGroups = $('#@nameof(Model.FormModel.GroupSelected)');
@@ -55,12 +55,12 @@
 					$(form).submit();
 				}
 
-				var fnDisableSelectList = function() {
+				var fnDisableSelectList = function () {
 					var isChecked = $(this).is(":checked");
 					ctGroups.prop('disabled', isChecked);
 				}
 
-				var fnDisableCheckboxList = function() {
+				var fnDisableCheckboxList = function () {
 					var isChecked = $(this).is(":checked");
 					$(ctPurposes).find('div.checkbox')[isChecked ? 'addClass' : 'removeClass']('text-muted disabled');
 					$(ctPurposes).find('input[type="checkbox"]').prop('disabled', isChecked);
@@ -75,7 +75,7 @@
 				fnDisableCheckboxList.apply(ctPurposeAny);
 			}
 
-			var pagunationHandler = function() {
+			var pagunationHandler = function () {
 				var pageNumberField = $(form).children('#PageNumber');
 				var pagingLinks = $('nav.product-list-pagination a[data-target]');
 				$(pagingLinks).click(function () {
@@ -103,8 +103,14 @@
 	<div class="row">
 		<div class="col-xs-12 col-md-9">
 			<div class="alert alert-warning">
-				Для работы формы используется <i>javascript</i>. Если вы не можете включить эту функцию в браузере - воспользуйтесь
-				<a href="@Url.Action("ViewAll", "Catalog")" rel="nofollow" class="alert-link">этой ссылкой для просмотра полного списка продукции</a>
+				<h4>Замечание</h4>
+				<p>
+					Для работы формы используется <i>javascript</i>.
+					Если вы не можете включить эту функцию в браузере - воспользуйтесь ссылкой для просмотра полного списка продукции
+				</p>
+				<p>
+					<a href="@Url.Action("ViewAll", "Catalog")" class="btn btn-default">Полный список продукции</a>
+				</p>
 			</div>
 		</div>
 	</div>
