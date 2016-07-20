@@ -93,9 +93,14 @@ namespace Hozpm.Controllers
 
 		public ViewResult ViewAll()
 		{
-			var model = _modelProvider.GetCatalogHomeViewModel();
+			var model = _modelProvider.GetCatalogHomeViewModel(new FormSettings
+			{
+				GroupAny = true,
+				PurposeAny = true,
+				DisplaySelected = "0"
+			});
 
-			return View(model);
+			return View("Index", model);
 		}
 
 		private static void HandleNotFoundError(Exception ex)
