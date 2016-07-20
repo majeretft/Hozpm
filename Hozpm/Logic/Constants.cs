@@ -9,5 +9,7 @@
 			public const int GroupSelectedDefault = 0;
 			public const int PageNumberDefault = 1;
 		}
+
+		public const string CompanyName = "Группа компаний AVRGroup";
 	}
 }
