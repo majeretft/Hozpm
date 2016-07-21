@@ -143,7 +143,7 @@ namespace Hozpm.Logic.Provider
 			return products.Where(x => list.Contains(x.Id));
 		}
 
-		protected IEnumerable<Product> GetProducts()
+		public IEnumerable<Product> GetProducts()
 		{
 			const string cacheKey = "Products";
 
@@ -162,7 +162,7 @@ namespace Hozpm.Logic.Provider
 			return result;
 		}
 
-		protected IEnumerable<Kit> GetKits()
+		public IEnumerable<Kit> GetKits()
 		{
 			const string cacheKey = "Kits";
 

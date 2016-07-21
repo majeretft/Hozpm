@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+	<mvcSiteMapNode title="Index" controller="Home" action="Index">
+		<mvcSiteMapNode title="CustomerInfo" controller="Home" action="CustomerInfo"/>
+		<mvcSiteMapNode title="PackingInfo" controller="Home" action="PackingInfo"/>
+		<mvcSiteMapNode title="Contact" controller="Home" action="Contact"/>
+		<mvcSiteMapNode title="About" controller="Home" action="About"/>
+
+		<mvcSiteMapNode title="Index" controller="Catalog" action="Index" key="CatalogController">
+			<mvcSiteMapNode title="Product" controller="Catalog" action="Product" dynamicNodeProvider="Hozpm.Logic.Sitemap.ProductDynamicNodeProvider, Hozpm"/>
+			<mvcSiteMapNode title="Kit" controller="Catalog" action="Kit" dynamicNodeProvider="Hozpm.Logic.Sitemap.KitDynamicNodeProvider, Hozpm"/>
+			<mvcSiteMapNode title="ViewAll" controller="Catalog" action="ViewAll"/>
+		</mvcSiteMapNode>
+	</mvcSiteMapNode>
+
+</mvcSiteMap>

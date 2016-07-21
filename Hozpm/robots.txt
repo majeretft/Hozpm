@@ -1,9 +1,10 @@
 User-agent: *
 Disallow: /
 Disallow: /error/*
-Host: hozpm.ru
 
-# Sitemap: http://hozpm.ru/sitemap.xml
+User-agent: *
+Host: hozpm.ru
+Sitemap: http://hozpm.ru/sitemap.xml
 # http://rehansaeed.com/dynamically-generating-sitemap-xml-for-asp-net-mvc/
 # http://benfoster.io/blog/generating-dynamic-xml-sitemaps-in-aspnet-mvc
 # http://stackoverflow.com/questions/2006529/mvc-how-to-route-sitemap-xml-to-an-actionresult

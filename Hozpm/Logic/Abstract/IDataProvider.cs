@@ -12,6 +12,8 @@ namespace Hozpm.Logic.Abstract
 		Kit GetKit(string uri);
 
 		IEnumerable<ProductBase> GetItems();
+		IEnumerable<Product> GetProducts();
+		IEnumerable<Kit> GetKits();
 		ItemListFluent GetFluentItems();
 
 		IEnumerable<Product> GetAnalogicProducts(int productId, int analogyId);
