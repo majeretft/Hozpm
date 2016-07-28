@@ -16,5 +16,9 @@ namespace Hozpm.Logic.Entities
 		public Container Container { get; set; }
 
 		public abstract bool GetIsKit { get; }
+
+		public DataSeo Seo { get; set; }
+		public DataOg Og { get; set; }
+		public DataSchema Schema { get; set; }
 	}
 }

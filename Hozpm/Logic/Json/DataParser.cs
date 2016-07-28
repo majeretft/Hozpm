@@ -8,6 +8,45 @@ namespace Hozpm.Logic.Json
 {
 	public class DataParser
 	{
+		private DataSeo ParseSeo(JToken token)
+		{
+			if (token == null)
+				throw new ArgumentNullException(nameof(token));
+
+			return new DataSeo
+			{
+				Description = token.Value<string>("description"),
+				Keywords = token.Value<string>("keywords")
+			};
+		}
+
+		private DataOg ParseOg(JToken token)
+		{
+			if (token == null)
+				throw new ArgumentNullException(nameof(token));
+
+			return new DataOg
+			{
+				Description = token.Value<string>("description"),
+				Title = token.Value<string>("title"),
+				ImageHeight = token.Value<int?>("imageHeight"),
+				ImageType = token.Value<string>("imageType"),
+				ImageWidth = token.Value<int?>("imageWidth")
+			};
+		}
+
+		private DataSchema ParseSchema(JToken token)
+		{
+			if (token == null)
+				throw new ArgumentNullException(nameof(token));
+
+			return new DataSchema
+			{
+				Description = token.Value<string>("description"),
+				Name = token.Value<string>("name")
+			};
+		}
+
 		private Container ParseContainer(JToken token)
 		{
 			if (token == null)
@@ -49,10 +88,20 @@ namespace Hozpm.Logic.Json
 				target.PurposeIds = purposes.Values<int>();
 
 			var container = token["container"];
-			if (container == null)
-				return;
+			if (container != null)
+				target.Container = ParseContainer(container);
 
-			target.Container = ParseContainer(container);
+			var seo = token["seo"];
+			if (seo != null)
+				target.Seo = ParseSeo(seo);
+
+			var og = token["og"];
+			if (og != null)
+				target.Og = ParseOg(og);
+
+			var schema = token["schema"];
+			if (schema != null)
+				target.Schema = ParseSchema(schema);
 		}
 
 		public IEnumerable<Product> ParseProducts(JToken token)

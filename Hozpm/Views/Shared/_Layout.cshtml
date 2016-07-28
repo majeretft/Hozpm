@@ -1,12 +1,16 @@
 ﻿<!DOCTYPE html>
-<html>
-<head>
+<html lang="ru">
+<head prefix="@ViewBag.HeadPrefix">
 	
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>@ViewBag.Title</title>
 	<link href="@Url.Content("~/img/favicon.ico")" rel="shortcut icon">
 	@RenderSection("head", false)
+
+	@RenderSection("seo", false)
+	@RenderSection("og", false)
+	@RenderSection("schema", false)
 
 	@Styles.Render("~/css/bootstrap", "~/css/site")
 	@RenderSection("styles", false)

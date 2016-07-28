@@ -2,6 +2,62 @@
 
 @{
 	ViewBag.Title = "Kit";
+	var p = Model.Kit;
+
+	var action = p.GetIsKit ? "Kit" : "Product";
+	string link = null;
+
+	if (p.Og != null && !string.IsNullOrEmpty(Request.Url?.Scheme))
+	{
+		link = Url.Action(action, "Catalog", new { Item = p.Uri }, Request.Url.Scheme);
+	}
+}
+
+@section seo {
+	@if (Model.Kit.Seo != null)
+	{
+		<meta name="keywords" content="@Model.Kit.Seo.Keywords" />
+		<meta name="description" content="@Model.Kit.Seo.Description" />
+	}
+}
+
+@section og {
+	@if (Model.Kit.Og != null && !string.IsNullOrEmpty(Request.Url?.Scheme))
+	{
+		ViewBag.HeadPrefix = Constants.Og.HeadPrefixProduct;
+
+		<meta property="og:type" content="product">
+		<meta property="og:url" content="@link">
+		<meta property="og:locale" content="ru_RU">
+
+		<meta property="og:title" content="@Model.Kit.Og.Title">
+		<meta property="og:description" content="@Model.Kit.Og.Description">
+		<meta property="og:determiner" content="">
+
+		<meta property="og:image" content="@Url.Content($"~/img/{Model.Kit.PhotoPath}", true)">
+		<meta property="og:image:type" content="@Model.Kit.Og.ImageType">
+		<meta property="og:image:width" content="@Model.Kit.Og.ImageWidth">
+		<meta property="og:image:height" content="@Model.Kit.Og.ImageHeight">
+
+		<meta property="product:availability" content="instock">
+		<meta property="product:condition" content="new">
+	}
+}
+
+@section schema {
+	@if (p.Schema != null && !string.IsNullOrEmpty(Request.Url?.Scheme))
+	{
+		<script type="application/ld+json">
+			{
+				"@@context": "http://schema.org",
+				"@@type": "Product",
+				"description": "@p.Schema.Description",
+				"name": "@p.Schema.Name",
+				"image": "@Url.Content($"~/img/{p.PhotoPath}", true)",
+				"itemCondition": "http://schema.org/NewCondition"
+			}
+		</script>
+	}
 }
 
 <div class="page-header">

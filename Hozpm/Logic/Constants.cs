@@ -10,6 +10,11 @@
 			public const int PageNumberDefault = 1;
 		}
 
+		public static class Og
+		{
+			public const string HeadPrefixProduct = "product: http://ogp.me/ns/product#";
+		}
+
 		public const string CompanyName = "Группа компаний AVRGroup";
 	}
 }
