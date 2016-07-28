@@ -11,6 +11,8 @@
 	{
 		link = Url.Action(action, "Catalog", new { Item = p.Uri }, Request.Url.Scheme);
 	}
+
+	ViewBag.HeadPrefix = Constants.Og.HeadPrefixProduct;
 }
 
 @section seo {
@@ -24,8 +26,6 @@
 @section og {
 	@if (Model.Kit.Og != null && !string.IsNullOrEmpty(Request.Url?.Scheme))
 	{
-		ViewBag.HeadPrefix = Constants.Og.HeadPrefixProduct;
-
 		<meta property="og:type" content="product">
 		<meta property="og:url" content="@link">
 		<meta property="og:locale" content="ru_RU">
