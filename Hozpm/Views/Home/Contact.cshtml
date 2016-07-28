@@ -5,6 +5,55 @@
 	var mapUrl = $"https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=_arpLO4PE819A1YjFE9m3U46OvMaJ1Kv&width={percent100}&height={percent100}&lang=ru_RU&sourceType=constructor";
 }
 
+@section seo {
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+}
+
+@section og {
+	@(ViewBag.HeadPrefix = Constants.Og.HeadPrefixBusiness)
+
+	<meta property="og:type" content="business.business">
+	<meta property="og:url" content="">
+	<meta property="og:locale" content="ru_RU">
+
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+
+	<meta property="og:image" content="">
+	<meta property="og:image:type" content="">
+	<meta property="og:image:width" content="">
+	<meta property="og:image:height" content="">
+
+	<meta property="business:contact_data:street_address" content="Ряжское шоссе, д.20">
+	<meta property="business:contact_data:locality" content="Рязань">
+	<meta property="business:contact_data:region" content="Рязанская область">
+	<meta property="business:contact_data:postal_code" content="390000">
+	<meta property="business:contact_data:country_name" content="Россия">
+	<meta property="business:contact_data:email" content="">
+	<meta property="business:contact_data:phone_number" content="">
+	<meta property="business:contact_data:website" content="">
+	<meta property="business:hours:day" content="monday">
+	<meta property="business:hours:start" content="8:00">
+	<meta property="business:hours:end" content="17:00">
+	<meta property="business:hours:day" content="tuesday">
+	<meta property="business:hours:start" content="8:00">
+	<meta property="business:hours:end" content="17:00">
+	<meta property="business:hours:day" content="wednesday">
+	<meta property="business:hours:start" content="8:00">
+	<meta property="business:hours:end" content="17:00">
+	<meta property="business:hours:day" content="thursday">
+	<meta property="business:hours:start" content="8:00">
+	<meta property="business:hours:end" content="17:00">
+	<meta property="business:hours:day" content="friday">
+	<meta property="business:hours:start" content="8:00">
+	<meta property="business:hours:end" content="17:00">
+}
+
+@section schema {
+	@* itemtype="http://schema.org/LocalBusiness" *@
+}
+
 <div class="page-header">
 	<h1>Контакты</h1>
 </div>

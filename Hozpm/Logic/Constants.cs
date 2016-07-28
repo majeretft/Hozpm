@@ -13,6 +13,7 @@
 		public static class Og
 		{
 			public const string HeadPrefixProduct = "product: http://ogp.me/ns/product#";
+			public const string HeadPrefixBusiness = "business: http://ogp.me/ns/business#";
 		}
 
 		public const string CompanyName = "Группа компаний AVRGroup";

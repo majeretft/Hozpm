@@ -3,6 +3,29 @@
 	ViewBag.Title = $"{Constants.CompanyName} - Главная";
 }
 
+@section seo {
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+}
+
+@section og {
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:locale" content="ru_RU">
+
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+
+	<meta property="og:image" content="">
+	<meta property="og:image:type" content="">
+	<meta property="og:image:width" content="">
+	<meta property="og:image:height" content="">
+}
+
+@section schema {
+
+}
+
 <div class="page-header">
 	<h1>@ViewBag.Title</h1>
 </div>
