@@ -19,7 +19,7 @@ namespace Hozpm.Controllers
 		}
 
 		[HttpGet]
-		[OutputCache(Duration = 600, Location = OutputCacheLocation.Any)]
+		[OutputCache(Duration = 600, Location = OutputCacheLocation.ServerAndClient)]
 		public ViewResult Index()
 		{
 			var model = _modelProvider.GetCatalogHomeViewModel();
@@ -55,7 +55,7 @@ namespace Hozpm.Controllers
 			return View(model);
 		}
 
-		[OutputCache(Duration = 600, Location = OutputCacheLocation.Any)]
+		[OutputCache(Duration = 600, Location = OutputCacheLocation.ServerAndClient)]
 		public ActionResult Product(string item)
 		{
 			if (string.IsNullOrEmpty(item))
@@ -73,7 +73,7 @@ namespace Hozpm.Controllers
 			return RedirectToAction("Http404", "Error");
 		}
 
-		[OutputCache(Duration = 600, Location = OutputCacheLocation.Any)]
+		[OutputCache(Duration = 600, Location = OutputCacheLocation.ServerAndClient)]
 		public ActionResult Kit(string item)
 		{
 			if (string.IsNullOrEmpty(item))
