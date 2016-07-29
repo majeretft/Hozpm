@@ -1,10 +1,8 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.UI;
 using Hozpm.Logic;
 using Hozpm.Logic.Abstract;
 using Hozpm.Logic.Entities;
-using Hozpm.Logic.Exception;
 using Hozpm.Models;
 
 namespace Hozpm.Controllers
@@ -59,17 +57,13 @@ namespace Hozpm.Controllers
 		public ActionResult Product(string item)
 		{
 			if (string.IsNullOrEmpty(item))
-			{
-				HandleNotFoundError(new ProductItemNotFoundException($"Product item not found (uri = {item})"));
 				return RedirectToAction("Http404", "Error");
-			}
 
 			ProductViewModel model;
 
 			if (_modelProvider.TryGetProductViewModel(item, out model))
 				return View(model);
 
-			HandleNotFoundError(new ProductItemNotFoundException($"Product item not found (uri = {item})"));
 			return RedirectToAction("Http404", "Error");
 		}
 
@@ -77,17 +71,13 @@ namespace Hozpm.Controllers
 		public ActionResult Kit(string item)
 		{
 			if (string.IsNullOrEmpty(item))
-			{
-				HandleNotFoundError(new ProductItemNotFoundException($"Product kit not found (uri = {item})"));
 				return RedirectToAction("Http404", "Error");
-			}
 
 			KitViewModel model;
 
 			if (_modelProvider.TryGetKitViewModel(item, out model))
 				return View(model);
 
-			HandleNotFoundError(new ProductItemNotFoundException($"Product kit not found (uri = {item})"));
 			return RedirectToAction("Http404", "Error");
 		}
 
@@ -101,11 +91,6 @@ namespace Hozpm.Controllers
 			});
 
 			return View(model);
-		}
-
-		private static void HandleNotFoundError(Exception ex)
-		{
-			Elmah.ErrorSignal.FromCurrentContext().Raise(ex);
 		}
 	}
 }

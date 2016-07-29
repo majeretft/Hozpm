@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Web.Optimization;
 using System.Web.Routing;
-using Elmah;
-using Hozpm.Logic.Exception;
 
 namespace Hozpm
 {
@@ -43,28 +41,6 @@ namespace Hozpm
 		protected void Application_End(object sender, EventArgs e)
 		{
 			// nothing
-		}
-
-		protected void ErrorLog_Logged(object sender, ErrorLoggedEventArgs args)
-		{
-			if (args.Entry.Error.Exception is ProductItemNotFoundException)
-				return;
-
-			switch (args.Entry.Error.StatusCode)
-			{
-				case 404:
-					Response.RedirectToRoute("Error404");
-					break;
-				case 500:
-					Response.RedirectToRoute("Error500");
-					break;
-				default:
-					Response.RedirectToRoute("Error", new { code = args.Entry.Error.StatusCode });
-					break;
-			}
-
-			Response.Clear();
-			Server.ClearError();
 		}
 	}
 }
