@@ -197,6 +197,7 @@
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\rc Any CPU.pubxml" />
     <None Include="Properties\PublishProfiles\rc x64.pubxml" />
     <None Include="Properties\PublishProfiles\rc x86.pubxml" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />

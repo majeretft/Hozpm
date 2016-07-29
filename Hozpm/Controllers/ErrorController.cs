@@ -7,9 +7,12 @@ namespace Hozpm.Controllers
 	{
 		public ActionResult Index(string code)
 		{
+			HttpContext.Response.Clear();
+			HttpContext.Response.TrySkipIisCustomErrors = true;
+
 			int c;
-			Response.StatusCode = int.TryParse(code, out c) && c != 0 
-				? c 
+			Response.StatusCode = int.TryParse(code, out c) && c != 0
+				? c
 				: (int) HttpStatusCode.InternalServerError;
 
 			return View();
@@ -17,14 +20,18 @@ namespace Hozpm.Controllers
 
 		public ActionResult Http404()
 		{
-			Response.StatusCode = (int) HttpStatusCode.NotFound;
+			HttpContext.Response.Clear();
+			HttpContext.Response.StatusCode = (int) HttpStatusCode.NotFound;
+			HttpContext.Response.TrySkipIisCustomErrors = true;
 
 			return View();
 		}
 
 		public ActionResult Http500()
 		{
-			Response.StatusCode = (int) HttpStatusCode.InternalServerError;
+			HttpContext.Response.Clear();
+			HttpContext.Response.StatusCode = (int) HttpStatusCode.InternalServerError;
+			HttpContext.Response.TrySkipIisCustomErrors = true;
 
 			return View();
 		}
