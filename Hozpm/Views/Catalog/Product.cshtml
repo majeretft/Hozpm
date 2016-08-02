@@ -1,8 +1,8 @@
 ﻿@model ProductViewModel
 
 @{
-	ViewBag.Title = "Product";
 	var p = Model.Product;
+	ViewBag.Title = p.CaptionShort;
 
 	var action = p.GetIsKit ? "Kit" : "Product";
 	string link = null;

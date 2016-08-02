@@ -3,7 +3,7 @@
 		"id": 0,
 		"productsIncluded": [ 0 ],
 		"caption": "Мой тестовый набор (полное наименование)",
-		"captionShort": "Мой тестовый набор (полное наименование)",
+		"captionShort": "Мой набор (краткое)",
 		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
 		"photoPath": "placeholder/placeholder_16x9.png",
 		"uri": "moj-testovyj-nabor-polnoe-naimenovanie",
