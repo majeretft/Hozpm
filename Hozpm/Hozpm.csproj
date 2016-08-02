@@ -200,6 +200,7 @@
     <None Include="Properties\PublishProfiles\rc Any CPU.pubxml" />
     <None Include="Properties\PublishProfiles\rc x64.pubxml" />
     <None Include="Properties\PublishProfiles\rc x86.pubxml" />
+    <None Include="Properties\PublishProfiles\release any cpu.pubxml" />
     <None Include="scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
