@@ -336,20 +336,20 @@ footer .content-wrap > div.container {
 }
 @media (min-width: 768px) {
   .group-card {
-    height: 594px;
+    height: 523px;
   }
   .group-card > .photo {
     height: 203px;
     max-height: 100%;
   }
   .group-card > .caption {
-    height: 72px;
+    height: 46px;
   }
   .group-card > .description {
     height: 190px;
   }
   .group-card .links {
-    height: 129px;
+    height: 84px;
   }
 }
 @media (min-width: 992px) {

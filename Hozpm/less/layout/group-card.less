@@ -1,22 +1,19 @@
 ﻿@import (once) '../variables.less';
 @import (once) '../mixins.less';
 
-@border-radius: 4px;
-@border-color: #ddd;
-@bottom-spacing: 25px;
-@element-top-spacing: 10px;
-@element-bottom-spacing: @element-top-spacing;
-
-@photo-width: 358px;
-@photo-height: 203px;
-@caption-height: 52px + @element-bottom-spacing + @element-top-spacing;
-@description-height: 170px + @element-bottom-spacing + @element-top-spacing;
-@links-height: 119px + @element-bottom-spacing;
-
-@bg-color: transparent;
-@description-hover-bg: darken(@bg-color, 2%);
-
 .group-card {
+	@border-radius: 4px;
+	@border-color: #ddd;
+
+	@photo-width: 358px;
+	@photo-height: 203px;
+	@caption-height: 52px / 2 + @element-bottom-spacing + @element-top-spacing;
+	@description-height: 170px + @element-bottom-spacing + @element-top-spacing;
+	@links-height: 84px;
+
+	@bg-color: transparent;
+	@description-hover-bg: darken(@bg-color, 2%);
+
 	border: 1px solid @border-color;
 	border-radius: @border-radius;
 	overflow: hidden;

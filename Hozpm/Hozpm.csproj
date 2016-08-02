@@ -183,7 +183,7 @@
     <Content Include="fonts\social-icons.ttf" />
     <Content Include="fonts\social-icons.woff" />
     <Content Include="fonts\social-icons.woff2" />
-    <Content Include="less\views\group-card.less" />
+    <Content Include="less\layout\group-card.less" />
     <Content Include="less\partial\catalog\aside-form.less" />
     <Content Include="less\partial\catalog\product-card.less" />
     <Content Include="less\partial\catalog\product-list-paging.less" />
@@ -210,7 +210,6 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Partial\Layout\Header.cshtml" />
     <Content Include="Views\Shared\Partial\Layout\Footer.cshtml" />
-    <Content Include="Views\Shared\Partial\Home\GroupCard.cshtml" />
     <Content Include="Views\Home\CustomerInfo.cshtml" />
     <Content Include="Views\Home\PackingInfo.cshtml" />
     <Content Include="Views\Home\About.cshtml" />

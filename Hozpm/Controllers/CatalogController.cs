@@ -18,9 +18,16 @@ namespace Hozpm.Controllers
 
 		[HttpGet]
 		[OutputCache(Duration = 600, Location = OutputCacheLocation.ServerAndClient)]
-		public ViewResult Index()
+		public ViewResult Index(string groupSelected)
 		{
-			var model = _modelProvider.GetCatalogHomeViewModel();
+			var formSettings = new FormSettings
+			{
+				GroupSelected = groupSelected,
+				GroupAny = string.IsNullOrEmpty(groupSelected),
+				PurposeAny = true
+			};
+
+			var model = _modelProvider.GetCatalogHomeViewModel(formSettings);
 
 			return View(model);
 		}
