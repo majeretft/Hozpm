@@ -13,6 +13,8 @@ namespace Hozpm.Logic.Provider
 	{
 		private readonly FileReader _fr;
 		private readonly Cache _cache;
+		private delegate object ReadData();
+		private static readonly object Lock = new object();
 
 		public DataProvider(string folder)
 		{
@@ -24,17 +26,11 @@ namespace Hozpm.Logic.Provider
 		{
 			const string cacheKey = "Groups";
 
-#if !DEBUG
-			var cachedResult = _cache[cacheKey] as IEnumerable<Filter>;
-
-			if (cachedResult != null)
-				return cachedResult;
-#endif
-
-			var token = _fr.GetGroups();
-			var result = new DataParser().ParseFilters(token);
-
-			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+			var result = GetCachedValue<Filter>(cacheKey, () =>
+			{
+				var token = _fr.GetGroups();
+				return new DataParser().ParseFilters(token);
+			});
 
 			return result;
 		}
@@ -43,17 +39,11 @@ namespace Hozpm.Logic.Provider
 		{
 			const string cacheKey = "Purposes";
 
-#if !DEBUG
-			var cachedResult = _cache[cacheKey] as IEnumerable<Filter>;
-
-			if (cachedResult != null)
-				return cachedResult;
-#endif
-
-			var token = _fr.GetPurposes();
-			var result = new DataParser().ParseFilters(token);
-
-			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+			var result = GetCachedValue<Filter>(cacheKey, () =>
+			{
+				var token = _fr.GetPurposes();
+				return new DataParser().ParseFilters(token);
+			});
 
 			return result;
 		}
@@ -82,21 +72,17 @@ namespace Hozpm.Logic.Provider
 		{
 			const string cacheKey = "Items";
 
-#if !DEBUG
-			var cachedResult = _cache[cacheKey] as IEnumerable<ProductBase>;
-
-			if (cachedResult != null)
-				return cachedResult;
-#endif
-
 			var p = GetProducts();
 			var k = GetKits();
 
-			var result = new List<ProductBase>();
-			result.AddRange(p);
-			result.AddRange(k);
+			var result = GetCachedValue<ProductBase>(cacheKey, () =>
+			{
+				var items = new List<ProductBase>();
+				items.AddRange(p);
+				items.AddRange(k);
 
-			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+				return items;
+			});
 
 			return result;
 		}
@@ -147,17 +133,11 @@ namespace Hozpm.Logic.Provider
 		{
 			const string cacheKey = "Products";
 
-#if !DEBUG
-			var cachedResult = _cache[cacheKey] as IEnumerable<Product>;
-
-			if (cachedResult != null)
-				return cachedResult;
-#endif
-
-			var token = _fr.GetProducts();
-			var result = new DataParser().ParseProducts(token);
-
-			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+			var result = GetCachedValue<Product>(cacheKey, () =>
+			{
+				var token = _fr.GetProducts();
+				return new DataParser().ParseProducts(token);
+			});
 
 			return result;
 		}
@@ -166,19 +146,41 @@ namespace Hozpm.Logic.Provider
 		{
 			const string cacheKey = "Kits";
 
-#if !DEBUG
-			var cachedResult = _cache[cacheKey] as IEnumerable<Kit>;
+			var result = GetCachedValue<Kit>(cacheKey, () =>
+			{
+				var token = _fr.GetKits();
+				return new DataParser().ParseKits(token);
+			});
 
+			return result;
+		}
+
+		private IEnumerable<T> GetCachedValue<T>(string cacheKey, ReadData readData) where T : class
+		{
+			if (string.IsNullOrEmpty(cacheKey))
+				throw new ArgumentNullException(nameof(cacheKey));
+			if (readData == null)
+				throw new ArgumentNullException(nameof(readData));
+
+#if !DEBUG
+			var cachedResult = _cache[cacheKey] as IEnumerable<T>;
 			if (cachedResult != null)
 				return cachedResult;
 #endif
 
-			var token = _fr.GetKits();
-			var result = new DataParser().ParseKits(token);
-
-			_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
-
-			return result;
+			lock (Lock)
+			{
+#if !DEBUG
+				cachedResult = _cache[cacheKey] as IEnumerable<T>;
+				if (cachedResult != null)
+					return cachedResult;
+#endif
+				var result = readData();
+#if !DEBUG
+				_cache.Add(cacheKey, result, null, Cache.NoAbsoluteExpiration, Cache.NoSlidingExpiration, CacheItemPriority.Normal, null);
+#endif
+				return result as IEnumerable<T>;
+			}
 		}
 	}
 }

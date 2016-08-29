@@ -84,7 +84,7 @@
 		"captionShort": "Продукция №3 (краткое название)",
 		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
 		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "my-awesome-product-3",
+		"uri": "my-awesome-product-2",
 		"code": "A000002",
 		"groupId": 2,
 		"purposeIds": [ 0 ],
