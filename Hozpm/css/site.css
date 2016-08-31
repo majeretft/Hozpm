@@ -439,7 +439,6 @@ footer .content-wrap > div.container {
   display: block;
   overflow: hidden;
   border-bottom: 1px solid #ccc;
-  border-radius: 4px;
   text-decoration: none;
   color: inherit;
 }
