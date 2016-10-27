@@ -1,0 +1,41 @@
+[
+	{
+		"id": 0,
+		"productsIncluded": [ 0 ],
+		"caption": "",
+		"captionShort": "",
+		"description": "",
+		"photoPath": "placeholder/placeholder_16x9.png",
+		"uri": "",
+		"code": "",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 0,
+			"volume": 0,
+			"lenght": 0,
+			"width": 0,
+			"height": 0,
+			"weightText": "мг/г/кг",
+			"volumeText": "мл/л",
+			"lenghtText": "мм/см/м",
+			"widthText": "мм/см/м",
+			"heightText": "мм/см/м"
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	}
+]
