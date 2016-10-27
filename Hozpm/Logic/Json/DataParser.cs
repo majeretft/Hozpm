@@ -117,7 +117,8 @@ namespace Hozpm.Logic.Json
 					ParseProductBase(result, x);
 					result.AnalogyId = x.Value<int?>("analogyId");
 					return result;
-				});
+				})
+				.Where(x => !string.IsNullOrEmpty(x.Uri));
 		}
 
 		public IEnumerable<Kit> ParseKits(JToken token)
@@ -137,7 +138,8 @@ namespace Hozpm.Logic.Json
 						result.ProductsIncluded = purposes.Values<int>();
 
 					return result;
-				});
+				})
+				.Where(x => !string.IsNullOrEmpty(x.Uri));
 		}
 
 		public IEnumerable<Filter> ParseFilters(JToken token)
