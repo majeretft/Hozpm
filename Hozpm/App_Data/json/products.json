@@ -1,17 +1,17 @@
 [
 	{
 		"id": 0,
-		"analogyId": 0,
-		"caption": "Экземпляр тестовой продукции №1 (полное наименование)",
-		"captionShort": "Продукция №1 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "ehkzemplyar-testovoj-produkcii-1-polnoe-naimenovanie",
-		"code": "A000000",
-		"groupId": 0,
+		"analogyId": null,
+		"caption": "Катушка 50 гр. ПОС-61 д.1 мм. с канифолью",
+		"captionShort": "Припой ПОС-61 с канифолью",
+		"description": "Описание",
+		"photoPath": "products/DSC02374.jpg",
+		"uri": "А060023",
+		"code": "А060023",
+		"groupId": 3,
 		"purposeIds": [ 0 ],
 		"container": {
-			"weight": 250,
+			"weight": 50,
 			"volume": null,
 			"lenght": null,
 			"width": null,
@@ -23,35 +23,113 @@
 			"heightText": null
 		},
 		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
+			"keywords": "",
+			"description": ""
 		},
 		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
+			"title": "",
+			"description": "",
 			"imageType": "image/jpeg",
 			"imageWidth": 1280,
 			"imageHeight": 720
 		},
 		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
+			"name": "",
+			"description": ""
 		}
 	},
 	{
 		"id": 1,
 		"analogyId": null,
-		"caption": "Другой экземпляр тестовой продукции (полное наименование)",
-		"captionShort": "Продукция №2 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "test-product-2",
-		"code": "A000001",
-		"groupId": 1,
+		"caption": "Катушка 50 гр. ПОС-61 д.2 мм. с канифолью",
+		"captionShort": "Припой ПОС-61 с канифолью",
+		"description": "Описание",
+		"photoPath": "products/DSC02375.jpg",
+		"uri": "А060027",
+		"code": "А060027",
+		"groupId": 3,
 		"purposeIds": [ 0 ],
 		"container": {
-			"weight": 250,
-			"volume": 250,
+			"weight": 50,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "г",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 2,
+		"analogyId": null,
+		"caption": "Катушка 1 кг. ПОС-61 д. 1.5 мм. с канифолью",
+		"captionShort": "Припой ПОС-61 с канифолью",
+		"description": "Описание",
+		"photoPath": "products/DSC02376.jpg",
+		"uri": "А060115",
+		"code": "А060115",
+		"groupId": 3,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 1,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "кг",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 3,
+		"analogyId": null,
+		"caption": "Флюс Кислота ортофосфорная фл. 15 мл. стекло",
+		"captionShort": "Флюс кислота ортофосфорная",
+		"description": "Описание",
+		"photoPath": "products/DSC02377.jpg",
+		"uri": "А010122",
+		"code": "А010122",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 18,
+			"volume": 15,
 			"lenght": null,
 			"width": null,
 			"height": null,
@@ -62,331 +140,487 @@
 			"heightText": null
 		},
 		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
+			"keywords": "",
+			"description": ""
 		},
 		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
+			"title": "",
+			"description": "",
 			"imageType": "image/jpeg",
 			"imageWidth": 1280,
 			"imageHeight": 720
 		},
 		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
-		}
-	},
-	{
-		"id": 2,
-		"analogyId": 0,
-		"caption": "Решил добавить третий экземпляр тестовой продукции чтобы было на чем тестить (полное наименование)",
-		"captionShort": "Продукция №3 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "my-awesome-product-2",
-		"code": "A000002",
-		"groupId": 2,
-		"purposeIds": [ 0 ],
-		"container": {
-			"weight": 250,
-			"volume": null,
-			"lenght": 15,
-			"width": 25,
-			"height": 15,
-			"weightText": "г",
-			"volumeText": null,
-			"lenghtText": "см",
-			"widthText": "см",
-			"heightText": "см"
-		},
-		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
-		},
-		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
-			"imageType": "image/jpeg",
-			"imageWidth": 1280,
-			"imageHeight": 720
-		},
-		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
-		}
-	},
-	{
-		"id": 3,
-		"analogyId": 1,
-		"caption": "Четвертый тестовый продукт",
-		"captionShort": "Продукция №4 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "my-awesome-product-3",
-		"code": "A000003",
-		"groupId": 3,
-		"purposeIds": [ 0 ],
-		"container": {
-			"weight": 250,
-			"volume": null,
-			"lenght": 15,
-			"width": 25,
-			"height": 15,
-			"weightText": "г",
-			"volumeText": null,
-			"lenghtText": "см",
-			"widthText": "см",
-			"heightText": "см"
-		},
-		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
-		},
-		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
-			"imageType": "image/jpeg",
-			"imageWidth": 1280,
-			"imageHeight": 720
-		},
-		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
+			"name": "",
+			"description": ""
 		}
 	},
 	{
 		"id": 4,
-		"analogyId": 2,
-		"caption": "Пятый тестовый продукт",
-		"captionShort": "Продукция №5 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "my-awesome-product-4",
-		"code": "A000004",
+		"analogyId": null,
+		"caption": "Клей для пластмасс \"Дихлорэтан\" фл. 15 мл. стекло",
+		"captionShort": "Клей для пластмасс \"Дихлорэтан\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02378.jpg",
+		"uri": "А080010",
+		"code": "А080010",
 		"groupId": 4,
 		"purposeIds": [ 0 ],
 		"container": {
-			"weight": 250,
-			"volume": null,
-			"lenght": 15,
-			"width": 25,
-			"height": 15,
+			"weight": 18,
+			"volume": 15,
+			"lenght": null,
+			"width": null,
+			"height": null,
 			"weightText": "г",
-			"volumeText": null,
-			"lenghtText": "см",
-			"widthText": "см",
-			"heightText": "см"
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
 		},
 		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
+			"keywords": "",
+			"description": ""
 		},
 		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
+			"title": "",
+			"description": "",
 			"imageType": "image/jpeg",
 			"imageWidth": 1280,
 			"imageHeight": 720
 		},
 		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
+			"name": "",
+			"description": ""
 		}
 	},
 	{
 		"id": 5,
-		"analogyId": 2,
-		"caption": "Шестой тестовый продукт",
-		"captionShort": "Продукция №6 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "my-awesome-product-5",
-		"code": "A000005",
-		"groupId": 4,
+		"analogyId": null,
+		"caption": "Флюс Кислота паяльная фл. 15 мл. стекло",
+		"captionShort": "Флюс Кислота паяльная",
+		"description": "Описание",
+		"photoPath": "products/DSC02379.jpg",
+		"uri": "А010112",
+		"code": "А010112",
+		"groupId": 0,
 		"purposeIds": [ 0 ],
 		"container": {
-			"weight": 250,
-			"volume": null,
-			"lenght": 15,
-			"width": 25,
-			"height": 15,
+			"weight": 18,
+			"volume": 15,
+			"lenght": null,
+			"width": null,
+			"height": null,
 			"weightText": "г",
-			"volumeText": null,
-			"lenghtText": "см",
-			"widthText": "см",
-			"heightText": "см"
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
 		},
 		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
+			"keywords": "",
+			"description": ""
 		},
 		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
+			"title": "",
+			"description": "",
 			"imageType": "image/jpeg",
 			"imageWidth": 1280,
 			"imageHeight": 720
 		},
 		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
+			"name": "",
+			"description": ""
 		}
 	},
 	{
 		"id": 6,
-		"analogyId": 2,
-		"caption": "Седьмой тестовый продукт",
-		"captionShort": "Продукция №7 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "my-awesome-product-6",
-		"code": "A000006",
+		"analogyId": null,
+		"caption": "Лак ЦАПОН бесцветный фл.30 мл. стекло",
+		"captionShort": "Флюс Кислота паяльная",
+		"description": "Описание",
+		"photoPath": "products/DSC02380.jpg",
+		"uri": "А090011",
+		"code": "А090011",
 		"groupId": 5,
 		"purposeIds": [ 0 ],
 		"container": {
-			"weight": 250,
-			"volume": null,
-			"lenght": 15,
-			"width": 25,
-			"height": 15,
+			"weight": 30,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
 			"weightText": "г",
-			"volumeText": null,
-			"lenghtText": "см",
-			"widthText": "см",
-			"heightText": "см"
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
 		},
 		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
+			"keywords": "",
+			"description": ""
 		},
 		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
+			"title": "",
+			"description": "",
 			"imageType": "image/jpeg",
 			"imageWidth": 1280,
 			"imageHeight": 720
 		},
 		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
+			"name": "",
+			"description": ""
 		}
 	},
 	{
 		"id": 7,
-		"analogyId": 2,
-		"caption": "Восьмой тестовый продукт",
-		"captionShort": "Продукция №7 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "my-awesome-product-7",
-		"code": "A000007",
-		"groupId": 5,
+		"analogyId": null,
+		"caption": "Клей для пластмасс \"Дихлорэтан\" фл. 30 мл. стекло",
+		"captionShort": "Клей для пластмасс \"Дихлорэтан\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02381.jpg",
+		"uri": "А080011",
+		"code": "А080011",
+		"groupId": 4,
 		"purposeIds": [ 0 ],
 		"container": {
-			"weight": 250,
-			"volume": null,
-			"lenght": 15,
-			"width": 25,
-			"height": 15,
+			"weight": 30,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
 			"weightText": "г",
-			"volumeText": null,
-			"lenghtText": "см",
-			"widthText": "см",
-			"heightText": "см"
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
 		},
 		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
+			"keywords": "",
+			"description": ""
 		},
 		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
+			"title": "",
+			"description": "",
 			"imageType": "image/jpeg",
 			"imageWidth": 1280,
 			"imageHeight": 720
 		},
 		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
+			"name": "",
+			"description": ""
 		}
 	},
 	{
 		"id": 8,
-		"analogyId": 3,
-		"caption": "Девятый тестовый продукт",
-		"captionShort": "Продукция №9 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "my-awesome-product-8",
-		"code": "A000008",
-		"groupId": 5,
+		"analogyId": null,
+		"caption": "Флюс Кислота паяльная фл. 30 мл. стекло",
+		"captionShort": "Флюс Кислота паяльная",
+		"description": "Описание",
+		"photoPath": "products/DSC02382.jpg",
+		"uri": "А010116",
+		"code": "А010116",
+		"groupId": 0,
 		"purposeIds": [ 0 ],
 		"container": {
-			"weight": 250,
-			"volume": null,
-			"lenght": 15,
-			"width": 25,
-			"height": 15,
+			"weight": 30,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
 			"weightText": "г",
-			"volumeText": null,
-			"lenghtText": "см",
-			"widthText": "см",
-			"heightText": "см"
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
 		},
 		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
+			"keywords": "",
+			"description": ""
 		},
 		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
+			"title": "",
+			"description": "",
 			"imageType": "image/jpeg",
 			"imageWidth": 1280,
 			"imageHeight": 720
 		},
 		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
+			"name": "",
+			"description": ""
 		}
 	},
 	{
 		"id": 9,
-		"analogyId": 3,
-		"caption": "Десятый тестовый продукт",
-		"captionShort": "Продукция №10 (краткое название)",
-		"description": "<h3>Какое-то описание моей тестовой продукции.</h3> <p>Она <strong>обладает</strong> следующими характеристиками:</p> <ul> <li>Не жалко</li> <li>Тестовая</li> <li>Бесплатная</li> </ul> <p><span style=\"text-decoration: underline;\">Ее можно удалить без зазрения совести.</span></p>",
-		"photoPath": "placeholder/placeholder_16x9.png",
-		"uri": "my-awesome-product-9",
-		"code": "A000009",
-		"groupId": 5,
+		"analogyId": null,
+		"caption": "Смазка универсальная с графитовой пудрой и алюминиевым амортизатором в б. 60 мл..",
+		"captionShort": "Смазка универсальная",
+		"description": "Описание",
+		"photoPath": "products/DSC02392.jpg",
+		"uri": "А120300",
+		"code": "А120300",
+		"groupId": 8,
 		"purposeIds": [ 0 ],
 		"container": {
-			"weight": 250,
-			"volume": null,
-			"lenght": 15,
-			"width": 25,
-			"height": 15,
-			"weightText": "г",
-			"volumeText": null,
-			"lenghtText": "см",
-			"widthText": "см",
-			"heightText": "см"
+			"weight": null,
+			"volume": 60,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
 		},
 		"seo": {
-			"keywords": "Слово1 Слово2 Слово3",
-			"description": "Что-то написано"
+			"keywords": "",
+			"description": ""
 		},
 		"og": {
-			"title": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов.",
+			"title": "",
+			"description": "",
 			"imageType": "image/jpeg",
 			"imageWidth": 1280,
 			"imageHeight": 720
 		},
 		"schema": {
-			"name": "Заглушка для квадратной трубы (60х60 мм)",
-			"description": "Одевается на трубу снаружи и предназначена для защиты от коррозии и загрязнения. Заглушка придает изделию законченный внешний вид и может быть изготовлена из пластика различных цветов."
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 10,
+		"analogyId": null,
+		"caption": "Канифоль в б. 50 гр.",
+		"captionShort": "Канифоль живичная",
+		"description": "Описание",
+		"photoPath": "products/DSC02396.jpg",
+		"uri": "А010041",
+		"code": "А010041",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 50,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "г",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 11,
+		"analogyId": null,
+		"caption": "Паста ГОИ в б. 25 гр.",
+		"captionShort": "Паста ГОИ",
+		"description": "Описание",
+		"photoPath": "products/DSC02398.jpg",
+		"uri": "А110130",
+		"code": "А110130",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 100,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "г",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 12,
+		"analogyId": null,
+		"caption": "Железо хлорное в б. 250 гр.",
+		"captionShort": "Железо хлорное",
+		"description": "Описание",
+		"photoPath": "products/DSC02400.jpg",
+		"uri": "А110013",
+		"code": "А110013",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 250,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "г",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 13,
+		"analogyId": null,
+		"caption": "Смазка для буров SD-1, SD-2 MAX с алюминиевым амортизатором в б. 60 мл..",
+		"captionShort": "Смазка для буров SD-1, SD-2 MAX",
+		"description": "Описание",
+		"photoPath": "products/DSC02401.jpg",
+		"uri": "А120270",
+		"code": "А120270",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 60,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 14,
+		"analogyId": null,
+		"caption": "Смазка для резукторов УШМ и бытовой техники с алюминиевым амортизатором в б. 60 мл.",
+		"captionShort": "Смазка для резукторов УШМ и бытовой техники",
+		"description": "Описание",
+		"photoPath": "products/DSC02406.jpg",
+		"uri": "А120280",
+		"code": "А120280",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 60,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 15,
+		"analogyId": null,
+		"caption": "Смазка-антикор для защиты металла в б. 60 мл.",
+		"captionShort": "Смазка-антикор для защиты металла",
+		"description": "Описание",
+		"photoPath": "products/DSC02408.jpg",
+		"uri": "А120290",
+		"code": "А120290",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 60,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
 		}
 	}
 ]
