@@ -622,5 +622,668 @@
 			"name": "",
 			"description": ""
 		}
+	},
+	{
+		"id": 16,
+		"analogyId": null,
+		"caption": "Масло силиконовое ПМС-5 фл. 20 мл. пластик с кап.",
+		"captionShort": "Масло силиконовое ПМС-5",
+		"description": "Описание",
+		"photoPath": "products/DSC02411.jpg",
+		"uri": "А120043",
+		"code": "А120043",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 17,
+		"analogyId": null,
+		"caption": "Масло силиконовое ПМС-100 фл. 20 мл. пластик с кап.",
+		"captionShort": "Масло силиконовое ПМС-100",
+		"description": "Описание",
+		"photoPath": "products/DSC02412.jpg",
+		"uri": "А120093",
+		"code": "А120093",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 18,
+		"analogyId": null,
+		"caption": "Флюс Кислота паяльная фл. 20 мл. пластик с кап.",
+		"captionShort": "Флюс Кислота паяльная",
+		"description": "Описание",
+		"photoPath": "products/DSC02413.jpg",
+		"uri": "А010113",
+		"code": "А010113",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "г",
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 19,
+		"analogyId": null,
+		"caption": "Флюс Ф-38н фл. 20 мл. пластик с кап.",
+		"captionShort": "Флюс Ф-38н",
+		"description": "Описание",
+		"photoPath": "products/DSC02414.jpg",
+		"uri": "А010273",
+		"code": "А010273",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 20,
+		"analogyId": null,
+		"caption": "Флюс СКФ фл. 20 мл. пластик с кап.",
+		"captionShort": "Флюс СКФ",
+		"description": "Описание",
+		"photoPath": "products/DSC02415.jpg",
+		"uri": "А010233",
+		"code": "А010233",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 21,
+		"analogyId": null,
+		"caption": "Флюс Кислота ортофосфорная фл. 20 мл. пластик с кап.",
+		"captionShort": "Флюс Кислота ортофосфорная",
+		"description": "Описание",
+		"photoPath": "products/DSC02416.jpg",
+		"uri": "А010123",
+		"code": "А010123",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "г",
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 22,
+		"analogyId": null,
+		"caption": "Флюс ЛТИ-120 фл. 20 мл. пластик с кап.",
+		"captionShort": "Флюс ЛТИ-120",
+		"description": "Описание",
+		"photoPath": "products/DSC02417.jpg",
+		"uri": "А010243",
+		"code": "А010243",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 23,
+		"analogyId": null,
+		"caption": "Флюс для алюминия Ф-59а фл. 20 мл. пластик с кап.",
+		"captionShort": "Флюс для алюминия Ф-59а",
+		"description": "Описание",
+		"photoPath": "products/DSC02418.jpg",
+		"uri": "А010163",
+		"code": "А010163",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 24,
+		"analogyId": null,
+		"caption": "Флюс для алюминия Ф-61а фл. 20 мл. пластик с кап.",
+		"captionShort": "Флюс для алюминия Ф-61а",
+		"description": "Описание",
+		"photoPath": "products/DSC02419.jpg",
+		"uri": "А010173",
+		"code": "А010173",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 25,
+		"analogyId": null,
+		"caption": "Масло силиконовое ПМС-1000 фл. 20 мл. пластик с кап.",
+		"captionShort": "Масло силиконовое ПМС-1000",
+		"description": "Описание",
+		"photoPath": "products/DSC02420.jpg",
+		"uri": "А120173",
+		"code": "А120173",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 26,
+		"analogyId": null,
+		"caption": "Флюс ФИМ фл. 20 мл. пластик с кап.",
+		"captionShort": "Флюс ФИМ",
+		"description": "Описание",
+		"photoPath": "products/DSC02421.jpg",
+		"uri": "А010403",
+		"code": "А010403",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 20,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 27,
+		"analogyId": null,
+		"caption": "Флюс для печатных плат №2 анилиновый фл. 75 мл. пластик с кап.",
+		"captionShort": "Флюс для печатных плат №2 анилиновый",
+		"description": "Описание",
+		"photoPath": "products/DSC02422.jpg",
+		"uri": "А010575",
+		"code": "А010575",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 75,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 28,
+		"analogyId": null,
+		"caption": "Масло силиконовое ПМС-100 фл. 40 мл. пластик с кап.",
+		"captionShort": "Масло силиконовое ПМС-100",
+		"description": "Описание",
+		"photoPath": "products/DSC02423.jpg",
+		"uri": "А120097",
+		"code": "А120097",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 40,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 29,
+		"analogyId": null,
+		"caption": "Флюс СКФ фл. 40 мл. пластик с кап.",
+		"captionShort": "Флюс СКФ",
+		"description": "Описание",
+		"photoPath": "products/DSC02424.jpg",
+		"uri": "А010237",
+		"code": "А010237",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 40,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 30,
+		"analogyId": null,
+		"caption": "Масло бытовое фл. 40 мл. пластик с кап.",
+		"captionShort": "Масло бытовое",
+		"description": "Описание",
+		"photoPath": "products/DSC02425.jpg",
+		"uri": "А120207",
+		"code": "А120207",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 40,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 31,
+		"analogyId": null,
+		"caption": "Флюс Кислота паяльная фл. 40 мл. пластик с кап.",
+		"captionShort": "Флюс Кислота паяльная",
+		"description": "Описание",
+		"photoPath": "products/DSC02426.jpg",
+		"uri": "А010117",
+		"code": "А010117",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 40,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 32,
+		"analogyId": null,
+		"caption": "Масло вазелиновое фл. 40 мл. пластик с кап.",
+		"captionShort": "Масло вазелиновое",
+		"description": "Описание",
+		"photoPath": "products/DSC02427.jpg",
+		"uri": "А120037",
+		"code": "А120037",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 40,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
 	}
 ]
