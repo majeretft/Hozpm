@@ -34,17 +34,34 @@
 }
 else
 {
-	<div class="table-responsive">
-		<table class="table table-striped table-bordered">
-			<thead>
+	var groups = Model.FormModel.Groups.ToList();
+
+	<table class="table table-bordered">
+		<thead>
+			<tr class="bg-primary">
+				<th>Артикул</th>
+				<th>Наименование</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var g in groups)
+			{
+				var groupItems = Model.Items
+					.Where(x => string.Equals(x.GroupId.ToString(), g.Value, StringComparison.InvariantCultureIgnoreCase))
+					.OrderBy(x => x.Code)
+					.ToList();
+
+				if (!groupItems.Any())
+				{
+					continue;
+				}
+
 				<tr>
-					<th>Артикул</th>
-					<th>Наименование</th>
-					<th></th>
+					<th colspan="3" class="bg-info text-center">@g.Text</th>
 				</tr>
-			</thead>
-			<tbody>
-				@foreach (var m in Model.Items)
+
+				foreach (var m in groupItems)
 				{
 					var action = m.GetIsKit ? "Kit" : "Product";
 					var link = Url.Action(action, "Catalog", new { Item = m.Uri });
@@ -57,7 +74,7 @@ else
 						</td>
 					</tr>
 				}
-			</tbody>
-		</table>
-	</div>
+			}
+		</tbody>
+	</table>
 }

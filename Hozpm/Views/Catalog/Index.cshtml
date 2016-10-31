@@ -14,6 +14,10 @@
 
 		.collapsing {
 			position: static;
+			-ms-transition: none;
+			-o-transition: none;
+			-webkit-transition: none;
+			transition: none;
 		}
 	</style>
 }
@@ -30,7 +34,7 @@
 				});
 
 				$(form).on('hide.bs.collapse', function () {
-					$(btnFormVisibility).children('span').text('Отобразить');
+					$(btnFormVisibility).children('span').text('Показать');
 				});
 
 				$(window).resize(function () {
@@ -105,29 +109,37 @@
 	<h1>@ViewBag.Title</h1>
 </div>
 
-<!--noindex-->
 <noscript>
 	<div class="row">
 		<div class="col-xs-12 col-md-9">
-			<div class="alert alert-warning">
-				<h4>Замечание</h4>
+			<div class="alert alert-danger">
 				<p>
-					Для работы формы используется <i>javascript</i>.
-					Если вы не можете включить эту функцию в браузере - воспользуйтесь ссылкой для просмотра полного списка продукции
-				</p>
-				<p>
-					<a href="@Url.Action("ViewAll", "Catalog")" class="btn btn-default">Полный список продукции</a>
+					Для работы этой страницы требуется <b>JavaScript</b>. Вы можете:
+					<ul>
+						<li>Включить/разрешить <b>JavaScript</b> в браузере</li>
+						<li>Воспользоваться страницей с полным списком продукции в табличном виде <a href="@Url.Action("ViewAll", "Catalog")" class="alert-link">по этой ссылке</a></li>
+					</ul>
 				</p>
 			</div>
 		</div>
 	</div>
 </noscript>
-<!--/noindex-->
+
+<div class="row">
+	<div class="col-xs-12 col-md-9">
+		<div class="alert alert-info">
+			<p>
+				Вы можете посмотреть <b>полный</b> список продукции в <b>табличном виде</b> на отдельной странице:
+				<a href="@Url.Action("ViewAll", "Catalog")" class="alert-link">перейти</a>
+			</p>
+		</div>
+	</div>
+</div>
 
 <div class="row">
 	<div class="col-xs-12">
 		<p class="visible-xs visible-sm">
-			<button type="button" class="btn btn-block btn-primary" id="toggle-btn"><span>Скрыть</span> фильтры</button>
+			<button type="button" class="btn btn-block btn-primary" id="toggle-btn"><span>Показать</span> фильтры</button>
 		</p>
 		@Html.Partial("Partial/Catalog/AsideForm", Model.FormModel)
 	</div>
