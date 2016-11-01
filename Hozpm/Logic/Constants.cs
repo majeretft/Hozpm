@@ -61,5 +61,7 @@
 		}
 
 		public const string CompanyName = "Группа компаний AVRGroup";
+
+		public const string EmptyPhotoPath = "placeholder/no-photo.jpg";
 	}
 }

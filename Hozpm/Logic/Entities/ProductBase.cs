@@ -4,6 +4,8 @@ namespace Hozpm.Logic.Entities
 {
 	public abstract class ProductBase
 	{
+		private string _photoPath;
+
 		public int Id { get; set; }
 		public int GroupId { get; set; }
 		public IEnumerable<int> PurposeIds { get; set; }
@@ -12,7 +14,19 @@ namespace Hozpm.Logic.Entities
 		public string CaptionShort { get; set; }
 		public string Code { get; set; }
 		public string Description { get; set; }
-		public string PhotoPath { get; set; }
+
+		public string PhotoPath
+		{
+			get
+			{
+				return _photoPath;
+			}
+			set
+			{
+				_photoPath = string.IsNullOrEmpty(value) ? Constants.EmptyPhotoPath : value;
+			}
+		}
+
 		public Container Container { get; set; }
 
 		public abstract bool GetIsKit { get; }
