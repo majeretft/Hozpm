@@ -86,7 +86,7 @@ namespace Hozpm.Logic.Entities
 			if (string.IsNullOrEmpty(code))
 				throw new ArgumentNullException(nameof(code));
 
-			_items = _items.Where(x => code.Equals(x.Code, StringComparison.InvariantCultureIgnoreCase));
+			_items = _items.Where(x => x.Code.EndsWith(code));
 
 			return this;
 		}

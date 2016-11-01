@@ -57,14 +57,7 @@ namespace Hozpm.Logic.Entities
 			}
 		}
 
-		public string GetCode
-		{
-			get
-			{
-				var code = Code?.Trim();
-				return string.IsNullOrEmpty(code) ? string.Empty : $"A{code}";
-			}
-		}
+		public string GetCode => Code?.Trim();
 
 		public IEnumerable<int> GetSelectedPurposes
 		{
