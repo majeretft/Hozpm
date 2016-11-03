@@ -83,7 +83,7 @@
 		"caption": "Катушка 1 кг. ПОС-61 д. 1.5 мм. с канифолью",
 		"captionShort": "Припой ПОС-61 с канифолью",
 		"description": "Описание",
-		"photoPath": "products/DSC02376.jpg",
+		"photoPath": "products/DSC02504.jpg",
 		"uri": "А060115",
 		"code": "А060115",
 		"groupId": 3,
@@ -1643,7 +1643,7 @@
 		"caption": "Флюс для алюминия Ф-59а фл. 30 мл. пластик с кап.",
 		"captionShort": "Флюс для алюминия Ф-59а",
 		"description": "Описание",
-		"photoPath": "products/DSC02437.jpg",
+		"photoPath": "products/DSC02479.jpg",
 		"uri": "А010165",
 		"code": "А010165",
 		"groupId": 0,
@@ -1764,6 +1764,1644 @@
 		"uri": "А010512",
 		"code": "А010512",
 		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 46,
+		"analogyId": null,
+		"caption": "Размораживатель замков фл. 30 мл. пластик с кап.",
+		"captionShort": "Размораживатель замков",
+		"description": "Описание",
+		"photoPath": "products/DSC02441.jpg",
+		"uri": "А180015",
+		"code": "А180015",
+		"groupId": 9,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 47,
+		"analogyId": null,
+		"caption": "Флюс ЛТИ-120 фл. 40 мл. пластик с кап.",
+		"captionShort": "Флюс ЛТИ-120",
+		"description": "Описание",
+		"photoPath": "products/DSC02442.jpg",
+		"uri": "А010247",
+		"code": "А010247",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 40,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 48,
+		"analogyId": null,
+		"caption": "Флюс ФЦА фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ФЦА",
+		"description": "Описание",
+		"photoPath": "products/DSC02443.jpg",
+		"uri": "А010462",
+		"code": "А010462",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 49,
+		"analogyId": null,
+		"caption": "Флюс-люкс  для АЛЮМИНИЯ низкотемпературный/сироп/повышенная активность фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс-люкс  для АЛЮМИНИЯ низкотемпературный",
+		"description": "Описание",
+		"photoPath": "products/DSC02444.jpg",
+		"uri": "А030060",
+		"code": "А030060",
+		"groupId": 2,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 50,
+		"analogyId": null,
+		"caption": "Флюс КЭЦ  фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс КЭЦ",
+		"description": "Описание",
+		"photoPath": "products/DSC02445.jpg",
+		"uri": "А010662",
+		"code": "А010662",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 51,
+		"analogyId": null,
+		"caption": "Флюс Ф-38Н фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс Ф-38Н",
+		"description": "Описание",
+		"photoPath": "products/DSC02446.jpg",
+		"uri": "А010275",
+		"code": "А010275",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 52,
+		"analogyId": null,
+		"caption": "Флюс ВТС  фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ВТС",
+		"description": "Описание",
+		"photoPath": "products/DSC02447.jpg",
+		"uri": "А010642",
+		"code": "А010642",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 53,
+		"analogyId": null,
+		"caption": "Флюс Кислота паяльная фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс Кислота паяльная",
+		"description": "Описание",
+		"photoPath": "products/DSC02448.jpg",
+		"uri": "А010115",
+		"code": "А010115",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 54,
+		"analogyId": null,
+		"caption": "Флюс КЭ  фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс КЭ",
+		"description": "Описание",
+		"photoPath": "products/DSC02449.jpg",
+		"uri": "А010672",
+		"code": "А010672",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 55,
+		"analogyId": null,
+		"caption": "Флюс-люкс для BGA и SMD жидкий водосмываемый гель фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс-люкс для BGA и SMD",
+		"description": "Описание",
+		"photoPath": "products/DSC02450.jpg",
+		"uri": "А030030",
+		"code": "А030030",
+		"groupId": 2,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 56,
+		"analogyId": null,
+		"caption": "Флюс ЗИЛ-4 фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ЗИЛ-4",
+		"description": "Описание",
+		"photoPath": "products/DSC02451.jpg",
+		"uri": "А010202",
+		"code": "А010202",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 57,
+		"analogyId": null,
+		"caption": "Флюс СКФ фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс СКФ",
+		"description": "Описание",
+		"photoPath": "products/DSC02452.jpg",
+		"uri": "А010235",
+		"code": "А010235",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 58,
+		"analogyId": null,
+		"caption": "Флюс активный ТАГС-2 фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс активный ТАГС-2",
+		"description": "Описание",
+		"photoPath": "products/DSC02453.jpg",
+		"uri": "А010155",
+		"code": "А010155",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 59,
+		"analogyId": null,
+		"caption": "Флюс глицерин-анилиновый фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс глицерин-анилиновый",
+		"description": "Описание",
+		"photoPath": "products/DSC02454.jpg",
+		"uri": "А010622",
+		"code": "А010622",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 60,
+		"analogyId": null,
+		"caption": "Флюс ПРИМА-2 фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ПРИМА-2",
+		"description": "Описание",
+		"photoPath": "products/DSC02455.jpg",
+		"uri": "А010293",
+		"code": "А010293",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 61,
+		"analogyId": null,
+		"caption": "Смазка Графитовая жидкая фл. 30 мл. пластик с кап.",
+		"captionShort": "Смазка Графитовая жидкая",
+		"description": "Описание",
+		"photoPath": "products/DSC02456.jpg",
+		"uri": "А120246",
+		"code": "А120246",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 62,
+		"analogyId": null,
+		"caption": "Флюс для печатных плат универсальный фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс для печатных плат универсальный",
+		"description": "Описание",
+		"photoPath": "products/DSC02457.jpg",
+		"uri": "А010552",
+		"code": "А010552",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 63,
+		"analogyId": null,
+		"caption": "Флюс активный ТАГС фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс активный ТАГС",
+		"description": "Описание",
+		"photoPath": "products/DSC02458.jpg",
+		"uri": "А010145",
+		"code": "А010145",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 64,
+		"analogyId": null,
+		"caption": "Флюс ФТС фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ФТС",
+		"description": "Описание",
+		"photoPath": "products/DSC02459.jpg",
+		"uri": "А010422",
+		"code": "А010422",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 65,
+		"analogyId": null,
+		"caption": "Флюс ЛТИ-120 фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ЛТИ-120",
+		"description": "Описание",
+		"photoPath": "products/DSC02460.jpg",
+		"uri": "А010245",
+		"code": "А010245",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 66,
+		"analogyId": null,
+		"caption": "Флюс ФТКА фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ФТКА",
+		"description": "Описание",
+		"photoPath": "products/DSC02461.jpg",
+		"uri": "А010442",
+		"code": "А010442",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 67,
+		"analogyId": null,
+		"caption": "Флюс для бронзы, латуни, меди фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс для бронзы, латуни, меди",
+		"description": "Описание",
+		"photoPath": "products/DSC02462.jpg",
+		"uri": "А010435",
+		"code": "А010435",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 68,
+		"analogyId": null,
+		"caption": "Флюс нейтральный низкотемпературный фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс нейтральный низкотемпературный",
+		"description": "Описание",
+		"photoPath": "products/DSC02463.jpg",
+		"uri": "А010452",
+		"code": "А010452",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 69,
+		"analogyId": null,
+		"caption": "Флюс-люкс \"Анилиновый\" сироп/водосмываемый/для трудно-паяемых материалов/повышенная активность фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс-люкс \"Анилиновый\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02464.jpg",
+		"uri": "А030050",
+		"code": "А030050",
+		"groupId": 2,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 70,
+		"analogyId": null,
+		"caption": "Очиститель для магнитных головок фл. 30 мл. пластик без кап.",
+		"captionShort": "Очиститель для магнитных головок",
+		"description": "Описание",
+		"photoPath": "products/DSC02465.jpg",
+		"uri": "А110024",
+		"code": "А110024",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 71,
+		"analogyId": null,
+		"caption": "Масло силиконовое ПМС-100 фл. 30 мл. пластик с кап.",
+		"captionShort": "Масло силиконовое ПМС-100",
+		"description": "Описание",
+		"photoPath": "products/DSC02466.jpg",
+		"uri": "А120095",
+		"code": "А120095",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 72,
+		"analogyId": null,
+		"caption": "Флюс ЗИЛ-5 фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ЗИЛ-5",
+		"description": "Описание",
+		"photoPath": "products/DSC02467.jpg",
+		"uri": "А010212",
+		"code": "А010212",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 73,
+		"analogyId": null,
+		"caption": "Флюс ЗИЛ-6 фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ЗИЛ-6",
+		"description": "Описание",
+		"photoPath": "products/DSC02468.jpg",
+		"uri": "А010222",
+		"code": "А010222",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 74,
+		"analogyId": null,
+		"caption": "Флюс ПРИМА-1 фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ПРИМА-1",
+		"description": "Описание",
+		"photoPath": "products/DSC02469.jpg",
+		"uri": "А010282",
+		"code": "А010282",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 75,
+		"analogyId": null,
+		"caption": "Масло силиконовое ПМС-200 фл. 30 мл. пластик с кап.",
+		"captionShort": "Масло силиконовое ПМС-200",
+		"description": "Описание",
+		"photoPath": "products/DSC02470.jpg",
+		"uri": "А120125",
+		"code": "А120125",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 76,
+		"analogyId": null,
+		"caption": "Флюс-люкс \"Кислота паяльная\" сироп/улучшенная формула/повышенная активность фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс-люкс Кислота паяльная",
+		"description": "Описание",
+		"photoPath": "products/DSC02471.jpg",
+		"uri": "А030040",
+		"code": "А030040",
+		"groupId": 2,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 77,
+		"analogyId": null,
+		"caption": "Флюс LV-1000 фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс LV-1000",
+		"description": "Описание",
+		"photoPath": "products/DSC02472.jpg",
+		"uri": "А010133",
+		"code": "А010133",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 78,
+		"analogyId": null,
+		"caption": "Флюс RF-218  фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс RF-218",
+		"description": "Описание",
+		"photoPath": "products/DSC02473.jpg",
+		"uri": "А010652",
+		"code": "А010652",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 79,
+		"analogyId": null,
+		"caption": "Очиститель универсальный фл. 30 мл. пластик с кап.",
+		"captionShort": "Очиститель универсальный",
+		"description": "Описание",
+		"photoPath": "products/DSC02474.jpg",
+		"uri": "А110035",
+		"code": "А110035",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 80,
+		"analogyId": null,
+		"caption": "Флюс глицерин-канифольный фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс глицерин-канифольный",
+		"description": "Описание",
+		"photoPath": "products/DSC02475.jpg",
+		"uri": "А010612",
+		"code": "А010612",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 81,
+		"analogyId": null,
+		"caption": "Флюс для алюминия Ф-61а фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс для алюминия Ф-61а",
+		"description": "Описание",
+		"photoPath": "products/DSC02476.jpg",
+		"uri": "А010175",
+		"code": "А010175",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 82,
+		"analogyId": null,
+		"caption": "Флюс ФИМ фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ФИМ",
+		"description": "Описание",
+		"photoPath": "products/DSC02477.jpg",
+		"uri": "А010405",
+		"code": "А010405",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 83,
+		"analogyId": null,
+		"caption": "Флюс-люкс \"ЛТИ-120-люкс\" водосмываемый/повышенная активность фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс-люкс \"ЛТИ-120-люкс\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02478.jpg",
+		"uri": "А030080",
+		"code": "А030080",
+		"groupId": 2,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 84,
+		"analogyId": null,
+		"caption": "Флюс-люкс \"Ф59а-люкс\" сироп/повышенная активность фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс-люкс \"Ф59а-люкс\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02437.jpg",
+		"uri": "А030090",
+		"code": "А030090",
+		"groupId": 2,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 85,
+		"analogyId": null,
+		"caption": "Флюс ЗИЛ-2 фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс ЗИЛ-2",
+		"description": "Описание",
+		"photoPath": "products/DSC02480.jpg",
+		"uri": "А010195",
+		"code": "А010195",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 86,
+		"analogyId": null,
+		"caption": "Флюс карбонатный низкотемпературный фл. 30 мл. пластик с кап.",
+		"captionShort": "Флюс карбонатный низкотемпературный",
+		"description": "Описание",
+		"photoPath": "products/DSC02481.jpg",
+		"uri": "А010632",
+		"code": "А010632",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 30,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 87,
+		"analogyId": null,
+		"caption": "Смывка-удалитель излишков флюса/канифоли/продуктов реакции фл. 30 мл. пластик с кап.",
+		"captionShort": "Смывка-удалитель излишков флюса/канифоли/продуктов реакции",
+		"description": "Описание",
+		"photoPath": "products/DSC02482.jpg",
+		"uri": "А110045",
+		"code": "А110045",
+		"groupId": 7,
 		"purposeIds": [ 0 ],
 		"container": {
 			"weight": null,
