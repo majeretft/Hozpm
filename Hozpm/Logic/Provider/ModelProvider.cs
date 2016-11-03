@@ -39,19 +39,17 @@ namespace Hozpm.Logic.Provider
 			{
 				itemsFluent.WithCode(code);
 			}
-			else
-			{
-				// if group is set and "any group" checkbox is unchecked
-				if (!formSettings.GetGroupAny && formSettings.GetGroupSelected >= 0)
-				{
-					itemsFluent.WithGroup(formSettings.GetGroupSelected);
-				}
 
-				// if there are any selected purposes and "any purpose" checkbox is unchecked
-				if (!formSettings.GetPurposeAny && formSettings.HasSelectedPurposes)
-				{
-					itemsFluent.WithPurposes(formSettings.GetSelectedPurposes);
-				}
+			// if group is set and "any group" checkbox is unchecked
+			if (!formSettings.GetGroupAny && formSettings.GetGroupSelected >= 0)
+			{
+				itemsFluent.WithGroup(formSettings.GetGroupSelected);
+			}
+
+			// if there are any selected purposes and "any purpose" checkbox is unchecked
+			if (!formSettings.GetPurposeAny && formSettings.HasSelectedPurposes)
+			{
+				itemsFluent.WithPurposes(formSettings.GetSelectedPurposes);
 			}
 
 			// Getting the filtered items list
