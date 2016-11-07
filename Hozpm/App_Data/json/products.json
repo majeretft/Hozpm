@@ -431,12 +431,12 @@
 	{
 		"id": 11,
 		"analogyId": null,
-		"caption": "Паста ГОИ в б. 25 гр.",
+		"caption": "Паста ГОИ в б. 100 гр.",
 		"captionShort": "Паста ГОИ",
 		"description": "Описание",
 		"photoPath": "products/DSC02398.jpg",
-		"uri": "А110130",
-		"code": "А110130",
+		"uri": "А110132",
+		"code": "А110132",
 		"groupId": 7,
 		"purposeIds": [ 0 ],
 		"container": {
