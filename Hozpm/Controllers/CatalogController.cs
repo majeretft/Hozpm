@@ -7,6 +7,7 @@ using Hozpm.Models;
 
 namespace Hozpm.Controllers
 {
+	[OutputCache(Duration = 300, Location = OutputCacheLocation.ServerAndClient)]
 	public class CatalogController : Controller
 	{
 		private readonly IModelProvider _modelProvider;
@@ -17,7 +18,7 @@ namespace Hozpm.Controllers
 		}
 
 		[HttpGet]
-		[OutputCache(Duration = 600, Location = OutputCacheLocation.ServerAndClient)]
+		[OutputCache(NoStore = true, Duration = 0, Location = OutputCacheLocation.None)]
 		public ViewResult Index(string groupSelected)
 		{
 			var formSettings = new FormSettings
@@ -32,7 +33,9 @@ namespace Hozpm.Controllers
 			return View(model);
 		}
 
-		[HttpPost, ValidateAntiForgeryToken]
+		[HttpPost]
+		[ValidateAntiForgeryToken]
+		[OutputCache(NoStore = true, Duration = 0, Location = OutputCacheLocation.None)]
 		public ViewResult Index(
 			string displaySelected, 
 			string pageNumber, 
@@ -60,7 +63,6 @@ namespace Hozpm.Controllers
 			return View(model);
 		}
 
-		[OutputCache(Duration = 600, Location = OutputCacheLocation.ServerAndClient)]
 		public ActionResult Product(string item)
 		{
 			if (string.IsNullOrEmpty(item))
@@ -74,7 +76,6 @@ namespace Hozpm.Controllers
 			return RedirectToAction("Http404", "Error");
 		}
 
-		[OutputCache(Duration = 600, Location = OutputCacheLocation.ServerAndClient)]
 		public ActionResult Kit(string item)
 		{
 			if (string.IsNullOrEmpty(item))
