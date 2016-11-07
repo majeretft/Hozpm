@@ -1,4 +1,6 @@
-﻿namespace Hozpm.Logic
+﻿using System.Collections.Generic;
+
+namespace Hozpm.Logic
 {
 	public static class Constants
 	{
@@ -60,7 +62,9 @@
 			public const string GroupOther = "9";
 		}
 
-		public const string CompanyName = "Группа компаний AVRGroup";
+		public const string CompanyName = "Группа компаний «Паяльные материалы»";
+		public const string CompanyEmail = "hozpm@mail.ru";
+		public static List<string> CompanyPhones = new List<string> { "+7 (4912) 27-17-55", "+7 (4912) 95-06-42", "+7 (4912) 95-06-43" };
 
 		public const string EmptyPhotoPath = "placeholder/no-photo.jpg";
 	}

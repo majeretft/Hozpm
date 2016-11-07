@@ -162,7 +162,7 @@ header > .content-wrap > .menu-wrap .navbar-agile ul.nav > li > a:hover {
 @media (min-width: 992px) {
   header > .content-wrap {
     height: 130px;
-    background: url('../img/avrgroup_logo.png') left center no-repeat, url('../img/contact-bg.png') right center no-repeat, url('../img/factory_1920x130.jpg') center center;
+    background: url('../img/pm_logo.png') left center no-repeat, url('../img/contact-bg.png') right center no-repeat, url('../img/factory_1920x130.jpg') center center;
     box-shadow: 0px 1px 8px #000;
   }
   header > .content-wrap .contact {
