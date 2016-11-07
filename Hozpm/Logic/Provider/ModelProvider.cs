@@ -41,13 +41,13 @@ namespace Hozpm.Logic.Provider
 			}
 
 			// if group is set and "any group" checkbox is unchecked
-			if (!formSettings.GetGroupAny && formSettings.GetGroupSelected >= 0)
+			if (!formSettings.GetGroupAny)
 			{
 				itemsFluent.WithGroup(formSettings.GetGroupSelected);
 			}
 
 			// if there are any selected purposes and "any purpose" checkbox is unchecked
-			if (!formSettings.GetPurposeAny && formSettings.HasSelectedPurposes)
+			if (!formSettings.GetPurposeAny)
 			{
 				itemsFluent.WithPurposes(formSettings.GetSelectedPurposes);
 			}

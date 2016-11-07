@@ -150,11 +150,16 @@
 		{
 			<span class="label label-primary text-uppercase">@Model.FilterGroup</span>
 		}
-		@if (Model.FilterPurposes != null && Model.FilterPurposes.Any())
+		@if (Model.FilterPurposes != null)
 		{
 			foreach (var filterPurpose in Model.FilterPurposes)
 			{
 				<span class="label label-danger text-uppercase">@filterPurpose</span>
+			}
+
+			if (!Model.FilterPurposes.Any())
+			{
+				<span class="label label-danger text-uppercase">ни одного из назначений</span>
 			}
 		}
 		@if (!string.IsNullOrEmpty(Model.FilterCode))
