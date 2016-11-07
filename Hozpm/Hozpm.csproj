@@ -272,6 +272,7 @@
     <Compile Include="Logic\Entities\DataSeo.cs" />
     <Compile Include="Logic\Entities\FormSettings.cs" />
     <Compile Include="Logic\Entities\ItemListFluent.cs" />
+    <Compile Include="Logic\ExceptionUtility.cs" />
     <Compile Include="Logic\OrderEnum.cs" />
     <Compile Include="Logic\Provider\DataProvider.cs" />
     <Compile Include="Logic\Entities\Container.cs" />

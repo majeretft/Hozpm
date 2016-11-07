@@ -245,3 +245,4 @@ ModelManifest.xml
 .fake/
 /Hozpm/App_Data/errorlogs
 /Hozpm/img/products
+/Hozpm/App_Data/Application_Error.txt
