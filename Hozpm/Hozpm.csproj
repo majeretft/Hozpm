@@ -208,6 +208,8 @@
     <Content Include="scripts\jquery-1.12.4.js" />
     <Content Include="scripts\jquery-1.12.4.min.js" />
     <Content Include="scripts\jquery-1.12.4.min.map" />
+    <Content Include="scripts\jquery.elevatezoom.js" />
+    <Content Include="scripts\jquery.elevatezoom.min.js" />
     <Content Include="scripts\site\elevatezoom-start.js" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
