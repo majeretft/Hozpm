@@ -5,7 +5,7 @@
 		"caption": "Набор для пайки \"Профи 2\" в пакете Zip-lock",
 		"captionShort": "Набор для пайки \"Профи 2\"",
 		"description": "Описание",
-		"photoPath": "products/DSC02385.jpg",
+		"photoPath": "products/DSC02551.jpg",
 		"uri": "А100012",
 		"code": "А100012",
 		"groupId": 6,
@@ -44,7 +44,7 @@
 		"caption": "Набор для пайки \"Профи 1\" в пакете Zip-lock",
 		"captionShort": "Набор для пайки \"Профи 1\"",
 		"description": "Описание",
-		"photoPath": "products/DSC02383.jpg",
+		"photoPath": "products/DSC02554.jpg",
 		"uri": "А100011",
 		"code": "А100011",
 		"groupId": 6,
@@ -83,7 +83,7 @@
 		"caption": "Набор для пайки \"Профи 3\" в пакете Zip-lock",
 		"captionShort": "Набор для пайки \"Профи 3\"",
 		"description": "Описание",
-		"photoPath": "products/DSC02388.jpg",
+		"photoPath": "products/DSC02553.jpg",
 		"uri": "А100013",
 		"code": "А100013",
 		"groupId": 6,
@@ -122,9 +122,48 @@
 		"caption": "Набор для пайки \"Профи 4\" в пакете Zip-lock",
 		"captionShort": "Набор для пайки \"Профи 4\"",
 		"description": "Описание",
-		"photoPath": "products/DSC02390.jpg",
+		"photoPath": "products/DSC02552.jpg",
 		"uri": "А100014",
 		"code": "А100014",
+		"groupId": 6,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 4,
+		"productsIncluded": [ ],
+		"caption": "Набор для пайки \"Универсальный\" 4 предмета в кор.",
+		"captionShort": "Набор для пайки \"Универсальный\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02555.jpg",
+		"uri": "А100010",
+		"code": "А100010",
 		"groupId": 6,
 		"purposeIds": [ 0 ],
 		"container": {
