@@ -2,7 +2,8 @@
 
 <div class="product-item clearfix">
 	<div class="clearfix">
-		<img src="@Url.Content($"~/img/{Model.PhotoPath}")" alt="" class="img-responsive image" />
+		<img src="@Url.Content($"~/img/{Model.PhotoPath}")" alt="" class="img-responsive image" data-zoom-image="@Url.Content($"~/img/{Model.PhotoPath}")" />
+		<p class="lead caption-full">@Model.Caption</p>
 		<p class="code">
 			Артикул: <b>@Model.Code</b>
 		</p>
@@ -43,9 +44,8 @@
 				</p>
 			}
 		}
-	</div>
-	<p class="lead caption-full">@Model.Caption</p>
-	<div class="description">
-		@Html.Raw(Model.Description)
+		<p class="description">
+			@Html.Raw(Model.Description)
+		</p>
 	</div>
 </div>

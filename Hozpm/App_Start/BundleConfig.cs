@@ -30,6 +30,12 @@ namespace Hozpm
 			bundles.Add(new StyleBundle("~/css/ie")
 				.Include("~/css/ie.css"));
 
+			// product and kit page plugins
+			bundles.Add(new ScriptBundle("~/js/elevatezoom", "https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/3.0.8/jquery.elevatezoom.min.js")
+				.Include("~/Scripts/jquery.elevatezoom.js"));
+			bundles.Add(new ScriptBundle("~/js/elevatezoom-start")
+				.Include("~/Scripts/site/elevatezoom-start.js"));
+
 			//website js
 			bundles.Add(new ScriptBundle("~/app/loader")
 				.Include("~/app/app.loader.js"));

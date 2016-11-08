@@ -15,6 +15,11 @@
 	ViewBag.HeadPrefix = Constants.Og.HeadPrefixProduct;
 }
 
+@section scripts {
+	@Scripts.Render("~/js/elevatezoom")
+	@Scripts.Render("~/js/elevatezoom-start")
+}
+
 @section seo {
 	@if (Model.Kit.Seo != null)
 	{
