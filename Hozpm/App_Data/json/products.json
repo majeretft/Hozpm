@@ -3430,5 +3430,941 @@
 			"name": "",
 			"description": ""
 		}
+	},
+	{
+		"id": 88,
+		"analogyId": null,
+		"caption": "Смазка Графитовая в б. 20 гр.",
+		"captionShort": "Смазка Графитовая",
+		"description": "Описание",
+		"photoPath": "products/DSC02587.jpg",
+		"uri": "А120240",
+		"code": "А120240",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 89,
+		"analogyId": null,
+		"caption": "Флюс-паста в б. 20 гр.",
+		"captionShort": "Флюс-паста",
+		"description": "Описание",
+		"photoPath": "products/DSC02588.jpg",
+		"uri": "А110050",
+		"code": "А110050",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 90,
+		"analogyId": null,
+		"caption": "Смазка Силиконовая в б. 8 гр.",
+		"captionShort": "Смазка Силиконовая",
+		"description": "Описание",
+		"photoPath": "products/DSC02589.jpg",
+		"uri": "А120220",
+		"code": "А120220",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 8,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 91,
+		"analogyId": null,
+		"caption": "Паста теплопроводная КПТ-8 в б. 30 гр.",
+		"captionShort": "Паста теплопроводная КПТ-8",
+		"description": "Описание",
+		"photoPath": "products/DSC02590.jpg",
+		"uri": "А110100",
+		"code": "А110100",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 30,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 92,
+		"analogyId": null,
+		"caption": "Паста ГОИ в б. 25 гр.",
+		"captionShort": "Паста ГОИ",
+		"description": "Описание",
+		"photoPath": "products/DSC02591.jpg",
+		"uri": "",
+		"code": "",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 25,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 93,
+		"analogyId": null,
+		"caption": "Канифоль в б. 20 гр.",
+		"captionShort": "Канифоль",
+		"description": "Описание",
+		"photoPath": "products/DSC02592.jpg",
+		"uri": "А010040",
+		"code": "А010040",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 94,
+		"analogyId": null,
+		"caption": "Бура в б. 20 гр.",
+		"captionShort": "Бура",
+		"description": "Описание",
+		"photoPath": "products/DSC02593.jpg",
+		"uri": "А010010",
+		"code": "А010010",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 95,
+		"analogyId": null,
+		"caption": "Паста НИСО в б. 20 гр.",
+		"captionShort": "Паста НИСО",
+		"description": "Описание",
+		"photoPath": "products/DSC02594.jpg",
+		"uri": "А110140",
+		"code": "А110140",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 96,
+		"analogyId": null,
+		"caption": "Жир активный в б. 20 гр.",
+		"captionShort": "Жир активный",
+		"description": "Описание",
+		"photoPath": "products/DSC02595.jpg",
+		"uri": "А010020",
+		"code": "А010020",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 97,
+		"analogyId": null,
+		"caption": "Флюс 16 ВК высокотемпературная пайка алюминия в б. 20 гр.",
+		"captionShort": "Флюс 16 ВК высокотемпературная пайка алюминия",
+		"description": "Описание",
+		"photoPath": "products/DSC02596.jpg",
+		"uri": "",
+		"code": "",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 98,
+		"analogyId": null,
+		"caption": "Смазка Циатим-201 в б. 20 гр.",
+		"captionShort": "Смазка Циатим-201",
+		"description": "Описание",
+		"photoPath": "products/DSC02597.jpg",
+		"uri": "А120260",
+		"code": "А120260",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 99,
+		"analogyId": null,
+		"caption": "Флюс-паста для алюминия в б. 20 гр.",
+		"captionShort": "Флюс-паста для алюминия",
+		"description": "Описание",
+		"photoPath": "products/DSC02598.jpg",
+		"uri": "А110080",
+		"code": "А110080",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 100,
+		"analogyId": null,
+		"caption": "Жир нейтральный в б. 20 гр.",
+		"captionShort": "Жир нейтральный",
+		"description": "Описание",
+		"photoPath": "products/DSC02599.jpg",
+		"uri": "А010030",
+		"code": "А010030",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 101,
+		"analogyId": null,
+		"caption": "Флюс ВАМИ в б. 20 гр.",
+		"captionShort": "Флюс ВАМИ",
+		"description": "Описание",
+		"photoPath": "products/DSC02600.jpg",
+		"uri": "А010080",
+		"code": "А010080",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 102,
+		"analogyId": null,
+		"caption": "Флюс ТИНОЛЬ в б. 30 гр.",
+		"captionShort": "Флюс ТИНОЛЬ",
+		"description": "Описание",
+		"photoPath": "products/DSC02601.jpg",
+		"uri": "А010100",
+		"code": "А010100",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 30,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 103,
+		"analogyId": null,
+		"caption": "Нашатырь в б. 20 гр.",
+		"captionShort": "Нашатырь",
+		"description": "Описание",
+		"photoPath": "products/DSC02602.jpg",
+		"uri": "А010050",
+		"code": "А010050",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 104,
+		"analogyId": null,
+		"caption": "Флюс-паста с канифолью в б. 20 гр.",
+		"captionShort": "Флюс-паста с канифолью",
+		"description": "Описание",
+		"photoPath": "products/DSC02603.jpg",
+		"uri": "А110090",
+		"code": "А110090",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 105,
+		"analogyId": null,
+		"caption": "Смазка Силиконовая в б. 30 гр.",
+		"captionShort": "Смазка Силиконовая",
+		"description": "Описание",
+		"photoPath": "products/DSC02604.jpg",
+		"uri": "А120222",
+		"code": "А120222",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 30,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 106,
+		"analogyId": null,
+		"caption": "Флюс для алюминия в б.20 гр.",
+		"captionShort": "Флюс для алюминия",
+		"description": "Описание",
+		"photoPath": "products/DSC02605.jpg",
+		"uri": "А010070",
+		"code": "А010070",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 107,
+		"analogyId": null,
+		"caption": "Флюс для алюминия Ф-34а в б. 20 гр.",
+		"captionShort": "Флюс для алюминия Ф-34а",
+		"description": "Описание",
+		"photoPath": "products/DSC02606.jpg",
+		"uri": "А010264",
+		"code": "А010264",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 108,
+		"analogyId": null,
+		"caption": "Вазелин в б. 20 гр.",
+		"captionShort": "Вазелин",
+		"description": "Описание",
+		"photoPath": "products/DSC02607.jpg",
+		"uri": "А120011",
+		"code": "А120011",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 109,
+		"analogyId": null,
+		"caption": "Оксидал в б. 20 гр.",
+		"captionShort": "Оксидал",
+		"description": "Описание",
+		"photoPath": "products/DSC02608.jpg",
+		"uri": "А110160",
+		"code": "А110160",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 110,
+		"analogyId": null,
+		"caption": "Флюс-паста ВТС в б. 20 гр.",
+		"captionShort": "Флюс-паста ВТС в б. 20 гр.",
+		"description": "Описание",
+		"photoPath": "products/DSC02609.jpg",
+		"uri": "А110060",
+		"code": "А110060",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 111,
+		"analogyId": null,
+		"caption": "Флюс ПВ209 в б. 20 гр.",
+		"captionShort": "Флюс ПВ209",
+		"description": "Описание",
+		"photoPath": "products/DSC02610.jpg",
+		"uri": "А010090",
+		"code": "А010090",
+		"groupId": 0,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": 20,
+			"volume": null,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "гр",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
 	}
 ]
