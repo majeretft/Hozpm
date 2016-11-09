@@ -7,17 +7,23 @@ namespace Hozpm.Logic
 {
 	public static class ExceptionUtility
 	{
-		public const string LogPath = "~/App_Data/Logs/Application_Error_{0}.txt";
+		public const string LogPath = "~/App_Data/Logs";
+		public const string LogName = "Application_Error_{0}.txt";
 
-		// Log an Exception 
 		public static void LogException(Exception exc)
 		{
-			// Include enterprise logic for logging exceptions 
-			// Get the absolute path to the log file 
-			var logFile = HostingEnvironment.MapPath(string.Format(LogPath, DateTime.Today.ToString("dd-MM-yyyy")));
+			var logDir = HostingEnvironment.MapPath(LogPath);
+
+			if (string.IsNullOrEmpty(logDir))
+				throw new Exception("MapPath returend invalid directory.");
+
+			if (!Directory.Exists(logDir))
+				Directory.CreateDirectory(logDir);
+
+			var logName = string.Format(LogName, DateTime.Today.ToString("dd-MM-yyyy"));
+			var logPath = Path.Combine(logDir, logName);
 			
-			// Open the log file for append and write the log
-			using (var sw = new StreamWriter(logFile ?? string.Empty, true))
+			using (var sw = new StreamWriter(logPath, true))
 			{
 				sw.WriteLine("********** {0} **********", DateTime.Now);
 

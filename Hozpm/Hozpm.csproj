@@ -143,6 +143,7 @@
     <Content Include="css\user.min.css">
       <DependentUpon>user.css</DependentUpon>
     </Content>
+    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\social-icons.svg" />
     <Content Include="img\avrgroup_logo.ico" />
