@@ -41,12 +41,12 @@
 	{
 		"id": 1,
 		"analogyId": null,
-		"caption": "Катушка 50 гр. ПОС-61 д.2 мм. с канифолью",
+		"caption": "Катушка 100 гр. ПОС-61 д.2 мм. с канифолью",
 		"captionShort": "Припой ПОС-61 с канифолью",
 		"description": "Описание",
 		"photoPath": "products/DSC02375.jpg",
-		"uri": "А060027",
-		"code": "А060027",
+		"uri": "А060057",
+		"code": "А060057",
 		"groupId": 3,
 		"purposeIds": [ 0 ],
 		"container": {
