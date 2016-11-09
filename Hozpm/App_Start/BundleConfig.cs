@@ -35,12 +35,6 @@ namespace Hozpm
 				.Include("~/Scripts/jquery.elevatezoom.js"));
 			bundles.Add(new ScriptBundle("~/js/elevatezoom-start")
 				.Include("~/Scripts/site/elevatezoom-start.js"));
-
-			//website js
-			bundles.Add(new ScriptBundle("~/app/loader")
-				.Include("~/app/app.loader.js"));
-			bundles.Add(new ScriptBundle("~/app/app")
-				.Include("~/app/app.js"));
 		}
 	}
 }

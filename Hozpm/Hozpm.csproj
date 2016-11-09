@@ -192,8 +192,6 @@
     <Content Include="less\partial\catalog\product-card.less" />
     <Content Include="less\partial\catalog\product-list-paging.less" />
     <Content Include="less\partial\catalog\product-ordered-list.less" />
-    <Content Include="less\_user\login.less" />
-    <Content Include="less\_user\all.less" />
     <Content Include="less\partial\catalog\product-item.less" />
     <Content Include="less\partial\catalog\product-another-container.less" />
     <Content Include="less\ie.less" />
@@ -231,7 +229,6 @@
     <Content Include="Views\Shared\Partial\Breadcrumb.cshtml" />
     <Content Include="Views\Shared\Partial\Catalog\ProductOrderedList.cshtml" />
     <Content Include="Views\Management\Index.cshtml" />
-    <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\Error\Http404.cshtml" />
     <Content Include="Views\Error\Http500.cshtml" />
     <Content Include="Views\Error\Index.cshtml" />
