@@ -243,7 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
-/Hozpm/App_Data/errorlogs
+/Hozpm/App_Data/Logs
 /Hozpm/img/products
 /Hozpm/img/preview/products
-/Hozpm/App_Data/Application_Error.txt

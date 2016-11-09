@@ -14,6 +14,7 @@ namespace Hozpm
 			routes.MapRoute("Error", "Error", new { controller = "Error", action = "Index" });
 			routes.MapRoute("Item", "Catalog/{action}/{item}", new { controller = "Catalog", action = "Index" });
 			routes.MapRoute("Default", "{controller}/{action}", new { controller = "Home", action = "Index" });
+			routes.MapRoute("Unknown", "{*anything}", new { controller = "Unknown", action = "Index" });
 		}
 	}
 }
