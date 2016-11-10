@@ -4366,5 +4366,707 @@
 			"name": "",
 			"description": ""
 		}
+	},
+	{
+		"id": 112,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Кислота паяльная\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Кислота паяльная\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02569.jpg",
+		"uri": "А020110",
+		"code": "А020110",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 113,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для пайки BGA компонентов, универсальный\" в пром. шприце 12 мл. (зеленый)",
+		"captionShort": "Флюс-гель \"Для пайки BGA компонентов, универсальный\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02570.jpg",
+		"uri": "А020020",
+		"code": "А020020",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": "мл",
+			"volumeText": null,
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 114,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для пайки SMD чипов и микромонтажа\" в пром. шприце 12 мл. (красный)",
+		"captionShort": "Флюс-гель \"Для пайки SMD чипов и микромонтажа\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02571.jpg",
+		"uri": "А020030",
+		"code": "А020030",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 115,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для трудно паяемых материалов\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Для трудно паяемых материалов\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02572.jpg",
+		"uri": "А020100",
+		"code": "А020100",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 116,
+		"analogyId": null,
+		"caption": "Смазка Графитовая в пром. шприце 12 мл.",
+		"captionShort": "Смазка Графитовая",
+		"description": "Описание",
+		"photoPath": "products/DSC02573.jpg",
+		"uri": "А120244",
+		"code": "А120244",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 117,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Канифоль - гель\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Канифоль - гель\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02574.jpg",
+		"uri": "А020040",
+		"code": "А020040",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 118,
+		"analogyId": null,
+		"caption": "Смазка Силиконовая в пром. шприце 12 мл.",
+		"captionShort": "Смазка Силиконовая",
+		"description": "Описание",
+		"photoPath": "products/DSC02575.jpg",
+		"uri": "А120225",
+		"code": "А120225",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 119,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для пайки бронзы, латуни, меди\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Для пайки бронзы, латуни, меди\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02576.jpg",
+		"uri": "А020080",
+		"code": "А020080",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 120,
+		"analogyId": null,
+		"caption": "Флюс-гель для BGA и SMD высокоактивный в пром. шприце 12 мл. \\t=248°C\\",
+		"captionShort": "Флюс-гель для BGA и SMD высокоактивный",
+		"description": "Описание",
+		"photoPath": "products/DSC02577.jpg",
+		"uri": "А020024",
+		"code": "А020024",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 121,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для пайки алюминия\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Для пайки алюминия\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02578.jpg",
+		"uri": "А020070",
+		"code": "А020070",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 122,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Нейтральный\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Нейтральный\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02579.jpg",
+		"uri": "А020120",
+		"code": "А020120",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 123,
+		"analogyId": null,
+		"caption": "Флюс-гель для BGA и SMD в пром. шприце 12 мл. \\t=185°C\\",
+		"captionShort": "Флюс-гель для BGA и SMD в пром. шприце 12 мл. \\t=185°C\\",
+		"description": "Описание",
+		"photoPath": "products/DSC02580.jpg",
+		"uri": "А020022",
+		"code": "А020022",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 124,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Универсальный\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Универсальный\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02581.jpg",
+		"uri": "А020130",
+		"code": "А020130",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 125,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Активный\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Активный\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02582.jpg",
+		"uri": "А020010",
+		"code": "А020010",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 126,
+		"analogyId": null,
+		"caption": "Паста теплопроводная СИЛУРОН в пром. шприце 12 мл.",
+		"captionShort": "Паста теплопроводная СИЛУРОН",
+		"description": "Описание",
+		"photoPath": "products/DSC02583.jpg",
+		"uri": "А110122",
+		"code": "А110122",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 127,
+		"analogyId": null,
+		"caption": "Паста теплопроводная КПТ-8 Classic в пром. шприце 12 мл.",
+		"captionShort": "Паста теплопроводная КПТ-8 Classic",
+		"description": "Описание",
+		"photoPath": "products/DSC02586.jpg",
+		"uri": "А110110",
+		"code": "А110110",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 128,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для сильно окисленных поверхностей LV-1000\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Для сильно окисленных поверхностей LV-1000\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02584.jpg",
+		"uri": "А020090",
+		"code": "А020090",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 129,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Канифоль - гель - актив\" в пром. шприце 12 мл.",
+		"captionShort": "Флюс-гель \"Канифоль - гель - актив\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02585.jpg",
+		"uri": "А020060",
+		"code": "А020060",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
 	}
 ]
