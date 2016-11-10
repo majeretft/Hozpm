@@ -57,7 +57,7 @@ namespace Hozpm.Logic.Entities
 			}
 		}
 
-		public string GetCode => Code?.Trim();
+		public string GetCode => Code?.Trim().TrimStart('A', 'А');
 
 		public IEnumerable<int> GetSelectedPurposes
 		{
