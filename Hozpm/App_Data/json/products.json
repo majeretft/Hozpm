@@ -5068,5 +5068,668 @@
 			"name": "",
 			"description": ""
 		}
+	},
+	{
+		"id": 130,
+		"analogyId": null,
+		"caption": "Смазка Силиконовая в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Смазка Силиконовая в пром. шприце",
+		"description": "Описание",
+		"photoPath": "products/DSC02628.jpg",
+		"uri": "А120226",
+		"code": "А120226",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 131,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для пайки BGA компонентов, универсальный\" в пром. шприце 12 мл. (зеленый) в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Для пайки BGA компонентов, универсальный\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02629.jpg",
+		"uri": "А020021",
+		"code": "А020021",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 132,
+		"analogyId": null,
+		"caption": "Флюс-гель для BGA и SMD в пром. шприце 12 мл. \\t=185°C\\ в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель для BGA и SMD",
+		"description": "Описание",
+		"photoPath": "products/DSC02630.jpg",
+		"uri": "А020023",
+		"code": "А020023",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 133,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Канифоль - гель\" в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Канифоль - гель\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02631.jpg",
+		"uri": "А020041",
+		"code": "А020041",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 134,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для пайки SMD чипов и микромонтажа\" в пром. шприце 12 мл. (красный) в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Для пайки SMD чипов и микромонтажа\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02632.jpg",
+		"uri": "А020031",
+		"code": "А020031",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 135,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Кислота паяльная\" в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Кислота паяльная\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02633.jpg",
+		"uri": "А020111",
+		"code": "А020111",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 136,
+		"analogyId": null,
+		"caption": "Паста теплопроводная КПТ-8 Classic в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Паста теплопроводная КПТ-8 Classic",
+		"description": "Описание",
+		"photoPath": "products/DSC02634.jpg",
+		"uri": "А110111",
+		"code": "А110111",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 137,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Универсальный\" в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Универсальный\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02635.jpg",
+		"uri": "А020131",
+		"code": "А020131",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 138,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Нейтральный\" в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Нейтральный\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02637.jpg",
+		"uri": "А020121",
+		"code": "А020121",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 139,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для трудно паяемых материалов\" в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Для трудно паяемых материалов\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02638.jpg",
+		"uri": "А020101",
+		"code": "А020101",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 140,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Активный\" в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Активный\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02639.jpg",
+		"uri": "А020011",
+		"code": "А020011",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 141,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Канифоль - гель - актив\" в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Канифоль - гель - актив\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02640.jpg",
+		"uri": "А020061",
+		"code": "А020061",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 142,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для сильно окисленных поверхностей LV-1000\" в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Для сильно окисленных поверхностей LV-1000\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02641.jpg",
+		"uri": "А020091",
+		"code": "А020091",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 143,
+		"analogyId": null,
+		"caption": "Флюс-гель \"Для пайки бронзы, латуни, меди\" в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель \"Для пайки бронзы, латуни, меди\"",
+		"description": "Описание",
+		"photoPath": "products/DSC02642.jpg",
+		"uri": "А020081",
+		"code": "А020081",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 144,
+		"analogyId": null,
+		"caption": "Смазка Графитовая в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Смазка Графитовая",
+		"description": "Описание",
+		"photoPath": "products/DSC02643.jpg",
+		"uri": "А120245",
+		"code": "А120245",
+		"groupId": 8,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 145,
+		"analogyId": null,
+		"caption": "Паста теплопроводная СИЛУРОН в пром. шприце 12 мл. в блистере с дозатором и толкателем",
+		"captionShort": "Паста теплопроводная СИЛУРОН",
+		"description": "Описание",
+		"photoPath": "products/DSC02644.jpg",
+		"uri": "А110123",
+		"code": "А110123",
+		"groupId": 7,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
+	},
+	{
+		"id": 146,
+		"analogyId": null,
+		"caption": "Флюс-гель для BGA и SMD высокоактивный в пром. шприце 12 мл. \\t=248°C\\ в блистере с дозатором и толкателем",
+		"captionShort": "Флюс-гель для BGA и SMD высокоактивный",
+		"description": "Описание",
+		"photoPath": "products/DSC02645.jpg",
+		"uri": "А020025",
+		"code": "А020025",
+		"groupId": 1,
+		"purposeIds": [ 0 ],
+		"container": {
+			"weight": null,
+			"volume": 12,
+			"lenght": null,
+			"width": null,
+			"height": null,
+			"weightText": null,
+			"volumeText": "мл",
+			"lenghtText": null,
+			"widthText": null,
+			"heightText": null
+		},
+		"seo": {
+			"keywords": "",
+			"description": ""
+		},
+		"og": {
+			"title": "",
+			"description": "",
+			"imageType": "image/jpeg",
+			"imageWidth": 1280,
+			"imageHeight": 720
+		},
+		"schema": {
+			"name": "",
+			"description": ""
+		}
 	}
 ]
