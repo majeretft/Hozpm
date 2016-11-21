@@ -15,16 +15,8 @@ header > .content-wrap {
 
 	position: relative;
 
-	.contact {
+	.contact-container {
 		display: none;
-		float: right;
-		font-size: 22px;
-		text-align: right;
-		line-height: 35px;
-		padding: 30px 15px;
-		color: #000;
-		text-shadow: 1px 1px 1px #888;
-		text-transform: uppercase;
 	}
 
 	> .menu-wrap {
@@ -71,8 +63,23 @@ header > .content-wrap {
 		background: url('../../img/pm_logo.png') left center no-repeat, url('../../img/contact-bg.png') right center no-repeat, url('../../img/factory_1920x130.jpg') center center;
 		box-shadow: 0px 1px 8px #000;
 
-		.contact {
-			display: inline-block;
+		.contact-container {
+			display: table;
+			height: @header-height;
+			width: 260px;
+			float: right;
+			font-size: 20px;
+			text-align: right;
+			line-height: 26px;
+			color: #000;
+			text-shadow: 1px 1px 1px #888;
+			text-transform: uppercase;
+
+			.contact {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+			}
 		}
 
 		> .menu-wrap {

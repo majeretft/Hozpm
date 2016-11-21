@@ -9,25 +9,24 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6">
-				<div class="contact">@Constants.CompanyEmail<br/>@Constants.CompanyPhones.First()</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,linkedin,gplus" data-bare></div>
+				<div class="contact-container">
+					<div class="contact">
+						@Constants.CompanyEmail<br />
+						@Constants.CompanyPhones[0]<br />
+						@Constants.CompanyPhones[1]<br />
+						@Constants.CompanyPhones[2]
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="bg">
 		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-md-6">
-					<div class="copywrite">
-						<span class="indissoluble">&copy; 2015-2016</span>
-						<span class="indissoluble">@Constants.CompanyName</span>
-					</div>
-				</div>
+			<div class="copywrite">
+				<span class="indissoluble">&copy; 2015-2016</span>
+				<span class="indissoluble">@Constants.CompanyName</span>
 			</div>
+			<div class="ya-share2" data-services="linkedin,facebook,vkontakte,viber,whatsapp,collections,moimir,gplus,lj" data-limit="5" data-popup-direction="top"></div>
 		</div>
 	</div>
 </div>

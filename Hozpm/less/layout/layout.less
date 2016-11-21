@@ -16,9 +16,9 @@ main {
 	padding-top: @navbar-height;
 	padding-bottom: @footer-xs-height;
 
-	@media(min-width: @screen-md-min) {
+	@media(min-width: @screen-sm-min) {
 		padding-top: 10px;
-		padding-bottom: @footer-md-height;
+		padding-bottom: @footer-sm-height;
 	}
 }
 
@@ -27,15 +27,15 @@ footer {
 	margin-top: -@footer-xs-height;
 
 	.content-wrap > div.container {
-		height: @footer-xs-height - 44px;
+		height: @footer-xs-height - 98px;
 	}
 
-	@media(min-width: @screen-md-min) {
-		height: @footer-md-height;
-		margin-top: -@footer-md-height;
+	@media(min-width: @screen-sm-min) {
+		height: @footer-sm-height;
+		margin-top: -@footer-sm-height;
 
 		.content-wrap > div.container {
-			height: @footer-md-height - 44px;
+			height: @footer-sm-height - 78px;
 		}
 	}
 }
