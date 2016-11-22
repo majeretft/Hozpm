@@ -7,8 +7,14 @@
 @section styles {
 	<style>
 		@@media(min-width: 992px) {
-			main {
-				min-height: 1010px;
+			.result {
+				min-height: 682px;
+			}
+		}
+
+		@@media(min-width: 1200px) {
+			.result {
+				min-height: 612px;
 			}
 		}
 
@@ -28,6 +34,8 @@
 			var form = ('form.catalog-filter');
 			var btnFormVisibility = $('#toggle-btn');
 
+			var isFullForm;
+
 			var collapseHandler = function () {
 				$(form).on('show.bs.collapse', function () {
 					$(btnFormVisibility).children('span').text('Скрыть');
@@ -38,8 +46,21 @@
 				});
 
 				$(window).resize(function () {
-					var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-					w && w >= 992 ? $(form).collapse('show') : $(form).collapse('hide');
+					var needFullForm;
+
+					if (window.isIEOlder9) {
+						var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+						needFullForm = w >= 992;
+					} else {
+						var m = window.matchMedia('(min-width: 992px)');
+						needFullForm = m.matches;
+					}
+
+					if (needFullForm === isFullForm)
+						return;
+
+					needFullForm ? $(form).collapse('show') : $(form).collapse('hide');
+					isFullForm = needFullForm;
 				});
 
 				$(btnFormVisibility).click(function () {
@@ -91,9 +112,31 @@
 				});
 			}
 
+			var handleNumberValidation = function () {
+				var allowedRegex = /^\d+$/;
+				var allowedCharRegex = /\d/;
+				var ctNumbers = $('input[data-number]');
+
+				ctNumbers.on('paste', function (e) {
+					var newValue =
+						e.originalEvent.clipboardData
+						? e.originalEvent.clipboardData.getData('Text')
+						: window.clipboardData.getData('Text');
+					if (!allowedRegex.test(newValue))
+						e.preventDefault();
+				});
+
+				ctNumbers.keypress(function (e) {
+					var key = e.key != null ? e.key : String.fromCharCode(e.which);
+					if (!allowedCharRegex.test(key))
+						e.preventDefault();
+				});
+			}
+
 			collapseHandler();
 			formIteractionHandler();
 			pagunationHandler();
+			handleNumberValidation();
 
 			$(window).resize();
 		});
@@ -168,7 +211,7 @@
 		}
 	</div>
 </div>
-<div class="row element-margin">
+<div class="row element-margin result">
 	<div class="col-md-9 col-lg-9">
 		@if (!Model.Items.Any())
 		{

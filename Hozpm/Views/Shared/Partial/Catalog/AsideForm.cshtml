@@ -4,7 +4,7 @@
 {
 	@Html.AntiForgeryToken()
 
-	<input type="hidden" id="@nameof(Model.PageNumber)" name="@nameof(Model.PageNumber)" value="@Model.PageNumber"/>
+	<input type="hidden" id="@nameof(Model.PageNumber)" name="@nameof(Model.PageNumber)" value="@Model.PageNumber" />
 
 	<div class="form-inline sorting-form">
 		<div class="form-group">
@@ -50,6 +50,28 @@
 					@Html.CheckBoxFor(x => Model.PurposeAny) Любое назначение
 				</label>
 			</div>
+		</div>
+		<div class="form-group form-inline">
+			<label>Масса <span class="hidden-xs">от</span></label>
+			<br class="visible-md"/>
+			<input type="text" class="form-control" placeholder="от" data-number />
+			<label class="hidden-xs">до</label>
+			<input type="text" class="form-control" placeholder="до" data-number />
+			<select class="form-control">
+				<option>г</option>
+				<option>кг</option>
+			</select>
+		</div>
+		<div class="form-group form-inline">
+			<label>Объем <span class="hidden-xs">от</span></label>
+			<br class="visible-md" />
+			<input type="text" class="form-control" placeholder="от" data-number />
+			<label class="hidden-xs">до</label>
+			<input type="text" class="form-control" placeholder="до" data-number />
+			<select class="form-control">
+				<option>мл</option>
+				<option>л</option>
+			</select>
 		</div>
 		<div class="form-group">
 			<label>Артикул</label>

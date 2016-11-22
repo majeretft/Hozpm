@@ -121,6 +121,7 @@ footer > .content-wrap .contact {
 footer > .content-wrap .copywrite {
   padding: 12px 0;
   text-align: center;
+  height: 64px;
 }
 footer > .content-wrap .bg {
   color: #8c8c8c;
@@ -300,6 +301,19 @@ footer .content-wrap > div.container {
 }
 .catalog-filter .sorting-form {
   display: none;
+}
+.catalog-filter .form-group.form-inline > label:first-child {
+  width: 72px;
+}
+.catalog-filter .form-group.form-inline input {
+  max-width: 55px;
+}
+.catalog-filter .form-group.form-inline select {
+  width: 70px;
+}
+.catalog-filter .form-group.form-inline .form-control {
+  display: inline-block;
+  vertical-align: middle;
 }
 .catalog-filter .aside-form {
   background-color: #ebebeb;
