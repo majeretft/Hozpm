@@ -1,6 +1,6 @@
 ﻿
 @{
-	ViewBag.Title = $"{Constants.CompanyName} - Главная";
+	ViewBag.Title = Constants.CompanyName;
 }
 
 @section seo {
@@ -30,16 +30,15 @@
 	<h1>@ViewBag.Title</h1>
 </div>
 
-<h2>Уважаемые партнеры и гости!</h2>
+<h2>Уважаемые партнеры!</h2>
 
-<p class="lead">Рады приветствовать Вас на нашем сайте hozpm</p>
+<p class="lead">Рады приветствовать Вас на нашем сайте</p>
 
-<p class="lead">Группа компаний &laquo;Паяльные материалы&raquo; осуществляет производство и поставку расходных материалов для пайки с 1997г.</p>
+<p class="lead">Группа компаний &laquo;@Constants.CompanyName&raquo; осуществляет производство и поставку расходных материалов для пайки с 1997г.</p>
 
 <p>
 	На протяжении всего этого времени наша организация зарекомендовала себя как стабильный и ответственный поставщик.
-	За годы своей работы мы целеустремленно увеличивали ассортимент выпускаемой продукции и в настоящее время наг прайс-лист включает в себя более 600 наименований паяльных материалов.
-	Предусмотрена индивидуальная и групповая (по 5-10 шт.) упаковка товара.
+	Мы целеустремленно увеличивали ассортимент выпускаемой продукции и в настоящее время наш прайс-лист включает в себя более 500 наименований продукции для пайки и смежных областей.
 </p>
 
 <p>
@@ -54,16 +53,17 @@
 	<li>Ежедневные отправки заказов</li>
 	<li>Готовность заказа через 2-3 часа после выставления счета</li>
 	<li>Доставка до терминала ТК Москвы и Рязани бесплатно</li>
-	<li>Профессиональная “с советским образованием” команда химиков-технологов и инженерно-технического персонала</li>
-	<li>Отпускаем продукцию от 1шт.</li>
+	<li>Профессиональная команда химиков-технологов и инженерно-технического персонала</li>
+	<li>Отпускаем продукцию от 1шт</li>
 	<li>Информируем заказчика об отправке товара в день отгрузки</li>
-	<li>Жителям Москвы и Московской области доставка бесплатно “до дверей”</li>
+	<li>Заказчикам из Рязани, Москвы и Московской области доставка бесплатно "до дверей"</li>
 </ul>
 
-<p class="lead">Группы нашей продукции:</p>
+<p class="lead">Группы выпускаемой продукции:</p>
 <ol>
 	<li>Флюсы: в растворах, порошках, пастах, сплавах</li>
 	<li>Флюс-гели, флюс-люксы</li>
+	<li>Припои и сплавы</li>
 	<li>Клеи, лаки, наборы для пайки, травления печатных плат</li>
 	<li>Очистители, смывки, полировальные и теплопроводные пасты</li>
 	<li>Смазочные материалы</li>
@@ -74,7 +74,7 @@
 <div class="row">
 	<div class="col-sm-6 col-md-5 col-lg-4">
 		<div class="group-card">
-			<img src="@Url.Content("~/img/placeholder/placeholder_16x9.png")" alt="" class="img-responsive photo" />
+			<img src="@Url.Content("~/img/groups/flux.jpg")" alt="" class="img-responsive photo" />
 			<h3 class="caption">
 				<span class="text-nowrap">Флюсы</span>,
 				<span class="text-nowrap">Флюс-гели</span>,
@@ -82,20 +82,11 @@
 			</h3>
 			<div class="description">
 				<p>
-					Тестовое описание текущей группы<br/>
-					Даже в несколько строк и даже с HTML!
+					Место для описания
 				</p>
-				<ul>
-					<li>Point 1</li>
-					<li>Point 2</li>
-					<li>Point 3</li>
-					<li>Point 4</li>
-					<li>Point OVR</li>
-					<li>Point OVR</li>
-				</ul>
 			</div>
 			<p class="links">
-				Открыть каталог:<br/>
+				Открыть в каталоге:<br />
 				<!--nofollow-->
 				<a href="@Url.Action("Index", "Catalog", new { groupSelected = Constants.Ids.GroupFlux })" class="btn btn-primary">Флюсы</a>
 				<a href="@Url.Action("Index", "Catalog", new { groupSelected = Constants.Ids.GroupFluxeGel })" class="btn btn-primary">Флюс-гели</a>
@@ -106,26 +97,17 @@
 	</div>
 	<div class="col-sm-6 col-md-5 col-lg-4">
 		<div class="group-card">
-			<img src="@Url.Content("~/img/placeholder/placeholder_16x9.png")" alt="" class="img-responsive photo" />
+			<img src="@Url.Content("~/img/groups/solder-alloy.jpg")" alt="" class="img-responsive photo" />
 			<h3 class="caption">
 				<span class="text-nowrap">Припои и сплавы</span>
 			</h3>
 			<div class="description">
 				<p>
-					Тестовое описание текущей группы<br/>
-					Даже в несколько строк и даже с HTML!
+					Место для описания
 				</p>
-				<ul>
-					<li>Point 1</li>
-					<li>Point 2</li>
-					<li>Point 3</li>
-					<li>Point 4</li>
-					<li>Point OVR</li>
-					<li>Point OVR</li>
-				</ul>
 			</div>
 			<p class="links">
-				Открыть каталог:<br/>
+				Открыть в каталоге:<br />
 				<!--nofollow-->
 				<a href="@Url.Action("Index", "Catalog", new { groupSelected = Constants.Ids.GroupAlloyAndSolder })" class="btn btn-primary">Припои и сплавы</a>
 				<!--/nofollow-->
@@ -141,20 +123,11 @@
 			</h3>
 			<div class="description">
 				<p>
-					Тестовое описание текущей группы<br/>
-					Даже в несколько строк и даже с HTML!
+					Место для описания
 				</p>
-				<ul>
-					<li>Point 1</li>
-					<li>Point 2</li>
-					<li>Point 3</li>
-					<li>Point 4</li>
-					<li>Point OVR</li>
-					<li>Point OVR</li>
-				</ul>
 			</div>
 			<p class="links">
-				Открыть каталог:<br/>
+				Открыть в каталоге:<br />
 				<!--nofollow-->
 				<a href="@Url.Action("Index", "Catalog", new { groupSelected = Constants.Ids.GroupGlue })" class="btn btn-primary">Клеи</a>
 				<a href="@Url.Action("Index", "Catalog", new { groupSelected = Constants.Ids.GroupLacquer })" class="btn btn-primary">Лаки</a>
@@ -170,20 +143,11 @@
 			</h3>
 			<div class="description">
 				<p>
-					Тестовое описание текущей группы<br/>
-					Даже в несколько строк и даже с HTML!
+					Место для описания
 				</p>
-				<ul>
-					<li>Point 1</li>
-					<li>Point 2</li>
-					<li>Point 3</li>
-					<li>Point 4</li>
-					<li>Point OVR</li>
-					<li>Point OVR</li>
-				</ul>
 			</div>
 			<p class="links">
-				Открыть каталог:<br/>
+				Открыть в каталоге:<br />
 				<!--nofollow-->
 				<a href="@Url.Action("Index", "Catalog", new { groupSelected = Constants.Ids.GroupCleanerPasteIron })" class="btn btn-primary">Очистители, пасты, железо хлорное</a>
 				<!--/nofollow-->
@@ -198,20 +162,11 @@
 			</h3>
 			<div class="description">
 				<p>
-					Тестовое описание текущей группы<br/>
-					Даже в несколько строк и даже с HTML!
+					Место для описания
 				</p>
-				<ul>
-					<li>Point 1</li>
-					<li>Point 2</li>
-					<li>Point 3</li>
-					<li>Point 4</li>
-					<li>Point OVR</li>
-					<li>Point OVR</li>
-				</ul>
 			</div>
 			<p class="links">
-				Открыть каталог:<br/>
+				Открыть в каталоге:<br />
 				<!--nofollow-->
 				<a href="@Url.Action("Index", "Catalog", new { groupSelected = Constants.Ids.GroupLubricant })" class="btn btn-primary">Смазочные материалы</a>
 				<!--/nofollow-->
@@ -220,27 +175,18 @@
 	</div>
 	<div class="col-sm-6 col-md-5 col-lg-4">
 		<div class="group-card">
-			<img src="@Url.Content("~/img/placeholder/placeholder_16x9.png")" alt="" class="img-responsive photo" />
+			<img src="@Url.Content("~/img/groups/kit.jpg")" alt="" class="img-responsive photo" />
 			<h3 class="caption">
 				<span class="text-nowrap">Наборы</span>,
 				<span class="text-nowrap">Разное</span>
 			</h3>
 			<div class="description">
 				<p>
-					Тестовое описание текущей группы<br/>
-					Даже в несколько строк и даже с HTML!
+					Место для описания
 				</p>
-				<ul>
-					<li>Point 1</li>
-					<li>Point 2</li>
-					<li>Point 3</li>
-					<li>Point 4</li>
-					<li>Point OVR</li>
-					<li>Point OVR</li>
-				</ul>
 			</div>
 			<p class="links">
-				Открыть каталог:<br/>
+				Открыть в каталоге:<br/>
 				<!--nofollow-->
 				<a href="@Url.Action("Index", "Catalog", new { groupSelected = Constants.Ids.GroupKit })" class="btn btn-primary">Наборы</a>
 				<a href="@Url.Action("Index", "Catalog", new { groupSelected = Constants.Ids.GroupOther })" class="btn btn-primary">Разное</a>

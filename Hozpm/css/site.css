@@ -175,7 +175,7 @@ main {
 @media (min-width: 768px) {
   main {
     padding-top: 10px;
-    padding-bottom: 178px;
+    padding-bottom: 193px;
   }
 }
 footer {
@@ -193,6 +193,21 @@ footer .content-wrap > div.container {
   footer .content-wrap > div.container {
     height: 100px;
   }
+}
+.package {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #eee;
+  border-radius: 4px;
+  max-width: 520px;
+}
+.package p {
+  font-size: 16px;
+  line-height: 18px;
+  height: 72px;
+}
+.package img {
+  border-radius: 4px;
 }
 .group-card {
   border: 1px solid #ddd;

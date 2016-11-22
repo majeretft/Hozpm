@@ -30,27 +30,90 @@
 	<h1>@ViewBag.Title</h1>
 </div>
 <h2>Виды упаковки</h2>
-<p class="lead">Продукция упаковывается в зависимости от вида и объема тары:</p>
-<ul>
-	<li>Флаконы по 1шт. в индивидуальную упаковку с европодвесом</li>
-	<li>Флаконы до 1л по 10шт. в пленку</li>
-	<li>Флаконы от 1л по 1шт. без плетки</li>
-	<li>Банки по 1шт в индивидуальную упаковку с европодвесом</li>
-	<li>Банки весом до 30гр по 10шт в пленку</li>
-	<li>Банки весом от 30гр по 2шт. в пленку</li>
-	<li>Припои на катушках до 1кг по 5шт. в пленку</li>
-	<li>Припои на катушках свыше 1кг по 1шт в бумагу</li>
-	<li>Припои в виде спиралей по 10шт в пакеты Zip-lock</li>
-	<li>Флюс-гели в промышленном картридже с дозатором и толкателем по 1шт. в блистер или пакет с европодвесом</li>
-	<li>Припои в прутках (стержнях) и бухтах заворачиваются в мешковину в виде пачки любым требуемым весом</li>
-</ul>
-
+<p class="lead">
+	Продукция упаковывается в зависимости от вида и объема тары.<br/>
+	Предусмотрена индивидуальная (по 1шт) и групповая (2-10 шт) упаковка.
+</p>
+<div class="row">
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Флаконы по 1шт в индивидуальную упаковку с европодвесом</p>
+			<img src="@Url.Content("~/img/placeholder/placeholder_1x1.png")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Флаконы до 1л по 10шт в пленку</p>
+			<img src="@Url.Content("~/img/preview/packages/vial-10x-40ml.jpg")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Флаконы от 1л по 1шт</p>
+			<img src="@Url.Content("~/img/preview/packages/bottle-1x-1l.jpg")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Банки по 1шт в индивидуальную упаковку с европодвесом</p>
+			<img src="@Url.Content("~/img/preview/packages/bank-1x-30g.jpg")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Банки весом от 30гр по 2шт в пленку</p>
+			<img src="@Url.Content("~/img/preview/packages/bank-2x-60ml.jpg")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Банки весом до 30гр по 10шт в пленку</p>
+			<img src="@Url.Content("~/img/preview/packages/bank-10x-20g.jpg")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Припои на катушках до 1кг по 5шт в пленку</p>
+			<img src="@Url.Content("~/img/placeholder/placeholder_1x1.png")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Припои на катушках свыше 1кг по 1шт в бумагу</p>
+			<img src="@Url.Content("~/img/preview/packages/spool-1x.jpg")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Припои в виде спиралей по 10шт в пакеты Zip-lock</p>
+			<img src="@Url.Content("~/img/placeholder/placeholder_1x1.png")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Припои в прутках (стержнях) и бухтах заворачиваются в мешковину в виде пачки (примерный вес 8,5-9 кг)</p>
+			<img src="@Url.Content("~/img/placeholder/placeholder_1x1.png")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Флюс-гели в промышленном картридже с дозатором и толкателем по 1шт в блистер с европодвесом</p>
+			<img src="@Url.Content("~/img/preview/packages/cartridge-1x-blister.jpg")" alt="" class="img-responsive" />
+		</div>
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div class="package">
+			<p>Флюс-гели в промышленном картридже с дозатором и толкателем по 1шт в пакет с европодвесом</p>
+			<img src="@Url.Content("~/img/preview/packages/cartridge-1x-packet.jpg")" alt="" class="img-responsive" />
+		</div>
+	</div>
+</div>
 <h2>Характеристики упаковки</h2>
 <p>
 	Товар укладывается в коробки из гофрокартона, заклеивается скотчем со всех сторон.
 	Каждое тарное место маркируется адресной запиской с указанием отправителя и получателя.
 </p>
 <p>
-	Примерный вес коробки: 10кг<br/>
+	Примерный вес коробки: 10кг<br />
 	Объем коробки: 0,03м3
 </p>

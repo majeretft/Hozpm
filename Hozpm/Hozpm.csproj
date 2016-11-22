@@ -156,6 +156,7 @@
     <Content Include="img\pm_icon.png" />
     <Content Include="img\pm_logo.ico" />
     <Content Include="img\pm_logo.png" />
+    <Content Include="img\work-order.jpg" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -187,7 +188,7 @@
     <Content Include="fonts\social-icons.ttf" />
     <Content Include="fonts\social-icons.woff" />
     <Content Include="fonts\social-icons.woff2" />
-    <Content Include="less\layout\group-card.less" />
+    <Content Include="less\partial\group-card.less" />
     <Content Include="less\partial\catalog\aside-form.less" />
     <Content Include="less\partial\catalog\product-card.less" />
     <Content Include="less\partial\catalog\product-list-paging.less" />
@@ -196,6 +197,7 @@
     <Content Include="less\partial\catalog\product-another-container.less" />
     <Content Include="less\ie.less" />
     <Content Include="Mvc.sitemap" />
+    <Content Include="less\views\packing-info.less" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
