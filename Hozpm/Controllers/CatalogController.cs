@@ -2,8 +2,8 @@
 using System.Web.UI;
 using Hozpm.Logic;
 using Hozpm.Logic.Abstract;
-using Hozpm.Logic.Entities;
 using Hozpm.Models;
+using Hozpm.Models.Entities;
 
 namespace Hozpm.Controllers
 {
@@ -19,12 +19,12 @@ namespace Hozpm.Controllers
 
 		[HttpGet]
 		[OutputCache(NoStore = true, Duration = 0, Location = OutputCacheLocation.None)]
-		public ViewResult Index(string groupSelected)
+		public ViewResult Index(int? groupSelected)
 		{
-			var formSettings = new FormSettings
+			var formSettings = new AsideFormViewModel
 			{
-				GroupSelected = groupSelected,
-				GroupAny = string.IsNullOrEmpty(groupSelected),
+				GroupSelected = groupSelected ?? 0,
+				GroupAny = !groupSelected.HasValue,
 				PurposeAny = true
 			};
 
@@ -36,29 +36,9 @@ namespace Hozpm.Controllers
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		[OutputCache(NoStore = true, Duration = 0, Location = OutputCacheLocation.None)]
-		public ViewResult Index(
-			string displaySelected, 
-			string pageNumber, 
-			string orderSelected, 
-			string groupSelected, 
-			string code, 
-			bool? groupAny, 
-			bool? purposeAny, 
-			params CheckboxListItem[] purposes)
+		public ViewResult Index(AsideFormViewModel settings)
 		{
-			var formSettings = new FormSettings
-			{
-				OrderSelected = orderSelected,
-				DisplaySelected = displaySelected,
-				GroupSelected = groupSelected,
-				Code = code,
-				GroupAny = groupAny,
-				PurposeAny = purposeAny,
-				Purposes = purposes,
-				PageNumber = pageNumber
-			};
-
-			var model = _modelProvider.GetCatalogHomeViewModel(formSettings);
+			var model = _modelProvider.GetCatalogHomeViewModel(settings);
 			
 			return View(model);
 		}
@@ -91,11 +71,11 @@ namespace Hozpm.Controllers
 
 		public ViewResult ViewAll()
 		{
-			var model = _modelProvider.GetCatalogHomeViewModel(new FormSettings
+			var model = _modelProvider.GetCatalogHomeViewModel(new AsideFormViewModel
 			{
 				GroupAny = true,
 				PurposeAny = true,
-				DisplaySelected = "0"
+				DisplaySelected = Constants.Form.DisplaySelectedAll
 			});
 
 			return View(model);

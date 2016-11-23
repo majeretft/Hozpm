@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+#if !DEBUG
 using System.Web;
 using System.Web.Caching;
+#endif
 using Hozpm.Logic.Abstract;
 using Hozpm.Logic.Entities;
 using Hozpm.Logic.Json;
@@ -12,14 +14,18 @@ namespace Hozpm.Logic.Provider
 	public class DataProvider : IDataProvider
 	{
 		private readonly FileReader _fr;
+#if !DEBUG
 		private readonly Cache _cache;
+#endif
 		private delegate object ReadData();
 		private static readonly object Lock = new object();
 
 		public DataProvider(string folder)
 		{
 			_fr = new FileReader(folder);
+#if !DEBUG
 			_cache = HttpRuntime.Cache;
+#endif
 		}
 
 		public IEnumerable<Filter> GetGroups()

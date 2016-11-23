@@ -9,11 +9,11 @@
 	<div class="form-inline sorting-form">
 		<div class="form-group">
 			<label>Сортировать по: </label>
-			@Html.DropDownListFor(x => x.OrderSelected, Model.OrderList, new { @class = "form-control" })
+			@Html.DropDownListFor(x => x.OrderSelected, Constants.Form.OrderList, new { @class = "form-control" })
 		</div>
 		<div class="form-group">
 			<label>Отображать по: </label>
-			@Html.DropDownListFor(x => x.DisplaySelected, Model.DisplayList, new { @class = "form-control" })
+			@Html.DropDownListFor(x => x.DisplaySelected, Constants.Form.DisplayList, new { @class = "form-control" })
 		</div>
 	</div>
 
@@ -51,27 +51,21 @@
 				</label>
 			</div>
 		</div>
-		<div class="form-group form-inline hidden">
+		<div class="form-group form-inline">
 			<label>Масса <span class="hidden-xs">от</span></label>
 			<br class="visible-md"/>
-			<input type="text" class="form-control" placeholder="от" data-number />
+			@Html.TextBoxFor(x => x.WeightFrom, new { @class = "form-control", placeholder = "от" })
 			<label class="hidden-xs">до</label>
-			<input type="text" class="form-control" placeholder="до" data-number />
-			<select class="form-control">
-				<option>г</option>
-				<option>кг</option>
-			</select>
+			@Html.TextBoxFor(x => x.WeightTo, new { @class = "form-control", placeholder = "до" })
+			@Html.DropDownListFor(x => x.WeightSelected, Constants.Form.WeightList, new { @class = "form-control" })
 		</div>
-		<div class="form-group form-inline hidden">
+		<div class="form-group form-inline">
 			<label>Объем <span class="hidden-xs">от</span></label>
 			<br class="visible-md" />
-			<input type="text" class="form-control" placeholder="от" data-number />
+			@Html.TextBoxFor(x => x.VolumeFrom, new { @class = "form-control", placeholder = "от" })
 			<label class="hidden-xs">до</label>
-			<input type="text" class="form-control" placeholder="до" data-number />
-			<select class="form-control">
-				<option>мл</option>
-				<option>л</option>
-			</select>
+			@Html.TextBoxFor(x => x.VolumeTo, new { @class = "form-control", placeholder = "от" })
+			@Html.DropDownListFor(x => x.VolumeSelected, Constants.Form.VolumeList, new { @class = "form-control" })
 		</div>
 		<div class="form-group">
 			<label>Артикул</label>

@@ -272,10 +272,10 @@
     <Compile Include="Logic\Abstract\IDataProvider.cs" />
     <Compile Include="Logic\Abstract\IModelProvider.cs" />
     <Compile Include="Logic\Constants.cs" />
+    <Compile Include="Logic\DisplayEnum.cs" />
     <Compile Include="Logic\Entities\DataOg.cs" />
     <Compile Include="Logic\Entities\DataSchema.cs" />
     <Compile Include="Logic\Entities\DataSeo.cs" />
-    <Compile Include="Logic\Entities\FormSettings.cs" />
     <Compile Include="Logic\Entities\ItemListFluent.cs" />
     <Compile Include="Logic\ExceptionUtility.cs" />
     <Compile Include="Logic\OrderEnum.cs" />
@@ -291,6 +291,8 @@
     <Compile Include="Logic\Sitemap\ProductDynamicNodeProvider.cs" />
     <Compile Include="Logic\Sitemap\KitDynamicNodeProvider.cs" />
     <Compile Include="Logic\Sitemap\ItemDynamicNodeProvider.cs" />
+    <Compile Include="Logic\VolumeEnum.cs" />
+    <Compile Include="Logic\WeightEnum.cs" />
     <Compile Include="Models\CatalogHomeViewModel.cs" />
     <Compile Include="Models\Entities\AsideFormViewModel.cs" />
     <Compile Include="Models\Entities\PaginationViewModel.cs" />
@@ -298,9 +300,7 @@
     <Compile Include="Models\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Unknown\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>

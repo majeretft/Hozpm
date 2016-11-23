@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic.Abstract;
-using Hozpm.Logic.Entities;
 using Hozpm.Models;
 using Hozpm.Models.Entities;
 
@@ -19,49 +19,92 @@ namespace Hozpm.Logic.Provider
 
 		public CatalogHomeViewModel GetCatalogHomeViewModel()
 		{
-			return GetCatalogHomeViewModel(new FormSettings
+			return GetCatalogHomeViewModel(new AsideFormViewModel
 			{
 				GroupAny = true,
 				PurposeAny = true
 			});
 		}
 
-		public CatalogHomeViewModel GetCatalogHomeViewModel(FormSettings formSettings)
+		public CatalogHomeViewModel GetCatalogHomeViewModel(AsideFormViewModel formSettings)
 		{
 			var itemsFluent = _dataProvider.GetFluentItems();
 
+			formSettings.Groups = _dataProvider.GetGroups()
+				.Select(x => new SelectListItem
+				{
+					Value = x.Id.ToString(),
+					Text = x.Text
+				})
+				.ToList();
+
+			if (formSettings.Groups.Any(x => x.Value.Equals(formSettings.GroupSelected.ToString())))
+			{
+				formSettings.Groups
+					.First(x => x.Value.Equals(formSettings.GroupSelected.ToString()))
+					.Selected = true;
+			}
+
+			var purposes = _dataProvider.GetPurposes()
+				.Select(x => new CheckboxListItem
+				{
+					Text = x.Text,
+					Value = x.Id.ToString()
+				})
+				.ToList();
+
+			// Set purposes to be selected if any
+			if (formSettings.Purposes != null && formSettings.Purposes.Any(x => x.Selected))
+			{
+				var intersected = purposes
+					.Intersect(formSettings.Purposes, new CheckboxListItemComparer())
+					.ToList();
+
+				foreach (var checkboxListItem in purposes)
+				{
+					if (intersected.Contains(checkboxListItem))
+						checkboxListItem.Selected = true;
+				}
+			}
+			formSettings.Purposes = purposes;
+
 			// Ordering all items before all operations
-			itemsFluent.Order(formSettings.GetOrderSelected);
+			itemsFluent.Order(formSettings.OrderSelected);
 
 			// Item code has maximum priority because it is uqique and gives only one item
-			var code = formSettings.GetCode;
+			var code = formSettings.Code?.Trim().TrimStart('A', 'А');
 			if (!string.IsNullOrEmpty(code))
 			{
 				itemsFluent.WithCode(code);
 			}
 
 			// if group is set and "any group" checkbox is unchecked
-			if (!formSettings.GetGroupAny)
+			if (!formSettings.GroupAny)
 			{
-				itemsFluent.WithGroup(formSettings.GetGroupSelected);
+				itemsFluent.WithGroup(formSettings.GroupSelected);
 			}
 
 			// if there are any selected purposes and "any purpose" checkbox is unchecked
-			if (!formSettings.GetPurposeAny)
+			if (!formSettings.PurposeAny && formSettings.Purposes != null)
 			{
-				itemsFluent.WithPurposes(formSettings.GetSelectedPurposes);
+				var selectedPurposes = formSettings.Purposes
+					.Where(x => x.Selected)
+					.Select(checkboxListItem => int.Parse(checkboxListItem.Value))
+					.ToList();
+
+				itemsFluent.WithPurposes(selectedPurposes);
 			}
 
 			// Getting the filtered items list
 			var items = itemsFluent.ToEnumerable().ToList();
 
-			var pageSize = formSettings.GetDisplaySelected;
+			var pageSize = (int)formSettings.DisplaySelected;
 			var itemsExceedPage = pageSize > 0 && items.Count > pageSize;
 
 			PaginationViewModel paginationViewModel = null;
 			if (itemsExceedPage)
 			{
-				var currentPage = formSettings.GetPageNumber;
+				var currentPage = formSettings.PageNumber;
 				var pageCount = (int) Math.Ceiling((double) items.Count/pageSize);
 
 				var skipCount = (currentPage - 1) * pageSize;
@@ -76,19 +119,29 @@ namespace Hozpm.Logic.Provider
 				};
 			}
 
-			var asideViewModel = GetAsideFormViewModel(formSettings, itemsExceedPage);
-
 			var result = new CatalogHomeViewModel
 			{
-				FormModel = asideViewModel,
+				FormModel = formSettings,
 				Items = items,
 				RequiresPagination = itemsExceedPage,
 				PaginationModel = paginationViewModel
 			};
 
 			result.FilterCode = result.FormModel.Code;
-			result.FilterGroup = result.FormModel.GetSelectedGroupText;
-			result.FilterPurposes = result.FormModel.GetSelectedPurposesText;
+
+			result.FilterGroup = 
+				formSettings.GroupAny 
+					? "любая группа" 
+					: formSettings.Groups.Any(x => x.Selected) 
+						? formSettings.Groups.First(x => x.Selected).Text
+						: "не выбрано ни одной группы";
+
+			result.FilterPurposes =
+				formSettings.PurposeAny 
+				? new List<string> { "любое назначение" }
+				: formSettings.Purposes.Any(x => x.Selected)
+					? formSettings.Purposes.Where(x => x.Selected).Select(x => x.Text)
+					: new List<string> { "не выбрано ни одного назначения" };
 
 			return result;
 		}
@@ -137,62 +190,6 @@ namespace Hozpm.Logic.Provider
 			};
 
 			return true;
-		}
-
-		protected AsideFormViewModel GetAsideFormViewModel()
-		{
-			var groups = _dataProvider.GetGroups();
-			var selectListItems = groups.Select(x => new SelectListItem
-			{
-				Value = x.Id.ToString(),
-				Text = x.Text
-			}).ToList();
-
-			if (selectListItems.Any())
-				selectListItems.First().Selected = true;
-
-			var purposes = _dataProvider.GetPurposes();
-			var checkboxListItems = purposes.Select(x => new CheckboxListItem
-			{
-				Value = x.Id.ToString(),
-				Text = x.Text
-			}).ToList();
-
-			var result = new AsideFormViewModel
-			{
-				Groups = selectListItems,
-				Purposes = checkboxListItems
-			};
-
-			return result;
-		}
-
-		protected AsideFormViewModel GetAsideFormViewModel(FormSettings formSettings, bool requirePagination)
-		{
-			var result = GetAsideFormViewModel();
-
-			result.GroupAny = formSettings.GetGroupAny;
-			result.PurposeAny = formSettings.GetPurposeAny;
-			result.GroupSelected = formSettings.GetGroupSelected.ToString();
-			result.Code = formSettings.GetCode;
-			result.DisplaySelected = formSettings.GetDisplaySelected.ToString();
-			result.OrderSelected = formSettings.GetOrderSelected.ToString();
-
-			if (!requirePagination)
-				result.PageNumber = Constants.Form.PageNumberDefault;
-
-			if (!formSettings.HasSelectedPurposes)
-				return result;
-
-			var purposesToModify = formSettings
-				.GetSelectedPurposes
-				.Select(selectedPurpose => result.Purposes.FirstOrDefault(x => x.Value == selectedPurpose.ToString()))
-				.Where(purpose => purpose != null);
-
-			foreach (var purpose in purposesToModify)
-				purpose.Selected = true;
-
-			return result;
 		}
 	}
 }

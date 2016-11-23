@@ -4,5 +4,10 @@
 	{
 		public int PageCount { get; set; }
 		public int CurrentPage { get; set; }
+
+		public PaginationViewModel()
+		{
+			CurrentPage = 1;
+		}
 	}
 }

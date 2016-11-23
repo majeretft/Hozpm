@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Web.Mvc;
 
 namespace Hozpm.Logic
 {
@@ -6,10 +7,37 @@ namespace Hozpm.Logic
 	{
 		public static class Form
 		{
-			public const int DisplaySelectedDefault = 10;
+			public const DisplayEnum DisplaySelectedDefault = DisplayEnum.Ten;
+			public const DisplayEnum DisplaySelectedAll = DisplayEnum.All;
 			public const OrderEnum OrderSelectedDefault = OrderEnum.Code;
 			public const int GroupSelectedDefault = 0;
 			public const int PageNumberDefault = 1;
+
+			public static IEnumerable<SelectListItem> DisplayList => new List<SelectListItem>
+			{
+				new SelectListItem { Selected = true, Value = DisplayEnum.Ten.ToString(), Text = ((int)DisplayEnum.Ten).ToString()},
+				new SelectListItem { Value = DisplayEnum.Twenty.ToString(), Text = ((int)DisplayEnum.Twenty).ToString()},
+				new SelectListItem { Value = DisplayEnum.Thirty.ToString(), Text = ((int)DisplayEnum.Thirty).ToString()},
+				new SelectListItem { Value = DisplayEnum.All.ToString(), Text = "Все"}
+			};
+
+			public static IEnumerable<SelectListItem> OrderList => new List<SelectListItem>
+			{
+				new SelectListItem { Selected = true, Value = OrderEnum.Code.ToString(), Text = "Артикул" },
+				new SelectListItem { Value = OrderEnum.Caption.ToString(), Text = "Наименование" }
+			};
+
+			public static IEnumerable<SelectListItem> VolumeList => new List<SelectListItem>
+			{
+				new SelectListItem { Selected = true, Value = VolumeEnum.MiliLiter.ToString(), Text = "мл"},
+				new SelectListItem { Value = VolumeEnum.Liter.ToString(), Text = "л"}
+			};
+
+			public static IEnumerable<SelectListItem> WeightList => new List<SelectListItem>
+			{
+				new SelectListItem { Selected = true, Value = WeightEnum.Gram.ToString(), Text = "г"},
+				new SelectListItem { Value = WeightEnum.KiloGram.ToString(), Text = "кг"}
+			};
 		}
 
 		public static class Og
