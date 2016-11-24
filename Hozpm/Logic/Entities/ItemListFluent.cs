@@ -53,6 +53,21 @@ namespace Hozpm.Logic.Entities
 			return this;
 		}
 
+		public IEnumerable<ProductBase> ToEnumerable()
+		{
+			return _items;
+		}
+
+		public ItemListFluent WithCode(string code)
+		{
+			if (string.IsNullOrEmpty(code))
+				throw new ArgumentNullException(nameof(code));
+
+			_items = _items.Where(x => x.Code.EndsWith(code));
+
+			return this;
+		}
+
 		public ItemListFluent WithGroup(int groupId)
 		{
 			if (groupId < 0)
@@ -81,19 +96,56 @@ namespace Hozpm.Logic.Entities
 			return this;
 		}
 
-		public ItemListFluent WithCode(string code)
+		public ItemListFluent WithVolume(double? from, double? to, VolumeEnum digit)
 		{
-			if (string.IsNullOrEmpty(code))
-				throw new ArgumentNullException(nameof(code));
+			var digitItem = Constants.Form.VolumeList.FirstOrDefault(x => x.Value == digit.ToString());
 
-			_items = _items.Where(x => x.Code.EndsWith(code));
+			if (digitItem == null)
+				throw new ArgumentOutOfRangeException(nameof(digit), $"Digit {digit} does not have correspinding value in Constants.Form.VolumeList");
+
+			var text = digitItem.Text;
+
+			if (from.HasValue && from.Value > 0)
+				_items = _items.Where(x => 
+					x.Container?.Volume != null 
+					&& x.Container.Volume.Value >= from.Value
+					&& text.Equals(x.Container.VolumeText, StringComparison.InvariantCultureIgnoreCase)
+				);
+
+			if (to.HasValue && to.Value > 0)
+				_items = _items.Where(x => 
+					x.Container?.Volume != null 
+					&& x.Container.Volume.Value <= to.Value 
+					&& text.Equals(x.Container.VolumeText, StringComparison.InvariantCultureIgnoreCase)
+				);
 
 			return this;
 		}
 
-		public IEnumerable<ProductBase> ToEnumerable()
+		public ItemListFluent WithWeight(double? from, double? to, WeightEnum digit)
 		{
-			return _items;
+			var digitItem = Constants.Form.WeightList.FirstOrDefault(x => x.Value == digit.ToString());
+
+			if (digitItem == null)
+				throw new ArgumentOutOfRangeException(nameof(digit), $"Digit {digit} does not have correspinding value in Constants.Form.WeightList");
+
+			var text = digitItem.Text;
+
+			if (from.HasValue && from.Value > 0)
+				_items = _items.Where(x => 
+					x.Container?.Weight != null 
+					&& x.Container.Weight.Value >= from.Value 
+					&& text.Equals(x.Container.WeightText, StringComparison.InvariantCultureIgnoreCase)
+				);
+
+			if (to.HasValue && to.Value > 0)
+				_items = _items.Where(x => 
+					x.Container?.Weight != null 
+					&& x.Container.Weight.Value <= to.Value
+					&& text.Equals(x.Container.WeightText, StringComparison.InvariantCultureIgnoreCase)
+				);
+
+			return this;
 		}
 	}
 }

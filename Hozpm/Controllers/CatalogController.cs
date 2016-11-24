@@ -7,7 +7,6 @@ using Hozpm.Models.Entities;
 
 namespace Hozpm.Controllers
 {
-	[OutputCache(Duration = 300, Location = OutputCacheLocation.ServerAndClient)]
 	public class CatalogController : Controller
 	{
 		private readonly IModelProvider _modelProvider;
@@ -69,6 +68,7 @@ namespace Hozpm.Controllers
 			return RedirectToAction("Http404", "Error");
 		}
 
+		[OutputCache(Duration = 600, Location = OutputCacheLocation.ServerAndClient)]
 		public ViewResult ViewAll()
 		{
 			var model = _modelProvider.GetCatalogHomeViewModel(new AsideFormViewModel

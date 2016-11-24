@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using Hozpm.Logic.Abstract;
+using Hozpm.Logic.Entities;
 using Hozpm.Models;
 using Hozpm.Models.Entities;
 
@@ -28,104 +29,19 @@ namespace Hozpm.Logic.Provider
 
 		public CatalogHomeViewModel GetCatalogHomeViewModel(AsideFormViewModel formSettings)
 		{
-			var itemsFluent = _dataProvider.GetFluentItems();
+			var result = new CatalogHomeViewModel();
 
-			formSettings.Groups = _dataProvider.GetGroups()
-				.Select(x => new SelectListItem
-				{
-					Value = x.Id.ToString(),
-					Text = x.Text
-				})
-				.ToList();
+			formSettings.Groups = AssignGroups(formSettings.GroupSelected.ToString()).ToList();
+			formSettings.Purposes = AssignPurposes(formSettings.Purposes).ToList();
+			result.FormModel = formSettings;
 
-			if (formSettings.Groups.Any(x => x.Value.Equals(formSettings.GroupSelected.ToString())))
-			{
-				formSettings.Groups
-					.First(x => x.Value.Equals(formSettings.GroupSelected.ToString()))
-					.Selected = true;
-			}
+			var items = FilterItems(formSettings).ToList();
+			var paginationViewModel = ApplyPaging(formSettings.DisplaySelected, formSettings.PageNumber, ref items);
 
-			var purposes = _dataProvider.GetPurposes()
-				.Select(x => new CheckboxListItem
-				{
-					Text = x.Text,
-					Value = x.Id.ToString()
-				})
-				.ToList();
+			result.Items = items;
 
-			// Set purposes to be selected if any
-			if (formSettings.Purposes != null && formSettings.Purposes.Any(x => x.Selected))
-			{
-				var intersected = purposes
-					.Intersect(formSettings.Purposes, new CheckboxListItemComparer())
-					.ToList();
-
-				foreach (var checkboxListItem in purposes)
-				{
-					if (intersected.Contains(checkboxListItem))
-						checkboxListItem.Selected = true;
-				}
-			}
-			formSettings.Purposes = purposes;
-
-			// Ordering all items before all operations
-			itemsFluent.Order(formSettings.OrderSelected);
-
-			// Item code has maximum priority because it is uqique and gives only one item
-			var code = formSettings.Code?.Trim().TrimStart('A', 'А');
-			if (!string.IsNullOrEmpty(code))
-			{
-				itemsFluent.WithCode(code);
-			}
-
-			// if group is set and "any group" checkbox is unchecked
-			if (!formSettings.GroupAny)
-			{
-				itemsFluent.WithGroup(formSettings.GroupSelected);
-			}
-
-			// if there are any selected purposes and "any purpose" checkbox is unchecked
-			if (!formSettings.PurposeAny && formSettings.Purposes != null)
-			{
-				var selectedPurposes = formSettings.Purposes
-					.Where(x => x.Selected)
-					.Select(checkboxListItem => int.Parse(checkboxListItem.Value))
-					.ToList();
-
-				itemsFluent.WithPurposes(selectedPurposes);
-			}
-
-			// Getting the filtered items list
-			var items = itemsFluent.ToEnumerable().ToList();
-
-			var pageSize = (int)formSettings.DisplaySelected;
-			var itemsExceedPage = pageSize > 0 && items.Count > pageSize;
-
-			PaginationViewModel paginationViewModel = null;
-			if (itemsExceedPage)
-			{
-				var currentPage = formSettings.PageNumber;
-				var pageCount = (int) Math.Ceiling((double) items.Count/pageSize);
-
-				var skipCount = (currentPage - 1) * pageSize;
-				if (skipCount > 0)
-					items = items.Skip(skipCount).ToList();
-				items = items.Take(pageSize).ToList();
-
-				paginationViewModel = new PaginationViewModel
-				{
-					CurrentPage = currentPage,
-					PageCount = pageCount
-				};
-			}
-
-			var result = new CatalogHomeViewModel
-			{
-				FormModel = formSettings,
-				Items = items,
-				RequiresPagination = itemsExceedPage,
-				PaginationModel = paginationViewModel
-			};
+			result.RequiresPagination = paginationViewModel != null && paginationViewModel.PageCount > 1;
+			result.PaginationModel = paginationViewModel;
 
 			result.FilterCode = result.FormModel.Code;
 
@@ -144,6 +60,121 @@ namespace Hozpm.Logic.Provider
 					: new List<string> { "не выбрано ни одного назначения" };
 
 			return result;
+		}
+
+		private PaginationViewModel ApplyPaging(DisplayEnum display, int page, ref List<ProductBase> items)
+		{
+			var pageSize = (int) display;
+			var itemsExceedPage = pageSize > 0 && items.Count > pageSize;
+
+			if (!itemsExceedPage)
+				return null;
+
+			var currentPage = page;
+			var pageCount = (int) Math.Ceiling((double) items.Count/pageSize);
+
+			var skipCount = (currentPage - 1)*pageSize;
+			if (skipCount > 0)
+				items = items.Skip(skipCount).ToList();
+			items = items.Take(pageSize).ToList();
+
+			var paginationViewModel = new PaginationViewModel
+			{
+				CurrentPage = currentPage,
+				PageCount = pageCount
+			};
+
+			return paginationViewModel;
+		}
+
+		private IEnumerable<ProductBase> FilterItems(AsideFormViewModel formSettings)
+		{
+			if (formSettings == null)
+				throw new ArgumentNullException(nameof(formSettings));
+
+			var itemsFluent = _dataProvider.GetFluentItems();
+
+			// Ordering all items before all operations
+			itemsFluent.Order(formSettings.OrderSelected);
+
+			// Item code has maximum priority because it is uqique and gives only one item
+			var code = formSettings.Code?.Trim().TrimStart('A', 'А');
+			if (!string.IsNullOrEmpty(code))
+				itemsFluent.WithCode(code);
+
+			// if group is set and "any group" checkbox is unchecked
+			if (!formSettings.GroupAny)
+				itemsFluent.WithGroup(formSettings.GroupSelected);
+
+			// if there are any selected purposes and "any purpose" checkbox is unchecked
+			if (!formSettings.PurposeAny && formSettings.Purposes != null)
+			{
+				var selectedPurposes = formSettings.Purposes
+					.Where(x => x.Selected)
+					.Select(checkboxListItem => int.Parse(checkboxListItem.Value))
+					.ToList();
+
+				itemsFluent.WithPurposes(selectedPurposes);
+			}
+
+			itemsFluent
+				.WithWeight(formSettings.WeightFrom, formSettings.WeightTo, formSettings.WeightSelected)
+				.WithVolume(formSettings.VolumeFrom, formSettings.VolumeTo, formSettings.VolumeSelected);
+
+			// Getting the filtered items list
+			return itemsFluent.ToEnumerable().ToList();
+		}
+
+		private IEnumerable<CheckboxListItem> AssignPurposes(IEnumerable<CheckboxListItem> existingPurposes)
+		{
+			var purposes = _dataProvider.GetPurposes()
+				.Select(x => new CheckboxListItem
+				{
+					Text = x.Text,
+					Value = x.Id.ToString()
+				})
+				.ToList();
+
+			if (existingPurposes == null)
+				return purposes;
+
+			var existing = existingPurposes.ToList();
+
+			// Set purposes to be selected if any
+			if (!existing.Any(x => x.Selected))
+				return purposes;
+
+			var intersected = purposes
+				.Intersect(existing, new CheckboxListItemComparer())
+				.ToList();
+
+			foreach (var checkboxListItem in purposes)
+			{
+				if (intersected.Contains(checkboxListItem))
+					checkboxListItem.Selected = true;
+			}
+
+			return purposes;
+		}
+
+		private IEnumerable<SelectListItem> AssignGroups(string groupSelected)
+		{
+			var groups = _dataProvider.GetGroups()
+				.Select(x => new SelectListItem
+				{
+					Value = x.Id.ToString(),
+					Text = x.Text
+				})
+				.ToList();
+
+			if (!string.IsNullOrEmpty(groupSelected) && groups.Any(x => x.Value.Equals(groupSelected)))
+			{
+				groups
+					.First(x => x.Value.Equals(groupSelected))
+					.Selected = true;
+			}
+
+			return groups;
 		}
 
 		public bool TryGetProductViewModel(string uri, out ProductViewModel result)
