@@ -54,17 +54,17 @@
 		<div class="form-group form-inline">
 			<label>Масса <span class="hidden-xs">от</span></label>
 			<br class="visible-md"/>
-			@Html.TextBoxFor(x => x.WeightFrom, new { @class = "form-control", placeholder = "от" })
+			@Html.TextBoxFor(x => x.WeightFrom, new { @class = "form-control", placeholder = "от", data_number = "" })
 			<label class="hidden-xs">до</label>
-			@Html.TextBoxFor(x => x.WeightTo, new { @class = "form-control", placeholder = "до" })
+			@Html.TextBoxFor(x => x.WeightTo, new { @class = "form-control", placeholder = "до", data_number = "" })
 			@Html.DropDownListFor(x => x.WeightSelected, Constants.Form.WeightList, new { @class = "form-control" })
 		</div>
 		<div class="form-group form-inline">
 			<label>Объем <span class="hidden-xs">от</span></label>
 			<br class="visible-md" />
-			@Html.TextBoxFor(x => x.VolumeFrom, new { @class = "form-control", placeholder = "от" })
+			@Html.TextBoxFor(x => x.VolumeFrom, new { @class = "form-control", placeholder = "от", data_number = "" })
 			<label class="hidden-xs">до</label>
-			@Html.TextBoxFor(x => x.VolumeTo, new { @class = "form-control", placeholder = "от" })
+			@Html.TextBoxFor(x => x.VolumeTo, new { @class = "form-control", placeholder = "от", data_number = "" })
 			@Html.DropDownListFor(x => x.VolumeSelected, Constants.Form.VolumeList, new { @class = "form-control" })
 		</div>
 		<div class="form-group">
