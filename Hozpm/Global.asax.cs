@@ -3,6 +3,7 @@ using System.Net;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Hozpm.Logic;
+using MvcSiteMapProvider.Web.Mvc;
 
 namespace Hozpm
 {
@@ -11,6 +12,7 @@ namespace Hozpm
 
 		protected void Application_Start(object sender, EventArgs e)
 		{
+			XmlSiteMapController.RegisterRoutes(RouteTable.Routes);
 			RouteConfig.Register(RouteTable.Routes);
 			BundleConfig.Register(BundleTable.Bundles);
 		}
