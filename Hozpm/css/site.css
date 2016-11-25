@@ -8,10 +8,6 @@ header > .content-wrap .contact-container {
   display: none;
 }
 header > .content-wrap > .menu-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   text-transform: uppercase;
 }
 header > .content-wrap > .menu-wrap .navbar-header > button > .icon-bar {
@@ -73,6 +69,7 @@ header > .content-wrap > .menu-wrap .navbar-agile ul.nav > li > a:hover {
     text-align: center;
   }
   header > .content-wrap > .menu-wrap {
+    position: absolute;
     top: auto;
     left: 0;
     right: 0;
