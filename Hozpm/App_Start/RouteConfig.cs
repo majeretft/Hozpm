@@ -7,7 +7,9 @@ namespace Hozpm
 	{
 		public static void Register(RouteCollection routes)
 		{
+			routes.LowercaseUrls = true;
 			routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+			routes.IgnoreRoute("{statics}", new { statics = @".*\.(css|js|gif|jpg|png|xml)(/.)?" });
 
 			routes.MapRoute("Error500", "Error/Http500", new { controller = "Error", action = "Http500" });
 			routes.MapRoute("Error404", "Error/Http404", new { controller = "Error", action = "Http404" });
