@@ -31,18 +31,19 @@
 @section scripts {
 	<script type="text/javascript">
 		$(function () {
-			var form = ('form.catalog-filter');
+			var form = $('form.catalog-filter');
 			var btnFormVisibility = $('#toggle-btn');
+			var pageNumberField = form.children('#PageNumber');
 
 			var isFullForm;
 
 			var collapseHandler = function () {
-				$(form).on('show.bs.collapse', function () {
-					$(btnFormVisibility).children('span').text('Скрыть');
+				form.on('show.bs.collapse', function () {
+					btnFormVisibility.children('span').text('Скрыть');
 				});
 
-				$(form).on('hide.bs.collapse', function () {
-					$(btnFormVisibility).children('span').text('Показать');
+				form.on('hide.bs.collapse', function () {
+					btnFormVisibility.children('span').text('Показать');
 				});
 
 				$(window).resize(function () {
@@ -59,12 +60,12 @@
 					if (needFullForm === isFullForm)
 						return;
 
-					needFullForm ? $(form).collapse('show') : $(form).collapse('hide');
+					needFullForm ? form.collapse('show') : form.collapse('hide');
 					isFullForm = needFullForm;
 				});
 
-				$(btnFormVisibility).click(function () {
-					$(form).collapse('toggle');
+				btnFormVisibility.click(function () {
+					form.collapse('toggle');
 				});
 			}
 
@@ -75,9 +76,12 @@
 				var ctGroupAny = $('#@nameof(Model.FormModel.GroupAny)');
 				var ctPurposes = $('.checkbox-list');
 				var ctPurposeAny = $('#@nameof(Model.FormModel.PurposeAny)');
+				form.find('button[type="submit"]').click(function() {
+					pageNumberField.val(null);
+				});
 
 				var fnSubmit = function () {
-					$(form).submit();
+					form.submit();
 				}
 
 				var fnDisableSelectList = function () {
@@ -87,28 +91,27 @@
 
 				var fnDisableCheckboxList = function () {
 					var isChecked = $(this).is(":checked");
-					$(ctPurposes).find('div.checkbox')[isChecked ? 'addClass' : 'removeClass']('text-muted disabled');
-					$(ctPurposes).find('input[type="checkbox"]').prop('disabled', isChecked);
+					ctPurposes.find('div.checkbox')[isChecked ? 'addClass' : 'removeClass']('text-muted disabled');
+					ctPurposes.find('input[type="checkbox"]').prop('disabled', isChecked);
 				}
 
-				$(ctOrderList).change(fnSubmit);
-				$(ctDisplayList).change(fnSubmit);
-				$(ctGroupAny).change(fnDisableSelectList);
-				$(ctPurposeAny).change(fnDisableCheckboxList);
+				ctOrderList.change(fnSubmit);
+				ctDisplayList.change(fnSubmit);
+				ctGroupAny.change(fnDisableSelectList);
+				ctPurposeAny.change(fnDisableCheckboxList);
 
 				fnDisableSelectList.apply(ctGroupAny);
 				fnDisableCheckboxList.apply(ctPurposeAny);
 			}
 
 			var pagunationHandler = function () {
-				var pageNumberField = $(form).children('#PageNumber');
 				var pagingLinks = $('nav.product-list-pagination a[data-target]');
-				$(pagingLinks).click(function () {
+				pagingLinks.click(function () {
 					var targetPage = $(this).data('target');
 					if (targetPage == null || targetPage === "")
 						return;
-					$(pageNumberField).val(targetPage);
-					$(form).submit();
+					pageNumberField.val(targetPage);
+					form.submit();
 				});
 			}
 

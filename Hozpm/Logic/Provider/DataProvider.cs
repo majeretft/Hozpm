@@ -61,7 +61,7 @@ namespace Hozpm.Logic.Provider
 
 			var items = GetProducts();
 
-			return items.FirstOrDefault(x => x.Uri.Equals(uri));
+			return items.FirstOrDefault(x => x.Uri.Equals(uri, StringComparison.InvariantCultureIgnoreCase));
 		}
 
 		public Kit GetKit(string uri)
